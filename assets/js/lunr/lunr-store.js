@@ -5,6 +5,18 @@ var store = [{
         "url": "/sideproject/1year-12-projects/",
         "teaser": null
       },{
+        "title": "纸牌游戏也可以盈利",
+        "excerpt":"多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。   Holger, 一个来自丹麦哥本哈根的设计师。设计师的功底，后转开发，并构建纸牌游戏而且盈利。最初Holger开发了游戏后，获得了每个月大概800美金的收入，最初版本是Mac单机版，通过Mac App Store下载。但去了纽约创业开办公司，很不幸，公司被竞争对手打败。通过这次创业，Holger不得不从新出发。   Holger一直对纸牌游戏情有独钟。重新构建了产品。Online Solitaire，目前每个月的盈利在1500美金。      关于更多-盈利，运营以及技术   开始时候，Holger通过一篇文章受到启发。这篇文章是关于如何把副业做成生意，从而获得被动收入。所以他很聪明的认识到，他不需要重新造轮子，而是做一些市场上成功的产品。最终他打算优化之前的纸牌游戏，但是创业期间，产品没有维护，随着系统平台不算升级，产品有很多bug。所以他打算做成在线的。 在这之前，他做了一些研究。他写了个脚本抓取AppAnnie应用商店的App评价，得出结论要做个单人版的纸牌游戏。分析情况如下图：      Mac版本开发在三到四个礼拜，在线版本的开发时间也花了Holger三到四个礼拜时间，初始版本开发出来后，升级以及优化就一直有在做。   在线版本主要是采用React的技术栈来做的。用Firebase做的数据库。动画方面使用了GSAP这个库。单机版本采用ToDesktop 这个转换工具来进行各个终端转换，Windows, Mac, Linux 都可以，目测网站上介绍。   在线版的纸牌运营主要靠SEO检索。当用户想玩的时候就会上网去搜索，毕竟纸牌人人都知道，所以也不会像其他SaaS 产品一样会有一些介绍文章。通过火狐的页面优化工具来提升检索效果，目前得到g家每天的1000多次点击。   纸牌游戏会有人付费么？答案是否定的。没人会付费玩。所以目前收入主要是广告收入。广告收入主人公也有一些心得。开始用g家的广告，但是每天获利才是10块，后面更换Monumetric，有25块一天，目前使用Freestar，将近50块一天。如果通过广告获益，那么多尝试几个。   写在后面   我觉得Holger真的很能够认清现实，即使目前依然能够盈利，但是他说他不希望这个成为他依靠的收入来源，现在市场真的有很多竞争者，竞争很激烈。   话说回来，只要有心，依靠数据分析，即使是很老旧的游戏也会有市场，所谓存在即有道理。关于文中Holger提到的受启发文章，找个时间我再写个分享上来。  ","categories": ["sideproject","startup"],
+        "tags": [],
+        "url": "/sideproject/startup/card-game/",
+        "teaser": null
+      },{
+        "title": "一个月入1.7万的退休项目",
+        "excerpt":"简介  今天要分享的主人是Michael, 他从2015年开始做QuotaGurad， 这是是一个静态ip和动态ip代理产品。Michael住在美国内华达州的拉斯维加斯。但是他去过很多地方，包括中国，波兰，香港和1/4个美国。有20年的软件开发和安全经验。曾在2014年尝试退休。但感觉无聊和担心技术落伍就重抄旧业；      QuotaGurad主要是基于云服务的应用提供服务，从15年开始，目前业务发展到2000多个客户。   构建产品缘起一个同行，产品开发到一半，但是不想继续开发下去，由新的想法，Michal了解想法后就接手了。在这一过程当中令他印象最深的就是因为不是由0开始，而是在现有一套代码上继续开发，这套代码又有用户在使用，所以即使后期有新的解决方案要重构代码，也要分两部分进行，保持现有代码用户不受影响的情况下构建新的解决方案，维护成本倍增。   关于产品的技术架构   QuotaGurad使用主要使用go语言来编写，因为Michael觉得go比较快以及方便部署；Ruby用来做后台管理以及外部应用集成；集成Stripe来实现支付；   关于运营以及商业模式  Mihael主要在      StackOverflow / Quora等在线平台上进行答疑并介绍QuotaGurad，以此来引流；   Google Adwords投放广告   Landingpage, 是广告转化的客户能够更加容易了解产品   Microsoft Azure  和 IBM Cloud，投放相关云服务平台   门户网站影响，用户可以在上面了解价格，解答   QuotaGurad 使用saas模式，按每月付费进行服务，大概有75%的用户是付费的，也推出免费的服务给用户进行体验，但有一个准则就是，免费的体验是有时效的。   写在后面   其中令我印象最深的还是，第一要有积蓄，Michael花的就是自己的积蓄，没有任何众筹或者投资，这样子确保自己能够不受其他方面的影响；第二就是只实现最主要的功能，把最主要功能实现好，第二第三功能都可以放一放。  ","categories": ["sideproject","startup"],
+        "tags": [],
+        "url": "/sideproject/startup/17k/",
+        "teaser": null
+      },{
         "title": "如何在Rails 项目里面加入图表",
         "excerpt":"在这篇文章里面，我们用到Chart.js，这是一个图表的js库。整个集成过程比较简单，运用到实际的项目需要自己考虑项目的情况，这里只做一个简单展示。 第一步 我们直接引用cdn。打开的application.html.erb，加入这段代码 &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.css\"&gt; &lt;script src=\"https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.js\"&gt;&lt;/script&gt; 第二步 然后新建一个页面，创建一个canvas &lt;canvas id=\"myChart\" width=\"960\" height=\"200\"&gt;&lt;/canvas&gt; 第三步 加入图表相关代码，直接在页面上写也是可以的。 &lt;script&gt; var ctx = document.getElementById('myChart'); var myChart = new Chart(ctx, { type: 'bar', data: { labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'], datasets: [{ label: '# of Votes', data: [12, 19, 3, 5, 2,...","categories": ["ruby on rails"],
         "tags": [],

@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-27T20:21:15+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>An amazing website.</subtitle><author><name>Ryan</name></author><entry><title type="html">快速处理csv</title><link href="/ruby/csv-gem/" rel="alternate" type="text/html" title="快速处理csv" /><published>2022-01-27T00:00:00+08:00</published><updated>2022-01-27T00:00:00+08:00</updated><id>/ruby/csv-gem</id><content type="html" xml:base="/ruby/csv-gem/"><![CDATA[<p>今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，<a href="https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html">链接附上处理csv的代码</a>，但是如果出来的行数足够大，那也是挺恐怖。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-27T20:30:17+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>An amazing website.</subtitle><author><name>Ryan</name></author><entry><title type="html">快速处理csv</title><link href="/ruby/csv-gem/" rel="alternate" type="text/html" title="快速处理csv" /><published>2022-01-27T00:00:00+08:00</published><updated>2022-01-27T00:00:00+08:00</updated><id>/ruby/csv-gem</id><content type="html" xml:base="/ruby/csv-gem/"><![CDATA[<p>今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，<a href="https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html">链接附上处理csv的代码</a>，但是如果出来的行数足够大，那也是挺恐怖。</p>
 
 <p>图1</p>
 
@@ -131,7 +131,62 @@ var myChart = new Chart(ctx, {
 
 <p>以上是一个比较简单的demo，可以当作参考。如果嫌麻烦，也可以参考这个<a href="https://github.com/coderbydesign/chart-js-rails">chart-js-rails</a>gem。但是使用还是要参考回Chart.js。</p>
 
-<p><a href="https://download.csdn.net/download/weixin_42577411/16670706">示例源码下载</a></p>]]></content><author><name>Ryan</name></author><category term="ruby on rails" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">1年12个项目</title><link href="/sideproject/1year-12-projects/" rel="alternate" type="text/html" title="1年12个项目" /><published>2021-01-24T00:00:00+08:00</published><updated>2021-01-24T00:00:00+08:00</updated><id>/sideproject/1year-12-projects</id><content type="html" xml:base="/sideproject/1year-12-projects/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124163648393.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p><a href="https://download.csdn.net/download/weixin_42577411/16670706">示例源码下载</a></p>]]></content><author><name>Ryan</name></author><category term="ruby on rails" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">一个月入1.7万的退休项目</title><link href="/sideproject/startup/17k/" rel="alternate" type="text/html" title="一个月入1.7万的退休项目" /><published>2021-04-13T00:00:00+08:00</published><updated>2021-04-13T00:00:00+08:00</updated><id>/sideproject/startup/17k</id><content type="html" xml:base="/sideproject/startup/17k/"><![CDATA[<h3 id="简介">简介</h3>
+<p>今天要分享的主人是Michael, 他从2015年开始做<a href="https://www.quotaguard.com">QuotaGurad</a>， 这是是一个静态ip和动态ip代理产品。Michael住在美国内华达州的拉斯维加斯。但是他去过很多地方，包括中国，波兰，香港和1/4个美国。有20年的软件开发和安全经验。曾在2014年尝试退休。但感觉无聊和担心技术落伍就重抄旧业；</p>
+
+<p><img src="https://img-blog.csdnimg.cn/2021041321574781.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p><a href="https://www.quotaguard.com">QuotaGurad</a>主要是基于云服务的应用提供服务，从15年开始，目前业务发展到2000多个客户。</p>
+
+<p>构建产品缘起一个同行，产品开发到一半，但是不想继续开发下去，由新的想法，Michal了解想法后就接手了。在这一过程当中令他印象最深的就是因为不是由0开始，而是在现有一套代码上继续开发，这套代码又有用户在使用，所以即使后期有新的解决方案要重构代码，也要分两部分进行，保持现有代码用户不受影响的情况下构建新的解决方案，维护成本倍增。</p>
+
+<h3 id="关于产品的技术架构">关于产品的技术架构</h3>
+
+<p><a href="https://www.quotaguard.com">QuotaGurad</a>使用主要使用go语言来编写，因为Michael觉得go比较快以及方便部署；Ruby用来做后台管理以及外部应用集成；集成Stripe来实现支付；</p>
+
+<h3 id="关于运营以及商业模式">关于运营以及商业模式</h3>
+<p>Mihael主要在</p>
+
+<ul>
+  <li>StackOverflow / Quora等在线平台上进行答疑并介绍QuotaGurad，以此来引流；</li>
+  <li>Google Adwords投放广告</li>
+  <li>Landingpage, 是广告转化的客户能够更加容易了解产品</li>
+  <li>Microsoft Azure  和 IBM Cloud，投放相关云服务平台</li>
+  <li>门户网站影响，用户可以在上面了解价格，解答</li>
+</ul>
+
+<p><a href="https://www.quotaguard.com">QuotaGurad</a> 使用saas模式，按每月付费进行服务，大概有75%的用户是付费的，也推出免费的服务给用户进行体验，但有一个准则就是，免费的体验是有时效的。</p>
+
+<h3 id="写在后面">写在后面</h3>
+
+<p>其中令我印象最深的还是，第一要有积蓄，Michael花的就是自己的积蓄，没有任何众筹或者投资，这样子确保自己能够不受其他方面的影响；第二就是只实现最主要的功能，把最主要功能实现好，第二第三功能都可以放一放。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><category term="startup" /><summary type="html"><![CDATA[简介 今天要分享的主人是Michael, 他从2015年开始做QuotaGurad， 这是是一个静态ip和动态ip代理产品。Michael住在美国内华达州的拉斯维加斯。但是他去过很多地方，包括中国，波兰，香港和1/4个美国。有20年的软件开发和安全经验。曾在2014年尝试退休。但感觉无聊和担心技术落伍就重抄旧业；]]></summary></entry><entry><title type="html">纸牌游戏也可以盈利</title><link href="/sideproject/startup/card-game/" rel="alternate" type="text/html" title="纸牌游戏也可以盈利" /><published>2021-03-28T00:00:00+08:00</published><updated>2021-03-28T00:00:00+08:00</updated><id>/sideproject/startup/card-game</id><content type="html" xml:base="/sideproject/startup/card-game/"><![CDATA[<p>多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。</p>
+
+<p>Holger, 一个来自丹麦哥本哈根的设计师。设计师的功底，后转开发，并构建纸牌游戏而且盈利。最初Holger开发了游戏后，获得了每个月大概800美金的收入，最初版本是Mac单机版，通过Mac App Store下载。但去了纽约创业开办公司，很不幸，公司被竞争对手打败。通过这次创业，Holger不得不从新出发。</p>
+
+<p>Holger一直对纸牌游戏情有独钟。重新构建了产品。<a href="https://online-solitaire.com/">Online Solitaire</a>，目前每个月的盈利在1500美金。</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20210328185034453.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<h3 id="关于更多-盈利运营以及技术">关于更多-盈利，运营以及技术</h3>
+
+<p>开始时候，Holger通过一篇文章受到启发。这篇文章是关于如何把副业做成生意，从而获得被动收入。所以他很聪明的认识到，他不需要重新造轮子，而是做一些市场上成功的产品。最终他打算优化之前的纸牌游戏，但是创业期间，产品没有维护，随着系统平台不算升级，产品有很多bug。所以他打算做成在线的。
+在这之前，他做了一些研究。他写了个脚本抓取<a href="https://www.appannie.com/">AppAnnie</a>应用商店的App评价，得出结论要做个单人版的纸牌游戏。分析情况如下图：</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20210328185047715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>Mac版本开发在三到四个礼拜，在线版本的开发时间也花了Holger三到四个礼拜时间，初始版本开发出来后，升级以及优化就一直有在做。</p>
+
+<p>在线版本主要是采用React的技术栈来做的。用<a href="https://firebase.google.com/">Firebase</a>做的数据库。动画方面使用了<a href="https://greensock.com/gsap/">GSAP</a>这个库。单机版本采用<a href="https://www.todesktop.com/">ToDesktop</a> 这个转换工具来进行各个终端转换，Windows, Mac, Linux 都可以，目测网站上介绍。</p>
+
+<p>在线版的纸牌运营主要靠SEO检索。当用户想玩的时候就会上网去搜索，毕竟纸牌人人都知道，所以也不会像其他SaaS 产品一样会有一些介绍文章。通过火狐的<a href="https://moz.com/products/pro/on-page-optimization">页面优化工具</a>来提升检索效果，目前得到g家每天的1000多次点击。</p>
+
+<p>纸牌游戏会有人付费么？答案是否定的。没人会付费玩。所以目前收入主要是广告收入。广告收入主人公也有一些心得。开始用g家的广告，但是每天获利才是10块，后面更换Monumetric，有25块一天，目前使用Freestar，将近50块一天。如果通过广告获益，那么多尝试几个。</p>
+
+<h3 id="写在后面">写在后面</h3>
+
+<p>我觉得Holger真的很能够认清现实，即使目前依然能够盈利，但是他说他不希望这个成为他依靠的收入来源，现在市场真的有很多竞争者，竞争很激烈。</p>
+
+<p>话说回来，只要有心，依靠数据分析，即使是很老旧的游戏也会有市场，所谓存在即有道理。关于文中Holger提到的受启发文章，找个时间我再写个分享上来。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><category term="startup" /><summary type="html"><![CDATA[多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。]]></summary></entry><entry><title type="html">1年12个项目</title><link href="/sideproject/1year-12-projects/" rel="alternate" type="text/html" title="1年12个项目" /><published>2021-01-24T00:00:00+08:00</published><updated>2021-01-24T00:00:00+08:00</updated><id>/sideproject/1year-12-projects</id><content type="html" xml:base="/sideproject/1year-12-projects/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124163648393.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
 <p>今天来聊下数字游民狂人Pieter Levels， 我更喜欢称他是项目狂人，因为他1年创建了12个项目，没有很强的行动力，恐怕连半数项目都做不来。12个项目当中获取有很好的创业idea，也可能激发你创业的idea，谁知道呢？</p>
 
