@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-27T16:26:43+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>An amazing website.</subtitle><author><name>Ryan</name></author><entry><title type="html">快速处理csv</title><link href="/ruby/csv-gem/" rel="alternate" type="text/html" title="快速处理csv" /><published>2022-01-27T00:00:00+08:00</published><updated>2022-01-27T00:00:00+08:00</updated><id>/ruby/csv-gem</id><content type="html" xml:base="/ruby/csv-gem/"><![CDATA[<p>今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，<a href="https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html">链接附上处理csv的代码</a>，但是如果出来的行数足够大，那也是挺恐怖。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-27T20:21:15+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>An amazing website.</subtitle><author><name>Ryan</name></author><entry><title type="html">快速处理csv</title><link href="/ruby/csv-gem/" rel="alternate" type="text/html" title="快速处理csv" /><published>2022-01-27T00:00:00+08:00</published><updated>2022-01-27T00:00:00+08:00</updated><id>/ruby/csv-gem</id><content type="html" xml:base="/ruby/csv-gem/"><![CDATA[<p>今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，<a href="https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html">链接附上处理csv的代码</a>，但是如果出来的行数足够大，那也是挺恐怖。</p>
 
 <p>图1</p>
 
@@ -27,4 +27,136 @@
 
 <h3 id="写在后面">写在后面</h3>
 
-<p>其实若干年前，我就碰到一个以电子表格为基础的应用，一下子想不起来了。国内团队开发的。我们大多数做web开发的，以CRUD为核心，如果可以灵活改造电子表格，是可以解决大部分业务管理系统的需求的。无非就是灵活自定义数据类型，各种查询条件自定义，灵活创建自定义表单。使用户随心所欲的录入数据，然后在随心所欲查询，图形化展示，导出下载等</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>其实若干年前，我就碰到一个以电子表格为基础的应用，一下子想不起来了。国内团队开发的。我们大多数做web开发的，以CRUD为核心，如果可以灵活改造电子表格，是可以解决大部分业务管理系统的需求的。无非就是灵活自定义数据类型，各种查询条件自定义，灵活创建自定义表单。使用户随心所欲的录入数据，然后在随心所欲查询，图形化展示，导出下载等</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">如何在Rails 项目里面加入图表</title><link href="/ruby%20on%20rails/how-to-add-chart-to-rails/" rel="alternate" type="text/html" title="如何在Rails 项目里面加入图表" /><published>2021-04-14T00:00:00+08:00</published><updated>2021-04-14T00:00:00+08:00</updated><id>/ruby%20on%20rails/how-to-add-chart-to-rails</id><content type="html" xml:base="/ruby%20on%20rails/how-to-add-chart-to-rails/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210414120844548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>在这篇文章里面，我们用到<a href="https://www.chartjs.org/">Chart.js</a>，这是一个图表的js库。整个集成过程比较简单，运用到实际的项目需要自己考虑项目的情况，这里只做一个简单展示。</p>
+
+<h3 id="第一步">第一步</h3>
+
+<p>我们直接引用cdn。打开的application.html.erb，加入这段代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.css"&gt;
+&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.js"&gt;&lt;/script&gt;
+</code></pre></div></div>
+
+<h3 id="第二步">第二步</h3>
+<p>然后新建一个页面，创建一个canvas</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;canvas id="myChart" width="960" height="200"&gt;&lt;/canvas&gt;
+</code></pre></div></div>
+
+<h3 id="第三步">第三步</h3>
+
+<p>加入图表相关代码，直接在页面上写也是可以的。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+  type: 'bar',
+  data: {
+    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+    datasets: [{
+      label: '# of Votes',
+      data: [12, 19, 3, 5, 2, 3],
+      backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
+      borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
+      borderWidth: 1
+    }]
+  },
+  options: {
+    scales: {
+      yAxes: [{
+        ticks: {
+          beginAtZero: true
+        }
+      }]
+    }
+  }
+});
+&lt;/script&gt;
+</code></pre></div></div>
+
+<p>大概是这个效果。
+<img src="https://img-blog.csdnimg.cn/2021041412091577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>同样的，柱形图也可以更换为 线型，参考代码如下</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
+var ctx = document.getElementById('myChart');
+var myChart = new Chart(ctx, {
+ type: 'line',
+ data: {
+  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
+  datasets: [{
+   label: '# of Votes',
+   data: [12, 19, 3, 5, 2, 12],
+   fill:false,
+   borderColor:"#308af3",
+   pointBackgroundColor: "#308af3",
+   pointBorderWidth: 2,
+   pointHoverBackgroundColor: "#fff",
+   pointHoverBorderWidth: 2,
+   lineTension:0.05
+  }, {
+   label: '# of Votes',
+   data: [19, 12, 6, 15, 7, 9],
+   fill:false,
+   borderColor:"#48ba16",
+   pointBackgroundColor: "#48ba16",
+   pointBorderWidth: 2,
+   pointHoverBackgroundColor: "#fff",
+   pointHoverBorderWidth: 2,
+   lineTension:0.05
+  }]
+ },
+ options: {
+  legend: { display: false },
+  scales: {
+   xAxes: [{
+    gridLines: { display:false },
+   }],
+   yAxes: [{
+    gridLines: {
+     color: "rgba(0, 0, 0, .05)",
+    }
+   }]
+  },
+ }
+});
+&lt;/script&gt;
+</code></pre></div></div>
+
+<p>长这样
+<img src="https://img-blog.csdnimg.cn/20210414122206589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<h3 id="写在后面">写在后面</h3>
+
+<p>以上是一个比较简单的demo，可以当作参考。如果嫌麻烦，也可以参考这个<a href="https://github.com/coderbydesign/chart-js-rails">chart-js-rails</a>gem。但是使用还是要参考回Chart.js。</p>
+
+<p><a href="https://download.csdn.net/download/weixin_42577411/16670706">示例源码下载</a></p>]]></content><author><name>Ryan</name></author><category term="ruby on rails" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">1年12个项目</title><link href="/sideproject/1year-12-projects/" rel="alternate" type="text/html" title="1年12个项目" /><published>2021-01-24T00:00:00+08:00</published><updated>2021-01-24T00:00:00+08:00</updated><id>/sideproject/1year-12-projects</id><content type="html" xml:base="/sideproject/1year-12-projects/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124163648393.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>今天来聊下数字游民狂人Pieter Levels， 我更喜欢称他是项目狂人，因为他1年创建了12个项目，没有很强的行动力，恐怕连半数项目都做不来。12个项目当中获取有很好的创业idea，也可能激发你创业的idea，谁知道呢？</p>
+
+<h3 id="play-my-inbox">Play My Inbox</h3>
+<p>Levels和他朋友有个习惯，他们对于喜爱的歌曲，他们会将歌曲链接放入邮件发给对方。基于这个习惯，他开发了这个产品，将收件箱的喜爱歌曲获取出来然后循环播放。个人非常喜欢这个idea。</p>
+
+<h3 id="go-fucking-do-it">Go Fucking Do It</h3>
+<p>每个人在可接受的压力下，是可以迫使自己达到一定的目标。这个产品就是这么来的。设置一个目标和一个实际的时间，如果到了时间节点你没法达到目标，你压在网站的钱就会没收了。。。</p>
+
+<h3 id="tubelytics">Tubelytics</h3>
+<p>这个产品是一个服务自媒体的数据分析平台。实时监控并查看视频平台各频道的情况。但2015年时候这个产品就停止了。</p>
+
+<h3 id="nomadlist">NomadList</h3>
+<p>大名鼎鼎的NomadList,方便用户能够了解世界上哪个城市能够更好的生活和远程工作。主要参数有生活成本，天气（这个太重要了），网速</p>
+
+<h3 id="nomadjobs">NomadJobs</h3>
+<p>只为创业公司提供的职位发布平台，并且完全按照Levels的作风，只能是远程工作。</p>
+
+<h3 id="gifbook">GifBook</h3>
+<p>上传你喜欢的Gif图，然后将图片变成动画书，类似小时候一个动作需要画很多张图，然后快速的翻这些图，这个动作就活动起来了。有时候老外的想法比较奇特。。。</p>
+
+<h3 id="nomads">Nomads</h3>
+<p>一个很酷的数字游民聊天社区。在社区里面你可以了解很多世界各地的资讯。</p>
+
+<h3 id="remoteok">Remote|OK</h3>
+<p>这个产品厉害了。主要是展示远程工作职位的，不同于传统的招聘网站，不能够发布职位，产品是采集那些远程职位然后进行展示的。</p>
+
+<p>然后，貌似没有12个项目呢，有些栏目可能烂尾了。。。从以上项目可以看出，基本上Levels一个人活出了一个团队，很有想法的全栈的工程师。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[]]></summary></entry></feed>
