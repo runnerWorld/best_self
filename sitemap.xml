@@ -1,8 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
+<loc>/sideproject/build-website-tool/</loc>
+<lastmod>2021-01-23T00:00:00+08:00</lastmod>
+</url>
+<url>
 <loc>/sideproject/1year-12-projects/</loc>
 <lastmod>2021-01-24T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/startup/languages-learn/</loc>
+<lastmod>2021-01-24T00:00:00+08:00</lastmod>
+</url>
+<url>
+<loc>/sideproject/website-design/</loc>
+<lastmod>2021-03-19T00:00:00+08:00</lastmod>
 </url>
 <url>
 <loc>/sideproject/fix-problem-bigger-than-five/</loc>
@@ -41,5 +53,8 @@
 </url>
 <url>
 <loc>/page2/</loc>
+</url>
+<url>
+<loc>/page3/</loc>
 </url>
 </urlset>

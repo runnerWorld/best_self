@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-28T11:17:47+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>An amazing website.</subtitle><author><name>Ryan</name></author><entry><title type="html">快速处理csv</title><link href="/ruby/csv-gem/" rel="alternate" type="text/html" title="快速处理csv" /><published>2022-01-27T00:00:00+08:00</published><updated>2022-01-27T00:00:00+08:00</updated><id>/ruby/csv-gem</id><content type="html" xml:base="/ruby/csv-gem/"><![CDATA[<p>今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，<a href="https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html">链接附上处理csv的代码</a>，但是如果出来的行数足够大，那也是挺恐怖。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-28T15:09:48+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>An amazing website.</subtitle><author><name>Ryan</name></author><entry><title type="html">快速处理csv</title><link href="/ruby/csv-gem/" rel="alternate" type="text/html" title="快速处理csv" /><published>2022-01-27T00:00:00+08:00</published><updated>2022-01-27T00:00:00+08:00</updated><id>/ruby/csv-gem</id><content type="html" xml:base="/ruby/csv-gem/"><![CDATA[<p>今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，<a href="https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html">链接附上处理csv的代码</a>，但是如果出来的行数足够大，那也是挺恐怖。</p>
 
 <p>图1</p>
 
@@ -257,32 +257,43 @@ var myChart = new Chart(ctx, {
 
 <h3 id="写在后面">写在后面</h3>
 
-<p>由于是个开发人员，对于市场这块还是摸索着来，所以平台还在慢慢成长。Dirk也对未来平台推广吸引用户策略，一是完善SEO，二是通过blog 让更多用户能够了解平台。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[今天分享个因为付费，所以自己做个车轮的故事。本文的标题出自今天主人公开发平台一路的心路历程。]]></summary></entry><entry><title type="html">1年12个项目</title><link href="/sideproject/1year-12-projects/" rel="alternate" type="text/html" title="1年12个项目" /><published>2021-01-24T00:00:00+08:00</published><updated>2021-01-24T00:00:00+08:00</updated><id>/sideproject/1year-12-projects</id><content type="html" xml:base="/sideproject/1year-12-projects/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124163648393.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>由于是个开发人员，对于市场这块还是摸索着来，所以平台还在慢慢成长。Dirk也对未来平台推广吸引用户策略，一是完善SEO，二是通过blog 让更多用户能够了解平台。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[今天分享个因为付费，所以自己做个车轮的故事。本文的标题出自今天主人公开发平台一路的心路历程。]]></summary></entry><entry><title type="html">做个网站设计开发工具，轻松每月4万块</title><link href="/sideproject/website-design/" rel="alternate" type="text/html" title="做个网站设计开发工具，轻松每月4万块" /><published>2021-03-19T00:00:00+08:00</published><updated>2021-03-19T00:00:00+08:00</updated><id>/sideproject/website-design</id><content type="html" xml:base="/sideproject/website-design/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210319222506861.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
-<p>今天来聊下数字游民狂人Pieter Levels， 我更喜欢称他是项目狂人，因为他1年创建了12个项目，没有很强的行动力，恐怕连半数项目都做不来。12个项目当中获取有很好的创业idea，也可能激发你创业的idea，谁知道呢？</p>
+<p><a href="https://designmodo.com/postcards/">Designmodo</a>是一个SAAS平台，能够帮助用户快速搭建网站以及设计邮件样式。平台下面主要有postcasds（设计邮件模版），slides（网站搭建工具，静态）和startup（拖拽搭建网站模版）组成。</p>
 
-<h3 id="play-my-inbox">Play My Inbox</h3>
-<p>Levels和他朋友有个习惯，他们对于喜爱的歌曲，他们会将歌曲链接放入邮件发给对方。基于这个习惯，他开发了这个产品，将收件箱的喜爱歌曲获取出来然后循环播放。个人非常喜欢这个idea。</p>
+<p>Andrian Valeanu,<a href="https://designmodo.com/postcards/">Designmodo</a>的创始人。只因对技术和互联网感兴趣，一切都是靠自学。17岁的时候开始学习SEO, 设计以及开发需要的技能。当时就开始做了第一个网站，一个简单的论坛以及在线摇滚杂志。当年我也是从论坛开始学习开发的，论坛的确是个很好入门的小App。Andrian Valeanu21岁从摩尔多瓦共和国搬去西班牙巴塞罗那, 他回忆当时，他所在摩尔多瓦共和国领的薪酬很低，一个月350美金，他当时就已经暗暗决心要辞职并且把所有时间投入到他的项目当中，很快他的项目可以让他每个月挣到350美金，他马上就辞职。在2012年到16年之间，Andrian Valeanu 主要售卖设计素材和网站模版，直到现在SAAS成为主要的商业模式。</p>
 
-<h3 id="go-fucking-do-it">Go Fucking Do It</h3>
-<p>每个人在可接受的压力下，是可以迫使自己达到一定的目标。这个产品就是这么来的。设置一个目标和一个实际的时间，如果到了时间节点你没法达到目标，你压在网站的钱就会没收了。。。</p>
+<h3 id="如果你对你的生意有信心那么就全部投入包括时间精力钱财">如果你对你的生意有信心，那么就全部投入（包括时间精力钱财）</h3>
 
-<h3 id="tubelytics">Tubelytics</h3>
-<p>这个产品是一个服务自媒体的数据分析平台。实时监控并查看视频平台各频道的情况。但2015年时候这个产品就停止了。</p>
+<p>产品打造初，Andrian Valeanu基本没有什么收入，他需要寻找合适的合伙人。他采用了收益分成的形式，以至于现在他的团队也是以这种方式进行收益分成的。产品开发初只具备基础功能，他觉得是设计把产品和其他竞品拉开距离的，</p>
 
-<h3 id="nomadlist">NomadList</h3>
-<p>大名鼎鼎的NomadList,方便用户能够了解世界上哪个城市能够更好的生活和远程工作。主要参数有生活成本，天气（这个太重要了），网速</p>
+<p>他们当时投入了非常多的精力在设计上面。由于是独立公司，意味着没有投资人，所有的收入只靠销售来获得。尽管这样，他们团队也将收入投入到产品中。还有一个就是快，他们细致分析每一个市场上面需要的功能，力求在竞争对手产品开发前完成。</p>
 
-<h3 id="nomadjobs">NomadJobs</h3>
-<p>只为创业公司提供的职位发布平台，并且完全按照Levels的作风，只能是远程工作。</p>
+<p>产品一开始用WordPress开发，后面集成WooCommerce（主要用于支付和客户信息管理）。产品前端采用 Bootstrap, jQuery, Vue, React。产品设计工具用Figma。</p>
 
-<h3 id="gifbook">GifBook</h3>
-<p>上传你喜欢的Gif图，然后将图片变成动画书，类似小时候一个动作需要画很多张图，然后快速的翻这些图，这个动作就活动起来了。有时候老外的想法比较奇特。。。</p>
+<p>目前团队主要致力于无代码搭建网站，把旗下的产品全部无代码化，从而能够让用户更加简单的使用产品。</p>
 
-<h3 id="nomads">Nomads</h3>
-<p>一个很酷的数字游民聊天社区。在社区里面你可以了解很多世界各地的资讯。</p>
+<h3 id="关于引流和盈利模式">关于引流和盈利模式</h3>
 
-<h3 id="remoteok">Remote|OK</h3>
-<p>这个产品厉害了。主要是展示远程工作职位的，不同于传统的招聘网站，不能够发布职位，产品是采集那些远程职位然后进行展示的。</p>
+<p>开始也采用了付费广告，但是效果不是很佳，Andrian Valeanu很快就放弃。实际上，团队blog能够吸引很多用户，目前已经有1000多篇博文，再者就是一些很流行的免费的素材和模版。</p>
 
-<p>然后，貌似没有12个项目呢，有些栏目可能烂尾了。。。从以上项目可以看出，基本上Levels一个人活出了一个团队，很有想法的全栈的工程师。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>目前平台主要盈利模式还是SaaS 。提供按月，按季度，按年付费。支付渠道采用PayPal 和Stripe。同时Andrian Valeanu非常推荐SaaS模式，通过这样，团队可以清楚了解产品盈利功能和数据，以便于后期更好的优化提升产品。</p>
+
+<h3 id="写在后面">写在后面</h3>
+
+<p>最后想以Andrian Valeanu给广大创业者的建议做结尾，有想法，要去尝试，不要害怕失败。 如果尝试去做，就不会失败。 如果根本不尝试，那么就是失败。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">有没有想过，诗和远方的同时也可以同时学语言</title><link href="/startup/languages-learn/" rel="alternate" type="text/html" title="有没有想过，诗和远方的同时也可以同时学语言" /><published>2021-01-24T00:00:00+08:00</published><updated>2021-01-24T00:00:00+08:00</updated><id>/startup/languages-learn</id><content type="html" xml:base="/startup/languages-learn/"><![CDATA[<p>今天要分享的是关于语言学习的产品，创始人不是一个技术开发者，是一个很漂亮的妹子,叫Marina，俄国的妹子，现在在美国湾区创业。妹子本身有过几种语言学习的经历，所以在外语学习这件事情上具备很多经验。</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20210124162759940.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p><a href="https://linguatrip.com/en">Linguatrip</a> 一个短期全浸式语言学习平台。通过网站，我们可以选择学习的语言，选择旅游的国家，选择旅游周数（至少两周）。我们在旅游的同时就不是单纯的旅游了，同时还可以学习一门语言。</p>
+
+<p>平台现在大概有2500个语言课程，全世界大多数国家基本都可以预约，并且比直接预约语言学校的课程价格还要低，可以与当地人一起生活（可以选择住民宿）。</p>
+
+<p>由于妹子是俄罗斯人，查看了下数据，挺多访问ip是俄罗斯的。</p>
+
+<p><img src="https://img-blog.csdnimg.cn/202101241629583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>估计在俄罗斯做的推广。妹子同时在油管上开专栏，经常教授英语学习内容。如10个英语常用俚语，如何流利使用英语之类的，订阅还是挺高的。</p>
+
+<h4 id="发散思考">发散思考</h4>
+<p>其实很多外国人都对中国很感兴趣，并且中国文化，中国语言的学习一直都很热门，可以模仿这个网站，与全国的教授中文学校和民宿合作，这个市场还是挺大的。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[今天要分享的是关于语言学习的产品，创始人不是一个技术开发者，是一个很漂亮的妹子,叫Marina，俄国的妹子，现在在美国湾区创业。妹子本身有过几种语言学习的经历，所以在外语学习这件事情上具备很多经验。]]></summary></entry></feed>
