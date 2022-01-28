@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-28T15:35:21+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>An amazing website.</subtitle><author><name>Ryan</name></author><entry><title type="html">快速处理csv</title><link href="/ruby/csv-gem/" rel="alternate" type="text/html" title="快速处理csv" /><published>2022-01-27T00:00:00+08:00</published><updated>2022-01-27T00:00:00+08:00</updated><id>/ruby/csv-gem</id><content type="html" xml:base="/ruby/csv-gem/"><![CDATA[<p>今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，<a href="https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html">链接附上处理csv的代码</a>，但是如果出来的行数足够大，那也是挺恐怖。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-28T16:15:19+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>Share with my blogs</subtitle><author><name>Ryan</name></author><entry><title type="html">快速处理csv</title><link href="/ruby/csv-gem/" rel="alternate" type="text/html" title="快速处理csv" /><published>2022-01-27T00:00:00+08:00</published><updated>2022-01-27T00:00:00+08:00</updated><id>/ruby/csv-gem</id><content type="html" xml:base="/ruby/csv-gem/"><![CDATA[<p>今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，<a href="https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html">链接附上处理csv的代码</a>，但是如果出来的行数足够大，那也是挺恐怖。</p>
 
 <p>图1</p>
 
@@ -11,289 +11,275 @@
 <p><img src="https://miro.medium.com/max/962/1*1rjo1rJc8IdXywJISSytsg.png" alt="" /></p>
 
 <h3 id="总结">总结</h3>
-<p>关于SmarterCSV还没得细看，看起来不错，做个记录。联想起之前项目也有生成csv过程，但是直接扔进数据库比较多，而且还是可以迭代处理，感觉不需要单个列 写出来。</p>]]></content><author><name>Ryan</name></author><category term="Ruby" /><summary type="html"><![CDATA[今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，链接附上处理csv的代码，但是如果出来的行数足够大，那也是挺恐怖。]]></summary></entry><entry><title type="html">从500强企业中辞职出来创业</title><link href="/startup/quit-from-500/" rel="alternate" type="text/html" title="从500强企业中辞职出来创业" /><published>2022-01-24T00:00:00+08:00</published><updated>2022-01-24T00:00:00+08:00</updated><id>/startup/quit-from-500</id><content type="html" xml:base="/startup/quit-from-500/"><![CDATA[<p><img src="https://www.espressowithoutmilk.com/uploads/photo/image/9/Screenshot_2021-01-31_at_10.13.27_AM.png" alt="" /></p>
+<p>关于SmarterCSV还没得细看，看起来不错，做个记录。联想起之前项目也有生成csv过程，但是直接扔进数据库比较多，而且还是可以迭代处理，感觉不需要单个列 写出来。</p>]]></content><author><name>Ryan</name></author><category term="Ruby" /><summary type="html"><![CDATA[今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，链接附上处理csv的代码，但是如果出来的行数足够大，那也是挺恐怖。]]></summary></entry><entry><title type="html">翘起1000万美元的高校业务</title><link href="/startup/high-school/" rel="alternate" type="text/html" title="翘起1000万美元的高校业务" /><published>2021-12-26T00:00:00+08:00</published><updated>2021-12-26T00:00:00+08:00</updated><id>/startup/high-school</id><content type="html" xml:base="/startup/high-school/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210125210951735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
-<p>今天的主人公 Rachit Khator，<a href="https://stackby.com/">Stackby.com</a>的创始人。前500强企业员工，高薪福利好，在职时候就经常使用电子表格管理工作流程，但是也遇到很多麻烦，所以他也在寻求CRM或者项目管理软件去处理他碰到的问题，但是都不尽如人意。他通过他的渠道做了个小调研，收集大家碰到的情况。便毅然的在2018年美国500强公司辞职了，并且去到印度开公司。</p>
+<p>今天分享的案例让我想起以前做的一个项目，帮一所高校图书馆做一个论文查重查引系统，当时做的时候对这方面业务不算了解，调研的业务怎么做就简单的规划了。依稀记得当时查重查引业务按条数收费，每条1，2块钱。然后将所需要的论文信息提交给图书馆，馆内的工作人员就根据提交的信息进行查询，得到结果后，根据引用处收钱。用户就进行支付即可。实在没想到美国的这家公司把论文查引业务和论文格式业务做到了极致，一个1000万美元的生意。</p>
 
-<p>当时回到印度碰到的第一个问题就是人手，Rachit Khator所在的城市，是以纺织品和钻著称的，所以要搭建一支技术团队还是比较慢的，就这样不断招人和完善产品，历经两年，产品问世。其中的反差就是之前领的6位数工资以及舒适的岗位，到两年0收入。后来Rachit  说其实还是想拥有自己产品的执念支撑。</p>
+<p>这期介绍的项目是<a href="https://easybib.com/">EasyBib.com</a>,这是一个帮助用户写论文时候查引和论文格式的网站。创始人Neal Taparia 和 Darshan读高中时候就已经开始编写网站了，高中时期他们做了个徽章和HTML教程的网站。当时他们正在为论文头疼，他们需要设置繁琐的格式。正是这个契机，本身他们也是用户，他们很清楚这个产品需要解决的问题。经过两个月的努力，他们的第一版本上线了。他们花了50美金租了主机。真正发生转机的时候在2001年2月，他们在他们知道的地方进行网站宣传，甚至于他们在互联网找到老师的邮箱，他们给老师写邮件介绍他们的网站，后面流量猛增。</p>
 
-<p>产品的盈利模式很简单，也是目前流行的。有三种收费套餐，免费套餐，标准套餐以及定制套餐。目前在1年的情况下已经累积了4千用户。现在每月盈利在5万美金。</p>
+<p>有了用户后服务需要跟上，有些用户要求他们提供APA格式，他们把这一功能做成付费形式。当然在那个年代还没有SAAS,对于SAAS的一些差异化付费也没有相关方面的研究。他们发现一次付费终身使用的服务比较适合用户。但是对于最大化收入原则并不是最好。他们总结，网站所有的改动是否有成效是需要经过用户检验的，不是当下的决定是对或错，将来有数据证明。对于300美金一次性支付就是很好的例子。07年的时候，网站已经有百万流量了。他们的一个朋友提议可以推出广告服务。后来他们的广告CPM(每千次展示率)超过同业。2016年的时候，EasyBib核心业务超过100万美元，并且没有融资。Neal Taparia 和 Darshan决定将业务卖出给Chegg公司，当时他们仍在Chegg公司，后来他们离开了Chegg公司，开始了下一轮新的创业。</p>
 
-<h3 id="关于-stackbycom">关于 Stackby.com</h3>
+<h3 id="复盘">复盘：</h3>
+<p>1 - 首先有个idea，并能够从最终用户角度考虑功能；</p>
 
-<p>Stackby.com 轻松的把电子表格打造成了一个数据库，使用人可以不需要懂任何数据库的技术（包括数据类型，索引一大堆数据库专有名词），不需要懂代码，轻松的就可以把自己的业务放到上面进行管理。也可以轻松去整合市面上的api，如脸书，油管，g家等，去读取上面的数据。项目管理，视频创作，市场营销这类场景统统试用。</p>
+<p>2 - 其次起步要快，快速搭建第一版本；</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">把贺卡生意做上互联网</title><link href="/startup/holiday-card/" rel="alternate" type="text/html" title="把贺卡生意做上互联网" /><published>2021-12-10T00:00:00+08:00</published><updated>2021-12-10T00:00:00+08:00</updated><id>/startup/holiday-card</id><content type="html" xml:base="/startup/holiday-card/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210126234714598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
-<p>Stackby.com 主要采用React作为前端，Node.js作为后端。整个js技术栈。</p>
+<h3 id="应用场景">应用场景</h3>
 
-<h3 id="写在后面">写在后面</h3>
+<p>小秋要离开公司了，公司同事想给小秋开个告别派对，但是疫情期间，大家都在家里工作。大张在<a href="https://thankbox.co">Thankbox</a> 设定了一些基础信息，例如接收人，贺卡主题等。同事们就在Thankbox 里面给小秋写贺卡，贺卡内容可以包括文字，图片，视频，甚至是红包，大家写好后就直接email给小秋。小秋收到后很感动。这就是Thankbox 的由来。</p>
 
-<p>其实若干年前，我就碰到一个以电子表格为基础的应用，一下子想不起来了。国内团队开发的。我们大多数做web开发的，以CRUD为核心，如果可以灵活改造电子表格，是可以解决大部分业务管理系统的需求的。无非就是灵活自定义数据类型，各种查询条件自定义，灵活创建自定义表单。使用户随心所欲的录入数据，然后在随心所欲查询，图形化展示，导出下载等</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Postgresql非本地连接设置</title><link href="/postgresql/postgresql-connection/" rel="alternate" type="text/html" title="Postgresql非本地连接设置" /><published>2021-05-25T00:00:00+08:00</published><updated>2021-05-25T00:00:00+08:00</updated><id>/postgresql/postgresql-connection</id><content type="html" xml:base="/postgresql/postgresql-connection/"><![CDATA[<p>机器在Ubuntu；</p>
+<h3 id="thankbox-故事线">Thankbox 故事线</h3>
 
-<h3 id="step1-postgresqlconf">Step1 postgresql.conf</h3>
+<p>创始人Valentin, 大学毕业后从事手机游戏开发。此前没有任何web开发经验，从2020年开始学习web开发。受英国的办公室文化启发，当同事要周年庆祝或者离开公司，同事们凑份子钱，但是大家都不习惯用现金，都纷纷去atm提款。在2020年3月，大家在家办公，他觉得时机到了，可以推出一个在线贺卡之类的产品，简单做了调研就投入了。</p>
 
-<p>postgresql.conf存放位置在/etc/postgresql/x/main下，这里的是PostgreSQL的版本号，编辑或添加下面一行，使PostgreSQL可以接受来自任意IP的连接请求。</p>
+<p>最初，他和妻子讨论以怎样的形式进行开始，因为他没有太多的web开发经验，所以决定雇佣开发人员快速把产品雏形做出来，但是也受预算的限制，最终找了个很好的小伙伴，以股份的形式兑现第一版本的开发费用。所以前期的投入就是设计上的支出，大概花了1000美金。很快第一版本出来了，差不多两个月，在2020年5月这样子。我的想法就是当你有一个很好的想法，只是成功一半，要动手做，重要的是，还要快，把你的想法落地。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listen_addresses = '*'
+<p>产品建成起初，他就在他的朋友圈里推广，产品卖的不怎样，大学的一个校友，公司正好有人离职，就用上。反响很好激励了Valentin，产品开发后的第一个月卖了6单。根据客户的反馈陆续完善了bug和一些功能。以及花钱做了使用视频和投入一些社交产品的广告，例如咱们朋友圈的广告。</p>
+
+<p>目前Thankbox一个月收入有3200刀。Thankbox 按每个5.99刀收费。未来可能会推出企业定制的套餐。</p>
+
+<h3 id="技术栈">技术栈</h3>
+
+<p>服务器采用托管，1cpu，1g ram， 25g硬盘，一个月5刀；</p>
+
+<p>图片存储采用图片云存储服务，当然为了保证图片浏览快速，必须的；</p>
+
+<p>产品框架采用 Laravel + Vue， php的框架，我不是很熟悉，有空我开个blog，详细讲下我了解的rails 技术栈哈；</p>
+
+<p>部署和服务管理采用  Laravel Forge</p>
+
+<p>管理员仪表盘用 Laravel Nova</p>
+
+<p>邮件应用 Mailgun</p>
+
+<p>支付采用 Stripe</p>
+
+<p>网站分析 Fathom</p>
+
+<p>错误报告和服务监控用 Honeybadger</p>
+
+<p>日志采用  Papertrail</p>
+
+<h3 id="最后">最后</h3>
+
+<p>疫情当下，身边很多场景往往都有痛点，解决痛点就是一个商机。正如写在本文，车厘子检出病毒阳性，车厘子市场商家肯定受到冲击，那么如何解决他们的困局，聪明如你，挖掘一个致富的机会。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">由护工跨行业投身到互联网行业</title><link href="/startup/nursing-to-internet/" rel="alternate" type="text/html" title="由护工跨行业投身到互联网行业" /><published>2021-11-21T00:00:00+08:00</published><updated>2021-11-21T00:00:00+08:00</updated><id>/startup/nursing-to-internet</id><content type="html" xml:base="/startup/nursing-to-internet/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210125211241439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>电商时代，透过商品的描述，我们能够判断商品是否满足我们的需求就是依赖商品评论了。 柯蒂斯Curtis Boyd） 还是护工的时候，依赖帮助一个美容医师移除负面虚假的评论，成功的付清了助学贷款以及日后创立的Objection Co这个帮助商家移除虚假评论的在线平台。</p>
+
+<p>时间回到六年前，柯蒂斯实习那一年，当时他还没有付清30,000美元的学习贷款，还在急诊室实习。一天一个美容医生走进急诊室，当时这位美容医师心情差到极点，因为一些负面的评论让他失去了客户咨询的生意。柯蒂斯问清楚了情况，就说可能能够帮助他移除负面的评论。美容医师开玩笑说，好啊，如果你可以做到，那么他就可以帮他还清助学贷款。隔天柯蒂斯再次打电话给美容医师，确认对方不是开玩笑。医师说不是开玩笑，负面评论出现的一周他已经失去了7，8个新的客户了。说干就干，柯蒂斯花了三天研究评论模式并与评论平台的管理员沟通，管理员就是不同意移除评论。在那这个周末柯蒂斯买了机票直接飞去了在线评论平台的总部洛杉矶，看是否能够直接沟通。还好有位高管接待了他并告诉了他评论的细则。有了这些建议柯蒂斯飞回了家并有开始尝试。最终又花了2天成功的把负面评论移除。美容医师也信守承诺付清了助学贷款。这个事情的契机下，使柯蒂斯意识到解决一个问题能够帮助到许多人。美容医师也是当地医疗机构的权威，也给柯蒂斯介绍了500多个客户。</p>
+
+<p>当时的柯蒂斯觉得只要有电脑就能够完成他的工作，所以他由零开始学习编程，并且也尝试着与许多人沟通自己的想法，也开始着手建立自己的平台。他首先在upwork 上找了一个印度的开发团队，但是这个团队经常没有能够按照时间点完成任务，并且费用也越来越多，迫不得已，他结束了和印度团队的合作。第二次他找了个乌克兰团队，这个团队很棒，印度团队做一年的工作量这个团队三个月就完成了。</p>
+
+<p>起初平台建起来，和大家想的一样，都想象有很多用户一下子涌进来。当然，这只是想象。柯蒂斯从ClearBanc获得了投资，通过资金，他们把精力放在一个专门收集各行业负面评论的工具上。然后他们使用他们的产品去识别虚假的负面的评论。如果有虚假评论他们就会给商家致电并且发送明信片。每天他们会从各行业40000条评论中进行筛查，并且有个专门的3人小组，一周需要给2500家商户致电。在这个方法下，第一个月收入有2000美金，第二个月到了10000美金。</p>
+
+<p>互联网的今天，有想法有行动力是可以开创一片蓝海的。笔者觉得只要找到一个能够帮助到别人的想法，并变现；然后寻找市场检验你的产品能力；保持信心，由零开始跨入互联网行业是可行的。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">安装Rails开发环境 MacOS 篇</title><link href="/ruby%20on%20rails/macos/rails-enviroment/" rel="alternate" type="text/html" title="安装Rails开发环境 MacOS 篇" /><published>2021-10-10T00:00:00+08:00</published><updated>2021-10-10T00:00:00+08:00</updated><id>/ruby%20on%20rails/macos/rails-enviroment</id><content type="html" xml:base="/ruby%20on%20rails/macos/rails-enviroment/"><![CDATA[<p>需时大概30分钟</p>
+
+<p>我们将在MacOS 10.15 Catalina安装 Ruby On Rails 环境。 10.15以前的系统版本也同样适用，可能会有些小问题，但是可以上网搜索解决或者给我留言。</p>
+
+<h3 id="配置终端">配置终端</h3>
+<p>使用ZSH作为你的终端，我们用</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/.zshrc
 </code></pre></div></div>
-<h3 id="step2-pg_hbaconf">Step2 pg_hba.conf</h3>
+<p>替代</p>
 
-<p>pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地址连接PostgreSQL，但是这在pg中还不够，我们还需在pg_hba.conf中配置服务端允许的认证方式。nano. 打开该文件，编辑或添加下面一行。</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>host  all  all 0.0.0.0/0 md5
-</code></pre></div></div>
-
-<p>默认pg只允许本机通过密码认证登录，修改为上面内容后即可以对任意IP访问进行密码验证。对照上面的注释可以很容易搞明白每列的含义，具体的支持项可以查阅文末参考引用。</p>
-
-<p>完成上两项配置后执行</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service postgresql restart
-</code></pre></div></div>
-<p>重启PostgreSQL服务后,允许外网访问的配置就算生效了。</p>
-
-<p>如果是云服务器，检查一下是否屏蔽5432这个port</p>]]></content><author><name>Ryan</name></author><category term="postgresql" /><summary type="html"><![CDATA[机器在Ubuntu；]]></summary></entry><entry><title type="html">如何在Rails 项目里面加入图表</title><link href="/ruby%20on%20rails/how-to-add-chart-to-rails/" rel="alternate" type="text/html" title="如何在Rails 项目里面加入图表" /><published>2021-04-14T00:00:00+08:00</published><updated>2021-04-14T00:00:00+08:00</updated><id>/ruby%20on%20rails/how-to-add-chart-to-rails</id><content type="html" xml:base="/ruby%20on%20rails/how-to-add-chart-to-rails/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210414120844548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<p>在这篇文章里面，我们用到<a href="https://www.chartjs.org/">Chart.js</a>，这是一个图表的js库。整个集成过程比较简单，运用到实际的项目需要自己考虑项目的情况，这里只做一个简单展示。</p>
-
-<h3 id="第一步">第一步</h3>
-
-<p>我们直接引用cdn。打开的application.html.erb，加入这段代码</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.css"&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.js"&gt;&lt;/script&gt;
-</code></pre></div></div>
-
-<h3 id="第二步">第二步</h3>
-<p>然后新建一个页面，创建一个canvas</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;canvas id="myChart" width="960" height="200"&gt;&lt;/canvas&gt;
-</code></pre></div></div>
-
-<h3 id="第三步">第三步</h3>
-
-<p>加入图表相关代码，直接在页面上写也是可以的。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-      borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-    }
-  }
-});
-&lt;/script&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/.bash_profile
 </code></pre></div></div>
 
-<p>大概是这个效果。
-<img src="https://img-blog.csdnimg.cn/2021041412091577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>你也可以手动启动。</p>
 
-<p>同样的，柱形图也可以更换为 线型，参考代码如下</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
- type: 'line',
- data: {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-  datasets: [{
-   label: '# of Votes',
-   data: [12, 19, 3, 5, 2, 12],
-   fill:false,
-   borderColor:"#308af3",
-   pointBackgroundColor: "#308af3",
-   pointBorderWidth: 2,
-   pointHoverBackgroundColor: "#fff",
-   pointHoverBorderWidth: 2,
-   lineTension:0.05
-  }, {
-   label: '# of Votes',
-   data: [19, 12, 6, 15, 7, 9],
-   fill:false,
-   borderColor:"#48ba16",
-   pointBackgroundColor: "#48ba16",
-   pointBorderWidth: 2,
-   pointHoverBackgroundColor: "#fff",
-   pointHoverBorderWidth: 2,
-   lineTension:0.05
-  }]
- },
- options: {
-  legend: { display: false },
-  scales: {
-   xAxes: [{
-    gridLines: { display:false },
-   }],
-   yAxes: [{
-    gridLines: {
-     color: "rgba(0, 0, 0, .05)",
-    }
-   }]
-  },
- }
-});
-&lt;/script&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chsh -s /bin/zsh
 </code></pre></div></div>
 
-<p>长这样
-<img src="https://img-blog.csdnimg.cn/20210414122206589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<h3 id="安装homebrew">安装Homebrew</h3>
+<p>首先我们需要安装 Homebrew. Homebrew是 MacOS的一个安装包管理工具。它使用非常简单。启动的时候如果出现提示安装 XCode CommandLine Tools， 点击’同意’按钮就可以了。</p>
 
-<h3 id="写在后面">写在后面</h3>
+<p>打开终端。运行</p>
 
-<p>以上是一个比较简单的demo，可以当作参考。如果嫌麻烦，也可以参考这个<a href="https://github.com/coderbydesign/chart-js-rails">chart-js-rails</a>gem。但是使用还是要参考回Chart.js。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
+</code></pre></div></div>
 
-<p><a href="https://download.csdn.net/download/weixin_42577411/16670706">示例源码下载</a></p>]]></content><author><name>Ryan</name></author><category term="ruby on rails" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">一个月入1.7万的退休项目</title><link href="/sideproject/startup/17k/" rel="alternate" type="text/html" title="一个月入1.7万的退休项目" /><published>2021-04-13T00:00:00+08:00</published><updated>2021-04-13T00:00:00+08:00</updated><id>/sideproject/startup/17k</id><content type="html" xml:base="/sideproject/startup/17k/"><![CDATA[<h3 id="简介">简介</h3>
-<p>今天要分享的主人是Michael, 他从2015年开始做<a href="https://www.quotaguard.com">QuotaGurad</a>， 这是是一个静态ip和动态ip代理产品。Michael住在美国内华达州的拉斯维加斯。但是他去过很多地方，包括中国，波兰，香港和1/4个美国。有20年的软件开发和安全经验。曾在2014年尝试退休。但感觉无聊和担心技术落伍就重抄旧业；</p>
+<h2 id="安装ruby">安装Ruby</h2>
+<p>推荐 Ruby 版本2.7.0.</p>
 
-<p><img src="https://img-blog.csdnimg.cn/2021041321574781.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>Homebrew安装完成后，我们就可以安装Ruby了。我们采用<a href="https://github.com/sstephenson/rbenv">rbenv</a>管理和安装Ruby在终端运行</p>
 
-<p><a href="https://www.quotaguard.com">QuotaGurad</a>主要是基于云服务的应用提供服务，从15年开始，目前业务发展到2000多个客户。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install rbenv ruby-build
+</code></pre></div></div>
 
-<p>构建产品缘起一个同行，产品开发到一半，但是不想继续开发下去，由新的想法，Michal了解想法后就接手了。在这一过程当中令他印象最深的就是因为不是由0开始，而是在现有一套代码上继续开发，这套代码又有用户在使用，所以即使后期有新的解决方案要重构代码，也要分两部分进行，保持现有代码用户不受影响的情况下构建新的解决方案，维护成本倍增。</p>
+<p>把rbenv加入到终端配置中</p>
 
-<h3 id="关于产品的技术架构">关于产品的技术架构</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo 'if which rbenv &gt; /dev/null; then eval "$(rbenv init -)"; fi' &gt;&gt; ~/.zshrc
+source ~/.zshrc
 
-<p><a href="https://www.quotaguard.com">QuotaGurad</a>使用主要使用go语言来编写，因为Michael觉得go比较快以及方便部署；Ruby用来做后台管理以及外部应用集成；集成Stripe来实现支付；</p>
+### 开始安装Ruby
+rbenv install 2.7.0
+rbenv global 2.7.0
+ruby -v
+</code></pre></div></div>
+<h3 id="配置git">配置Git</h3>
+<p>我们使用Git作为我们的开发版本管理工具，下面的教程也需要用到。所以我们需要有个Github账户，如果没有可以点击<a href="https://github.com/">注册</a>。</p>
 
-<h3 id="关于运营以及商业模式">关于运营以及商业模式</h3>
-<p>Mihael主要在</p>
+<p>把下面代码复制到终端运行，把example改成自己的邮箱和用户名。</p>
 
-<ul>
-  <li>StackOverflow / Quora等在线平台上进行答疑并介绍QuotaGurad，以此来引流；</li>
-  <li>Google Adwords投放广告</li>
-  <li>Landingpage, 是广告转化的客户能够更加容易了解产品</li>
-  <li>Microsoft Azure  和 IBM Cloud，投放相关云服务平台</li>
-  <li>门户网站影响，用户可以在上面了解价格，解答</li>
-</ul>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global color.ui true 
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR@EMAIL.com"
+ssh-keygen -t rsa -C "YOUR@EMAIL.com"
+</code></pre></div></div>
+<p>把生成的SSH Key 加入到Github账户当中。复制黏贴到<a href="https://github.com/settings/keys">Github</a></p>
 
-<p><a href="https://www.quotaguard.com">QuotaGurad</a> 使用saas模式，按每月付费进行服务，大概有75%的用户是付费的，也推出免费的服务给用户进行体验，但有一个准则就是，免费的体验是有时效的。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat ~/.ssh/id_rsa.pub
+</code></pre></div></div>
 
-<h3 id="写在后面">写在后面</h3>
+<p>完成上面步骤后可以进行如下测试.</p>
 
-<p>其中令我印象最深的还是，第一要有积蓄，Michael花的就是自己的积蓄，没有任何众筹或者投资，这样子确保自己能够不受其他方面的影响；第二就是只实现最主要的功能，把最主要功能实现好，第二第三功能都可以放一放。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><category term="startup" /><summary type="html"><![CDATA[简介 今天要分享的主人是Michael, 他从2015年开始做QuotaGurad， 这是是一个静态ip和动态ip代理产品。Michael住在美国内华达州的拉斯维加斯。但是他去过很多地方，包括中国，波兰，香港和1/4个美国。有20年的软件开发和安全经验。曾在2014年尝试退休。但感觉无聊和担心技术落伍就重抄旧业；]]></summary></entry><entry><title type="html">从内容营销到iOS开发，月入14000美金——在产品还没投放就应该开始营销</title><link href="/sideproject/startup/content-market-ios/" rel="alternate" type="text/html" title="从内容营销到iOS开发，月入14000美金——在产品还没投放就应该开始营销" /><published>2021-04-06T00:00:00+08:00</published><updated>2021-04-06T00:00:00+08:00</updated><id>/sideproject/startup/content-market-ios</id><content type="html" xml:base="/sideproject/startup/content-market-ios/"><![CDATA[<h3 id="引言">引言</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+</code></pre></div></div>
+<p>得到下面的信息提示表示成功</p>
 
-<p>周末清明需要回老家，所以耽搁了，抱歉。今天分享的故事是关于个人数据App的。主人公叫Belle,之前从事市场营销，现从事iOS开发，与小伙伴Josh创业开了个公司，叫做HelloCode。目前在澳大利墨尔本。主打产品是<a href="https://exist.io">Exist</a>, 是一款集成了个人数据的App。凭借这款产品目前月入14000美金。公司还有款产品叫做<a href="https://larder.io">larder</a>。这是款类似书签的产品，也比较有趣。今天主要说下Exsit。如图。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hi excid3! You've successfully authenticated, but GitHub does not provide shell access.
+</code></pre></div></div>
 
-<p>Exis能够展示今日步数，睡眠时间以及一些应用的个人信息，通过这些信息展示将让用户更清晰了解自己每日情况，譬如获取了todo信息，那么就分析哪天事情处理效率，获取了日历信息，就知道哪天工作多等。</p>
+<h3 id="安装rails">安装Rails</h3>
+<p>推荐安装6.0.2.1版本， 运行</p>
 
-<p>目前链接的应用在产品页面都可以找得到，有apple watch, google fit, garmin, strava, github,todolist等。按月收费和按年收费。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install rails -v 6.0.2.1
+</code></pre></div></div>
 
-<p><img src="https://img-blog.csdnimg.cn/20210406001101848.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>rails 安装完成后，我们需要更新下配置，在终端运行下面命令</p>
 
-<h3 id="历程">历程</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv rehash
 
-<p>最初。Belle还在还在Buffer公司，就已经研究要开发Exist了，当成一个业余项目来开发。小伙伴 Josh 构建了MVP(最小化可实行产品)，Belle则从事老本行，营销。由于是一个业余的项目，所以进度不是很快。Josh是一个自由职业者，所以也不能够全职来做Exist。Belle和Josh 打算做一个众筹，以一个比较低的价格来让用户进行支付，以便支撑他们能够全职进行产品。虽然众筹没能够达到他们的期望值，但是这个事情让他们有了继续往下开发好这个产品的信心。</p>
+### 查看rails 版本
+rails -v
+# Rails 6.0.2.1
+</code></pre></div></div>
 
-<p>最初的最初，Exist是一个响应式的App。并不是手机原生态的App。Belle一直在自学iOS的开发。而Josh也在捣鼓Android的开发。 Josh的本行是web开发。在2014是移动App开始盛行的年代，他们也意识到必须要把产品转到原生态App，从那时候起产品就一直迭代。</p>
+<h2 id="安装数据库">安装数据库</h2>
 
-<h3 id="关于盈利">关于盈利</h3>
+<p>rails 框架比较轻便的数据库sqlite3,我们首先安装这个,终端运行</p>
 
-<p>由于是不断获取个人数据，服务器配置需要跟上，所以一开始就是付费服务。这个想法也一直是他们所努力的方向。用户可以免费使用30天，然后要么转付费要么就删用户，虽然一开始注册需要绑定信用卡等信息，但是这样也过滤的免费的用户，更精准的转化用户，也算一种zhezong</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install sqlite3
+</code></pre></div></div>
 
-<h3 id="关于推广">关于推广</h3>
+<h3 id="安装mysql">安装MySQL</h3>
+<p>如果之前有PHP开发经验，可能对MySQL比较熟悉。 终端运行:</p>
 
-<p>Belle之前在公司时候就了解某些时候公开透明一些业务是对于用户扩展很有帮助的。所以做Exist时候就公开了收入信息以及一些feature，让用户去投票以便于更好把握用户关注的功能。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install mysql
+</code></pre></div></div>
+<p>命令运行完后，可能会有一些提示，按照提示执行就可以了。</p>
 
-<p>在14，15年的时候，人们很关心个人的量化数据，正因为这个契机，App也很快收到用户的追捧。同时Belle也会写Blog，并且在相关内容的网站投稿（Lifehacker和Zapier），并且获得引流，因为也是内容网站，所以也会需要内容（正如我们今天的今日头条，知乎之类的）。刚好还有个契机，默林·曼恩（Merlin Mann）的大牛在播客中多次提到Exist，也涌入不少注册会员。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 启动MySQL 服务:
+brew services start mysql
+</code></pre></div></div>
 
-<h3 id="写在后面">写在后面</h3>
+<h3 id="安装postgresql">安装PostgreSQL</h3>
+<p>同样通过Homebrew安装:</p>
 
-<p>Exist很难实现，其实不是，很多应用会提供Api，把数据抓取然后放在手机App上展示，就是最简单Exist的原型。其实难的是在做产品前要把产品推出去验证想法，有用户买单了才体现价值。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><category term="startup" /><summary type="html"><![CDATA[引言]]></summary></entry><entry><title type="html">纸牌游戏也可以盈利</title><link href="/sideproject/startup/card-game/" rel="alternate" type="text/html" title="纸牌游戏也可以盈利" /><published>2021-03-28T00:00:00+08:00</published><updated>2021-03-28T00:00:00+08:00</updated><id>/sideproject/startup/card-game</id><content type="html" xml:base="/sideproject/startup/card-game/"><![CDATA[<p>多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install postgresql
+</code></pre></div></div>
 
-<p>Holger, 一个来自丹麦哥本哈根的设计师。设计师的功底，后转开发，并构建纸牌游戏而且盈利。最初Holger开发了游戏后，获得了每个月大概800美金的收入，最初版本是Mac单机版，通过Mac App Store下载。但去了纽约创业开办公司，很不幸，公司被竞争对手打败。通过这次创业，Holger不得不从新出发。</p>
+<p>命令运行完后，可能会有一些提示，按照提示执行就可以了。
+启动服务</p>
 
-<p>Holger一直对纸牌游戏情有独钟。重新构建了产品。<a href="https://online-solitaire.com/">Online Solitaire</a>，目前每个月的盈利在1500美金。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew services start postgresql
+</code></pre></div></div>
 
-<p><img src="https://img-blog.csdnimg.cn/20210328185034453.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>默认Postgresql 用户就是系统的root用户，可以直接登录进去。</p>
 
-<h3 id="关于更多-盈利运营以及技术">关于更多-盈利，运营以及技术</h3>
+<h3 id="最后一步">最后一步</h3>
 
-<p>开始时候，Holger通过一篇文章受到启发。这篇文章是关于如何把副业做成生意，从而获得被动收入。所以他很聪明的认识到，他不需要重新造轮子，而是做一些市场上成功的产品。最终他打算优化之前的纸牌游戏，但是创业期间，产品没有维护，随着系统平台不算升级，产品有很多bug。所以他打算做成在线的。
-在这之前，他做了一些研究。他写了个脚本抓取<a href="https://www.appannie.com/">AppAnnie</a>应用商店的App评价，得出结论要做个单人版的纸牌游戏。分析情况如下图：</p>
+<p>Mojave系统改变了一些头文件的位置，我们需要执行如下命令。</p>
 
-<p><img src="https://img-blog.csdnimg.cn/20210328185047715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+</code></pre></div></div>
 
-<p>Mac版本开发在三到四个礼拜，在线版本的开发时间也花了Holger三到四个礼拜时间，初始版本开发出来后，升级以及优化就一直有在做。</p>
+<h3 id="测试">测试</h3>
 
-<p>在线版本主要是采用React的技术栈来做的。用<a href="https://firebase.google.com/">Firebase</a>做的数据库。动画方面使用了<a href="https://greensock.com/gsap/">GSAP</a>这个库。单机版本采用<a href="https://www.todesktop.com/">ToDesktop</a> 这个转换工具来进行各个终端转换，Windows, Mac, Linux 都可以，目测网站上介绍。</p>
+<p>到目前为止，基本配置工作完成了。我们建个项目测试下。</p>
 
-<p>在线版的纸牌运营主要靠SEO检索。当用户想玩的时候就会上网去搜索，毕竟纸牌人人都知道，所以也不会像其他SaaS 产品一样会有一些介绍文章。通过火狐的<a href="https://moz.com/products/pro/on-page-optimization">页面优化工具</a>来提升检索效果，目前得到g家每天的1000多次点击。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### 建立项目
+rails new myapp
 
-<p>纸牌游戏会有人付费么？答案是否定的。没人会付费玩。所以目前收入主要是广告收入。广告收入主人公也有一些心得。开始用g家的广告，但是每天获利才是10块，后面更换Monumetric，有25块一天，目前使用Freestar，将近50块一天。如果通过广告获益，那么多尝试几个。</p>
+### 使用MySQL数据库
+rails new myapp -d mysql
 
-<h3 id="写在后面">写在后面</h3>
+### 使用Postgres数据库
+rails new myapp -d postgresql
 
-<p>我觉得Holger真的很能够认清现实，即使目前依然能够盈利，但是他说他不希望这个成为他依靠的收入来源，现在市场真的有很多竞争者，竞争很激烈。</p>
+### 安装好后，进入项目文件夹
+cd myapp
 
-<p>话说回来，只要有心，依靠数据分析，即使是很老旧的游戏也会有市场，所谓存在即有道理。关于文中Holger提到的受启发文章，找个时间我再写个分享上来。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><category term="startup" /><summary type="html"><![CDATA[多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。]]></summary></entry><entry><title type="html">解决一个小问题比尝试解决五个大问题要好得多</title><link href="/sideproject/fix-problem-bigger-than-five/" rel="alternate" type="text/html" title="解决一个小问题比尝试解决五个大问题要好得多" /><published>2021-03-21T00:00:00+08:00</published><updated>2021-03-21T00:00:00+08:00</updated><id>/sideproject/fix-problem-bigger-than-five</id><content type="html" xml:base="/sideproject/fix-problem-bigger-than-five/"><![CDATA[<p>今天分享个因为付费，所以自己做个车轮的故事。本文的标题出自今天主人公开发平台一路的心路历程。</p>
+###  创建数据库
+rake db:create
 
-<p>Dirk 是个在阿姆斯特丹的软件工程师。他在做自己的一个项目时候，发现有个视频截屏API需要付费，一琢磨，就自己做了个，并且挂到网站，以SaaS的模式开始了盈利。</p>
+### 启动
+rails server
+</code></pre></div></div>
 
-<h3 id="平台介绍">平台介绍</h3>
+<p>打开浏览器访问 http://localhost:3000, 成功的话应该可以看到
+Yay! You’re on Rails!</p>]]></content><author><name>Ryan</name></author><category term="ruby on rails" /><category term="MacOS" /><summary type="html"><![CDATA[需时大概30分钟]]></summary></entry><entry><title type="html">找不到好的创业点子，试试EXCEL</title><link href="/sideproject/excel-side-project/" rel="alternate" type="text/html" title="找不到好的创业点子，试试EXCEL" /><published>2021-10-05T00:00:00+08:00</published><updated>2021-10-05T00:00:00+08:00</updated><id>/sideproject/excel-side-project</id><content type="html" xml:base="/sideproject/excel-side-project/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124170557466.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
-<p>一切要从开始做个兴趣网站说起，Dirk 决定做一个关于新闻文章目录的网站，在首页的时候，他想展示一个文章索引的截屏图片，这样子需要一个自动截屏的功能。然后他就决定搜索一下相关功能API。好不容易找到一个挺满意的，但是需要35块钱一个月，因为是兴趣项目，所以也没法接受付费。琢磨了下干脆自己开发一个。</p>
+<p>很多时候，开发人员空有一身好本事，但是就是想不到一个好的创业点子。如图可以试试EXCEL。上周有个朋友跟我说了一个需求，单位里有个软件会临时分配清单客户，需要及时记录，过了一定的期限这些客户信息就不显示了。而开发客户不是一朝一夕能够谈成的，更多的他们都记录在笔记本里面，但是对日后的查询又会不方便。所以拜托我看看能不能转成电子档的。这个需求在软件开发工程师理解就是1到2个表解决的问题，而我第一时间想到了Excel，用excel把所需要的字段信息整理，然后逐个记录，也可以查询，可以存在网上，随时随地有客户端就可以查阅并且更新。</p>
 
-<p>每天1到2个小时，努力了1个多月，终于把MVP(最小化可用产品)做了出来，其中也包含一些小功能。这就是今天介绍的<a href="https://screenshotapi.net">Screenhsotapi.net</a></p>
+<p>很多SAAS初创企业面临的最大竞争者其实是EXCEL，但是存在竞争都是有好处的.百度或者谷歌搜索一波 excel template，会看到各种各样的EXCEL样式，针对每个样式的EXCEL大都可以挖掘出需求，注意了。这里的样式不是颜色的意思，是各行业。</p>
 
-<p><img src="https://img-blog.csdnimg.cn/20210321220148968.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p><img src="https://img-blog.csdnimg.cn/20210124170615971.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
-<p>平台主要用Laravel搭建，前端主要用js和vue框架，其中还用了 Selenium。</p>
+<p>举例说明，通常收入支出表是会计金融行业才关注的，而且也有相关的格式，但是自由职业者是不是也会需要？婚礼统筹是不是也会需要？房屋出租是不是也会需要？每个行业一细分就会是一个业务，再把周边业务打通，就可以做一个产品了。</p>
 
-<h3 id="关于引流和盈利模式">关于引流和盈利模式</h3>
+<p>这个不是瞎说也不是瞎想。从EXCEL表格业务细分出来的初创公司有<a href="https://www.runsandbox.com/">Sandbox</a>(早教方面的saas，方便教育人员安排活动)，<a href="https://www.sweptworks.com">swept</a>(管理家政清洁的SAAS平台),<a href="https://www.littlehotelier.com">Little Hotelier</a>（AirBnb上方便的调度平台）。</p>
 
-<p>平台目前采用g家的付费广告，每个月花费大概在100块这个样子。目前盈利平均400块。关于投入付费广告的策略可以参考我以前的文章，主要就是使用工具去查看竞争对手网站或者相关的检索关键字，根据检索关键字做付费广告。相关工具有<a href="https://ahrefs.com">Ahrefs</a> 和 <a href="https://www.similarweb.com">SimilarWeb</a></p>
+<p>留心琢磨，下个成功的SAAS产品说不定你可以从EXCEL上找出来。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">节假日查询，一个简单很暴力的idea</title><link href="/sideproject/holidays-query/" rel="alternate" type="text/html" title="节假日查询，一个简单很暴力的idea" /><published>2021-09-24T00:00:00+08:00</published><updated>2021-09-24T00:00:00+08:00</updated><id>/sideproject/holidays-query</id><content type="html" xml:base="/sideproject/holidays-query/"><![CDATA[<p>自由职业的人，或者不是朝九晚五上班的人，基本上没有放假的概念。经常会通过搜索引擎查询公众假期，除了搜索引擎自带的公众假期安排显示，这段时间搜索结果还有个叫<a href="https://publicholidays.cn">publicholidays</a>的网站。网站做的挺简洁，大家可以感受下.</p>
 
-<p>平台使用SaaS模式，有个入门的免费套餐，提供100个截屏每月，收费从9块开始，相比之前的35块还是便宜的多。</p>
+<p><img src="https://img-blog.csdnimg.cn/2021012417015957.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
-<h3 id="写在后面">写在后面</h3>
+<p>我就纳闷，这样子的公众假期展示也会有人做么？他怎么获利？原来网站挂了google的adsense。通过similar web我们可以查看。</p>
 
-<p>由于是个开发人员，对于市场这块还是摸索着来，所以平台还在慢慢成长。Dirk也对未来平台推广吸引用户策略，一是完善SEO，二是通过blog 让更多用户能够了解平台。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[今天分享个因为付费，所以自己做个车轮的故事。本文的标题出自今天主人公开发平台一路的心路历程。]]></summary></entry><entry><title type="html">做个网站设计开发工具，轻松每月4万块</title><link href="/sideproject/website-design/" rel="alternate" type="text/html" title="做个网站设计开发工具，轻松每月4万块" /><published>2021-03-19T00:00:00+08:00</published><updated>2021-03-19T00:00:00+08:00</updated><id>/sideproject/website-design</id><content type="html" xml:base="/sideproject/website-design/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210319222506861.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p><img src="https://img-blog.csdnimg.cn/20210124170329770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
-<p><a href="https://designmodo.com/postcards/">Designmodo</a>是一个SAAS平台，能够帮助用户快速搭建网站以及设计邮件样式。平台下面主要有postcasds（设计邮件模版），slides（网站搭建工具，静态）和startup（拖拽搭建网站模版）组成。</p>
+<p>每个月平均两百万人访问，这个访问量真大。</p>
 
-<p>Andrian Valeanu,<a href="https://designmodo.com/postcards/">Designmodo</a>的创始人。只因对技术和互联网感兴趣，一切都是靠自学。17岁的时候开始学习SEO, 设计以及开发需要的技能。当时就开始做了第一个网站，一个简单的论坛以及在线摇滚杂志。当年我也是从论坛开始学习开发的，论坛的确是个很好入门的小App。Andrian Valeanu21岁从摩尔多瓦共和国搬去西班牙巴塞罗那, 他回忆当时，他所在摩尔多瓦共和国领的薪酬很低，一个月350美金，他当时就已经暗暗决心要辞职并且把所有时间投入到他的项目当中，很快他的项目可以让他每个月挣到350美金，他马上就辞职。在2012年到16年之间，Andrian Valeanu 主要售卖设计素材和网站模版，直到现在SAAS成为主要的商业模式。</p>
-
-<h3 id="如果你对你的生意有信心那么就全部投入包括时间精力钱财">如果你对你的生意有信心，那么就全部投入（包括时间精力钱财）</h3>
-
-<p>产品打造初，Andrian Valeanu基本没有什么收入，他需要寻找合适的合伙人。他采用了收益分成的形式，以至于现在他的团队也是以这种方式进行收益分成的。产品开发初只具备基础功能，他觉得是设计把产品和其他竞品拉开距离的，</p>
-
-<p>他们当时投入了非常多的精力在设计上面。由于是独立公司，意味着没有投资人，所有的收入只靠销售来获得。尽管这样，他们团队也将收入投入到产品中。还有一个就是快，他们细致分析每一个市场上面需要的功能，力求在竞争对手产品开发前完成。</p>
-
-<p>产品一开始用WordPress开发，后面集成WooCommerce（主要用于支付和客户信息管理）。产品前端采用 Bootstrap, jQuery, Vue, React。产品设计工具用Figma。</p>
-
-<p>目前团队主要致力于无代码搭建网站，把旗下的产品全部无代码化，从而能够让用户更加简单的使用产品。</p>
-
-<h3 id="关于引流和盈利模式">关于引流和盈利模式</h3>
-
-<p>开始也采用了付费广告，但是效果不是很佳，Andrian Valeanu很快就放弃。实际上，团队blog能够吸引很多用户，目前已经有1000多篇博文，再者就是一些很流行的免费的素材和模版。</p>
-
-<p>目前平台主要盈利模式还是SaaS 。提供按月，按季度，按年付费。支付渠道采用PayPal 和Stripe。同时Andrian Valeanu非常推荐SaaS模式，通过这样，团队可以清楚了解产品盈利功能和数据，以便于后期更好的优化提升产品。</p>
-
-<h3 id="写在后面">写在后面</h3>
-
-<p>最后想以Andrian Valeanu给广大创业者的建议做结尾，有想法，要去尝试，不要害怕失败。 如果尝试去做，就不会失败。 如果根本不尝试，那么就是失败。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">有没有想过，诗和远方的同时也可以同时学语言</title><link href="/startup/languages-learn/" rel="alternate" type="text/html" title="有没有想过，诗和远方的同时也可以同时学语言" /><published>2021-01-24T00:00:00+08:00</published><updated>2021-01-24T00:00:00+08:00</updated><id>/startup/languages-learn</id><content type="html" xml:base="/startup/languages-learn/"><![CDATA[<p>今天要分享的是关于语言学习的产品，创始人不是一个技术开发者，是一个很漂亮的妹子,叫Marina，俄国的妹子，现在在美国湾区创业。妹子本身有过几种语言学习的经历，所以在外语学习这件事情上具备很多经验。</p>
-
-<p><img src="https://img-blog.csdnimg.cn/20210124162759940.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<p><a href="https://linguatrip.com/en">Linguatrip</a> 一个短期全浸式语言学习平台。通过网站，我们可以选择学习的语言，选择旅游的国家，选择旅游周数（至少两周）。我们在旅游的同时就不是单纯的旅游了，同时还可以学习一门语言。</p>
-
-<p>平台现在大概有2500个语言课程，全世界大多数国家基本都可以预约，并且比直接预约语言学校的课程价格还要低，可以与当地人一起生活（可以选择住民宿）。</p>
-
-<p>由于妹子是俄罗斯人，查看了下数据，挺多访问ip是俄罗斯的。</p>
-
-<p><img src="https://img-blog.csdnimg.cn/202101241629583.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<p>估计在俄罗斯做的推广。妹子同时在油管上开专栏，经常教授英语学习内容。如10个英语常用俚语，如何流利使用英语之类的，订阅还是挺高的。</p>
+<p>这个网站是个人开发的么？带着疑问我研究了一下。我找到了<a href="https://publicholidays.global/about/">关于我们</a>,2011年成立于悉尼，为全球200多个国家地区提供公众假期查询服务，并且还会介绍假期的由来和文化等信息。</p>
 
 <h4 id="发散思考">发散思考</h4>
-<p>其实很多外国人都对中国很感兴趣，并且中国文化，中国语言的学习一直都很热门，可以模仿这个网站，与全国的教授中文学校和民宿合作，这个市场还是挺大的。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[今天要分享的是关于语言学习的产品，创始人不是一个技术开发者，是一个很漂亮的妹子,叫Marina，俄国的妹子，现在在美国湾区创业。妹子本身有过几种语言学习的经历，所以在外语学习这件事情上具备很多经验。]]></summary></entry></feed>
+
+<p>很多很实用的小工具，往往会带来超乎想象的流量。除了公众假期？我们还会查什么？个人工资？报税？最近社会热点？</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[自由职业的人，或者不是朝九晚五上班的人，基本上没有放假的概念。经常会通过搜索引擎查询公众假期，除了搜索引擎自带的公众假期安排显示，这段时间搜索结果还有个叫publicholidays的网站。网站做的挺简洁，大家可以感受下.]]></summary></entry><entry><title type="html">从Web开发到做支付</title><link href="/stratup/web-to-pay/" rel="alternate" type="text/html" title="从Web开发到做支付" /><published>2021-09-10T00:00:00+08:00</published><updated>2021-09-10T00:00:00+08:00</updated><id>/stratup/web-to-pay</id><content type="html" xml:base="/stratup/web-to-pay/"><![CDATA[<p><img src="https://media.payrequest.nl/images/payrequest-dashboard-v2.webp" alt="在这里插入图片描述" /></p>
+
+<h3 id="总览">总览</h3>
+
+<p><a href="https://payrequest.io">PayRequest</a>，是一个全球性的支付服务平台，一个SAAS。可以轻松创建自己品牌支付页面，管理你的支付链接，你的客户根据支付链接就可以向你的产品或者服务进行支付。全程不需要你懂代码。创始人Geert Jan Sloos，是位德国人，12岁开始写网站，到18岁，就已经运营一个web主机公司，大概客户在1000人左右。</p>
+
+<p>在创业过程中，Geert Jan Sloos 觉得最难的部分应该是找到用户并且留存。他说他有在线推广经验，但是PayRequest是一个全球的服务平台，所以他还是很谨慎。他很感恩，从获得第一个用户到逐渐收获一些正面的反馈。</p>
+
+<p>目前的运营模式就是从收款方收取手续费，按每笔交易1%的手续费收取。他觉得很合理，收款方有钱进账， 那么作为服务方同样有钱进账。</p>
+
+<h3 id="技术部分">技术部分</h3>
+
+<p>平台目前依托Github的page，Jekyll。开发框架采用symfony，目前架构(Linux + Apache + Nginx + Mariadb + PHP )。</p>
+
+<h3 id="总结收获">总结收获</h3>
+<p>PayRequest的业务非常简单，但正是简单，解决用户的痛点才是关键。这让我想起之前个人开发的收款工具。总所周知，wechat pay和alipay 两大支付巨头，公司办理接口业务比较方便，但是对于个人开发者来说就不是那么友好。市场上已经推出了满足个人开发者收款的工具。其实也很简单。就是在android手机上写个驻留程序，根据个人开发者的微信支付或者支付宝付款推送，获取收款信息，然后解析发给服务器，再由服务器推送给业务系统，个人开发者只需要在开发的产品上放置收款码即可。</p>
+
+<p>今天分享就到这里，如果你有好的idea或者不同意见，欢迎留言讨论。</p>]]></content><author><name>Ryan</name></author><category term="stratup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">17岁妹子轻松赚取90万——帮孩子去英文名</title><link href="/stratup/english-name/" rel="alternate" type="text/html" title="17岁妹子轻松赚取90万——帮孩子去英文名" /><published>2021-08-09T00:00:00+08:00</published><updated>2021-08-09T00:00:00+08:00</updated><id>/stratup/english-name</id><content type="html" xml:base="/stratup/english-name/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124164257854.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>17岁的一个英国女孩子Beau Jessup，创建一个帮中国小孩起英文名的网站<a href="http://www.specialname.cn">www.specialname.cn</a>。 在之前的9个月已经给250,000中国小孩取了英文名。之前162,000个小孩免费，然后开始每个名字按10块钱收费。在支付宝上收，然后给出三个参考名字，而且每个名字有什么名人，最后可以分享到微信和家人们讨论。</p>
+
+<h4 id="怎么做到的">怎么做到的</h4>
+<p>Beau先创建一个4,000个名字的数据库，每个名字对应5个性格以及历史的人名。当用户选择五个自己希望小孩的性格后就开始匹配。</p>
+
+<h4 id="复盘">复盘:</h4>
+<p>这个点子很简单，但是很有用。按照她说的，父母都想把最好的给孩子。才花10块钱，可以让英美人士起一个，自己又喜欢又贴切的英文名，何乐而不为。</p>
+
+<p>我们也可以给老外建一个中文名字的网站？小程序？</p>]]></content><author><name>Ryan</name></author><category term="stratup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">一窥谷歌产品全家福</title><link href="/google/google-products/" rel="alternate" type="text/html" title="一窥谷歌产品全家福" /><published>2021-08-03T00:00:00+08:00</published><updated>2021-08-03T00:00:00+08:00</updated><id>/google/google-products</id><content type="html" xml:base="/google/google-products/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124164614439.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>之前讲到过一篇<a href="https://www.espressowithoutmilk.com/blogs/zhao-bu-dao-hao-de-chuang-ye-dian-zi-shi-shi-excel">找不到好的创业点子，试试EXCEL
+</a>,今天我们把目光放在GSuit上。也许很多人并不大知道GSuit，Alphabet。是的，这并不奇怪，我们知道更多的是谷歌搜索。 Alphabet其实是google的母公司。时间来到2004年。当时没人知道google，但是Alphabet，当年以美股54美金上市，来到2020年，现在每股超过1300美元。06年的时候，Alphabet公司发布一款叫做Google Apps的产品，在2016年更名为GSuit。</p>
+
+<p>我们再来看一张图。
+<img src="https://img-blog.csdnimg.cn/20210124165934399.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>通过图中所知，Alphabet公司的营收大部分由广告业务组成，即使这样，我们也有需要了解GSuit的产品，因为我们的创业idea 说不好也能从里面挖掘出来。Alphabet公司作为一流的互联网产品公司，他们的眼光，战略，产品线都有我们需要学习的地方。单单看产品线就众多，但是很多互联网创业公司就是吃准了这个点，专注与某一领域，甚至就在某一领域超越了Alphabet公司。</p>
+
+<p>我们最熟悉的远程会议软件，今年的疫情很多行业估计已经启用远程会议了。Zoom是现在使用最多的远程会议产品，Zoom 2019年上市，到2019年7月营收330,000,000美金。2017年营收60,800,000美金， 2018 年营收151,500,000美金。截止19年底营收610,000,000美金。 占了Alphabet公司云计算以及GSuit产品19年营收只和的35%。这无疑是一个巨大的成功。从最上面的图中得知，基本上GSuit每个领域都有对应的初创企业。每个企业就是一个故事，以后有时间再和大家分享。</p>]]></content><author><name>Ryan</name></author><category term="google" /><summary type="html"><![CDATA[]]></summary></entry></feed>

@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 <script data-ad-client="ca-pub-4606636162302812" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- begin _includes/seo.html --><title>如何在Rails 项目里面加入图表 - Espresso Withoutmilk</title>
+<!-- begin _includes/seo.html --><title>从Web开发到做支付 - Espresso Withoutmilk</title>
 <meta name="description" content="">
 
 
@@ -22,8 +22,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Espresso Withoutmilk">
-<meta property="og:title" content="如何在Rails 项目里面加入图表">
-<meta property="og:url" content="/ruby%20on%20rails/how-to-add-chart-to-rails/">
+<meta property="og:title" content="从Web开发到做支付">
+<meta property="og:url" content="/stratup/web-to-pay/">
 
 
   <meta property="og:description" content="">
@@ -34,7 +34,7 @@
 
 
 
-  <meta property="article:published_time" content="2021-04-14T00:00:00+08:00">
+  <meta property="article:published_time" content="2021-09-10T00:00:00+08:00">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="/ruby%20on%20rails/how-to-add-chart-to-rails/">
+<link rel="canonical" href="/stratup/web-to-pay/">
 
 
 
@@ -249,16 +249,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="如何在Rails 项目里面加入图表">
+    <meta itemprop="headline" content="从Web开发到做支付">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2021-04-14T00:00:00+08:00">
+    <meta itemprop="datePublished" content="2021-09-10T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="/ruby%20on%20rails/how-to-add-chart-to-rails/" class="u-url" itemprop="url">如何在Rails 项目里面加入图表
+            <a href="/stratup/web-to-pay/" class="u-url" itemprop="url">从Web开发到做支付
 </a>
           </h1>
           
@@ -275,7 +275,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          less than 1 minute read
         
       </span>
     
@@ -287,111 +287,25 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p><img src="https://img-blog.csdnimg.cn/20210414120844548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+        <p><img src="https://media.payrequest.nl/images/payrequest-dashboard-v2.webp" alt="在这里插入图片描述" /></p>
 
-<p>在这篇文章里面，我们用到<a href="https://www.chartjs.org/">Chart.js</a>，这是一个图表的js库。整个集成过程比较简单，运用到实际的项目需要自己考虑项目的情况，这里只做一个简单展示。</p>
+<h3 id="总览">总览</h3>
 
-<h3 id="第一步">第一步</h3>
+<p><a href="https://payrequest.io">PayRequest</a>，是一个全球性的支付服务平台，一个SAAS。可以轻松创建自己品牌支付页面，管理你的支付链接，你的客户根据支付链接就可以向你的产品或者服务进行支付。全程不需要你懂代码。创始人Geert Jan Sloos，是位德国人，12岁开始写网站，到18岁，就已经运营一个web主机公司，大概客户在1000人左右。</p>
 
-<p>我们直接引用cdn。打开的application.html.erb，加入这段代码</p>
+<p>在创业过程中，Geert Jan Sloos 觉得最难的部分应该是找到用户并且留存。他说他有在线推广经验，但是PayRequest是一个全球的服务平台，所以他还是很谨慎。他很感恩，从获得第一个用户到逐渐收获一些正面的反馈。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.css"&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.js"&gt;&lt;/script&gt;
-</code></pre></div></div>
+<p>目前的运营模式就是从收款方收取手续费，按每笔交易1%的手续费收取。他觉得很合理，收款方有钱进账， 那么作为服务方同样有钱进账。</p>
 
-<h3 id="第二步">第二步</h3>
-<p>然后新建一个页面，创建一个canvas</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;canvas id="myChart" width="960" height="200"&gt;&lt;/canvas&gt;
-</code></pre></div></div>
+<h3 id="技术部分">技术部分</h3>
 
-<h3 id="第三步">第三步</h3>
+<p>平台目前依托Github的page，Jekyll。开发框架采用symfony，目前架构(Linux + Apache + Nginx + Mariadb + PHP )。</p>
 
-<p>加入图表相关代码，直接在页面上写也是可以的。</p>
+<h3 id="总结收获">总结收获</h3>
+<p>PayRequest的业务非常简单，但正是简单，解决用户的痛点才是关键。这让我想起之前个人开发的收款工具。总所周知，wechat pay和alipay 两大支付巨头，公司办理接口业务比较方便，但是对于个人开发者来说就不是那么友好。市场上已经推出了满足个人开发者收款的工具。其实也很简单。就是在android手机上写个驻留程序，根据个人开发者的微信支付或者支付宝付款推送，获取收款信息，然后解析发给服务器，再由服务器推送给业务系统，个人开发者只需要在开发的产品上放置收款码即可。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-      borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-    }
-  }
-});
-&lt;/script&gt;
-</code></pre></div></div>
+<p>今天分享就到这里，如果你有好的idea或者不同意见，欢迎留言讨论。</p>
 
-<p>大概是这个效果。
-<img src="https://img-blog.csdnimg.cn/2021041412091577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<p>同样的，柱形图也可以更换为 线型，参考代码如下</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
- type: 'line',
- data: {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-  datasets: [{
-   label: '# of Votes',
-   data: [12, 19, 3, 5, 2, 12],
-   fill:false,
-   borderColor:"#308af3",
-   pointBackgroundColor: "#308af3",
-   pointBorderWidth: 2,
-   pointHoverBackgroundColor: "#fff",
-   pointHoverBorderWidth: 2,
-   lineTension:0.05
-  }, {
-   label: '# of Votes',
-   data: [19, 12, 6, 15, 7, 9],
-   fill:false,
-   borderColor:"#48ba16",
-   pointBackgroundColor: "#48ba16",
-   pointBorderWidth: 2,
-   pointHoverBackgroundColor: "#fff",
-   pointHoverBorderWidth: 2,
-   lineTension:0.05
-  }]
- },
- options: {
-  legend: { display: false },
-  scales: {
-   xAxes: [{
-    gridLines: { display:false },
-   }],
-   yAxes: [{
-    gridLines: {
-     color: "rgba(0, 0, 0, .05)",
-    }
-   }]
-  },
- }
-});
-&lt;/script&gt;
-</code></pre></div></div>
-
-<p>长这样
-<img src="https://img-blog.csdnimg.cn/20210414122206589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<h3 id="写在后面">写在后面</h3>
-
-<p>以上是一个比较简单的demo，可以当作参考。如果嫌麻烦，也可以参考这个<a href="https://github.com/coderbydesign/chart-js-rails">chart-js-rails</a>gem。但是使用还是要参考回Chart.js。</p>
-
-<p><a href="https://download.csdn.net/download/weixin_42577411/16670706">示例源码下载</a></p>
 
         
       </section>
@@ -410,7 +324,7 @@ var myChart = new Chart(ctx, {
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#ruby-on-rails" class="page__taxonomy-item p-category" rel="tag">ruby on rails</a>
+      <a href="/categories/#stratup" class="page__taxonomy-item p-category" rel="tag">stratup</a>
     
     </span>
   </p>
@@ -418,7 +332,7 @@ var myChart = new Chart(ctx, {
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-04-14T00:00:00+08:00">April 14, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-09-10T00:00:00+08:00">September 10, 2021</time></p>
 
       </footer>
 
@@ -427,22 +341,22 @@ var myChart = new Chart(ctx, {
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%E5%A6%82%E4%BD%95%E5%9C%A8Rails+%E9%A1%B9%E7%9B%AE%E9%87%8C%E9%9D%A2%E5%8A%A0%E5%85%A5%E5%9B%BE%E8%A1%A8%20%2Fruby%2520on%2520rails%2Fhow-to-add-chart-to-rails%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%E4%BB%8EWeb%E5%BC%80%E5%8F%91%E5%88%B0%E5%81%9A%E6%94%AF%E4%BB%98%20%2Fstratup%2Fweb-to-pay%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fruby%2520on%2520rails%2Fhow-to-add-chart-to-rails%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fstratup%2Fweb-to-pay%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fruby%2520on%2520rails%2Fhow-to-add-chart-to-rails%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fstratup%2Fweb-to-pay%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/sideproject/startup/17k/" class="pagination--pager" title="一个月入1.7万的退休项目
+      <a href="/stratup/english-name/" class="pagination--pager" title="17岁妹子轻松赚取90万——帮孩子去英文名
 ">Previous</a>
     
     
-      <a href="/postgresql/postgresql-connection/" class="pagination--pager" title="Postgresql非本地连接设置
+      <a href="/sideproject/holidays-query/" class="pagination--pager" title="节假日查询，一个简单很暴力的idea
 ">Next</a>
     
   </nav>

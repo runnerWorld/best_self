@@ -9,7 +9,7 @@
   <head>
     <meta charset="utf-8">
 <script data-ad-client="ca-pub-4606636162302812" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- begin _includes/seo.html --><title>如何在Rails 项目里面加入图表 - Espresso Withoutmilk</title>
+<!-- begin _includes/seo.html --><title>把贺卡生意做上互联网 - Espresso Withoutmilk</title>
 <meta name="description" content="">
 
 
@@ -22,8 +22,8 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Espresso Withoutmilk">
-<meta property="og:title" content="如何在Rails 项目里面加入图表">
-<meta property="og:url" content="/ruby%20on%20rails/how-to-add-chart-to-rails/">
+<meta property="og:title" content="把贺卡生意做上互联网">
+<meta property="og:url" content="/startup/holiday-card/">
 
 
   <meta property="og:description" content="">
@@ -34,7 +34,7 @@
 
 
 
-  <meta property="article:published_time" content="2021-04-14T00:00:00+08:00">
+  <meta property="article:published_time" content="2021-12-10T00:00:00+08:00">
 
 
 
@@ -45,7 +45,7 @@
   
 
 
-<link rel="canonical" href="/ruby%20on%20rails/how-to-add-chart-to-rails/">
+<link rel="canonical" href="/startup/holiday-card/">
 
 
 
@@ -249,16 +249,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="如何在Rails 项目里面加入图表">
+    <meta itemprop="headline" content="把贺卡生意做上互联网">
     <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2021-04-14T00:00:00+08:00">
+    <meta itemprop="datePublished" content="2021-12-10T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="/ruby%20on%20rails/how-to-add-chart-to-rails/" class="u-url" itemprop="url">如何在Rails 项目里面加入图表
+            <a href="/startup/holiday-card/" class="u-url" itemprop="url">把贺卡生意做上互联网
 </a>
           </h1>
           
@@ -275,7 +275,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          1 minute read
+          less than 1 minute read
         
       </span>
     
@@ -287,111 +287,47 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p><img src="https://img-blog.csdnimg.cn/20210414120844548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+        <p><img src="https://img-blog.csdnimg.cn/20210126234714598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
-<p>在这篇文章里面，我们用到<a href="https://www.chartjs.org/">Chart.js</a>，这是一个图表的js库。整个集成过程比较简单，运用到实际的项目需要自己考虑项目的情况，这里只做一个简单展示。</p>
+<h3 id="应用场景">应用场景</h3>
 
-<h3 id="第一步">第一步</h3>
+<p>小秋要离开公司了，公司同事想给小秋开个告别派对，但是疫情期间，大家都在家里工作。大张在<a href="https://thankbox.co">Thankbox</a> 设定了一些基础信息，例如接收人，贺卡主题等。同事们就在Thankbox 里面给小秋写贺卡，贺卡内容可以包括文字，图片，视频，甚至是红包，大家写好后就直接email给小秋。小秋收到后很感动。这就是Thankbox 的由来。</p>
 
-<p>我们直接引用cdn。打开的application.html.erb，加入这段代码</p>
+<h3 id="thankbox-故事线">Thankbox 故事线</h3>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.css"&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.js"&gt;&lt;/script&gt;
-</code></pre></div></div>
+<p>创始人Valentin, 大学毕业后从事手机游戏开发。此前没有任何web开发经验，从2020年开始学习web开发。受英国的办公室文化启发，当同事要周年庆祝或者离开公司，同事们凑份子钱，但是大家都不习惯用现金，都纷纷去atm提款。在2020年3月，大家在家办公，他觉得时机到了，可以推出一个在线贺卡之类的产品，简单做了调研就投入了。</p>
 
-<h3 id="第二步">第二步</h3>
-<p>然后新建一个页面，创建一个canvas</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;canvas id="myChart" width="960" height="200"&gt;&lt;/canvas&gt;
-</code></pre></div></div>
+<p>最初，他和妻子讨论以怎样的形式进行开始，因为他没有太多的web开发经验，所以决定雇佣开发人员快速把产品雏形做出来，但是也受预算的限制，最终找了个很好的小伙伴，以股份的形式兑现第一版本的开发费用。所以前期的投入就是设计上的支出，大概花了1000美金。很快第一版本出来了，差不多两个月，在2020年5月这样子。我的想法就是当你有一个很好的想法，只是成功一半，要动手做，重要的是，还要快，把你的想法落地。</p>
 
-<h3 id="第三步">第三步</h3>
+<p>产品建成起初，他就在他的朋友圈里推广，产品卖的不怎样，大学的一个校友，公司正好有人离职，就用上。反响很好激励了Valentin，产品开发后的第一个月卖了6单。根据客户的反馈陆续完善了bug和一些功能。以及花钱做了使用视频和投入一些社交产品的广告，例如咱们朋友圈的广告。</p>
 
-<p>加入图表相关代码，直接在页面上写也是可以的。</p>
+<p>目前Thankbox一个月收入有3200刀。Thankbox 按每个5.99刀收费。未来可能会推出企业定制的套餐。</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-      borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-    }
-  }
-});
-&lt;/script&gt;
-</code></pre></div></div>
+<h3 id="技术栈">技术栈</h3>
 
-<p>大概是这个效果。
-<img src="https://img-blog.csdnimg.cn/2021041412091577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>服务器采用托管，1cpu，1g ram， 25g硬盘，一个月5刀；</p>
 
-<p>同样的，柱形图也可以更换为 线型，参考代码如下</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
- type: 'line',
- data: {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-  datasets: [{
-   label: '# of Votes',
-   data: [12, 19, 3, 5, 2, 12],
-   fill:false,
-   borderColor:"#308af3",
-   pointBackgroundColor: "#308af3",
-   pointBorderWidth: 2,
-   pointHoverBackgroundColor: "#fff",
-   pointHoverBorderWidth: 2,
-   lineTension:0.05
-  }, {
-   label: '# of Votes',
-   data: [19, 12, 6, 15, 7, 9],
-   fill:false,
-   borderColor:"#48ba16",
-   pointBackgroundColor: "#48ba16",
-   pointBorderWidth: 2,
-   pointHoverBackgroundColor: "#fff",
-   pointHoverBorderWidth: 2,
-   lineTension:0.05
-  }]
- },
- options: {
-  legend: { display: false },
-  scales: {
-   xAxes: [{
-    gridLines: { display:false },
-   }],
-   yAxes: [{
-    gridLines: {
-     color: "rgba(0, 0, 0, .05)",
-    }
-   }]
-  },
- }
-});
-&lt;/script&gt;
-</code></pre></div></div>
+<p>图片存储采用图片云存储服务，当然为了保证图片浏览快速，必须的；</p>
 
-<p>长这样
-<img src="https://img-blog.csdnimg.cn/20210414122206589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>产品框架采用 Laravel + Vue， php的框架，我不是很熟悉，有空我开个blog，详细讲下我了解的rails 技术栈哈；</p>
 
-<h3 id="写在后面">写在后面</h3>
+<p>部署和服务管理采用  Laravel Forge</p>
 
-<p>以上是一个比较简单的demo，可以当作参考。如果嫌麻烦，也可以参考这个<a href="https://github.com/coderbydesign/chart-js-rails">chart-js-rails</a>gem。但是使用还是要参考回Chart.js。</p>
+<p>管理员仪表盘用 Laravel Nova</p>
 
-<p><a href="https://download.csdn.net/download/weixin_42577411/16670706">示例源码下载</a></p>
+<p>邮件应用 Mailgun</p>
+
+<p>支付采用 Stripe</p>
+
+<p>网站分析 Fathom</p>
+
+<p>错误报告和服务监控用 Honeybadger</p>
+
+<p>日志采用  Papertrail</p>
+
+<h3 id="最后">最后</h3>
+
+<p>疫情当下，身边很多场景往往都有痛点，解决痛点就是一个商机。正如写在本文，车厘子检出病毒阳性，车厘子市场商家肯定受到冲击，那么如何解决他们的困局，聪明如你，挖掘一个致富的机会。</p>
 
         
       </section>
@@ -410,7 +346,7 @@ var myChart = new Chart(ctx, {
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#ruby-on-rails" class="page__taxonomy-item p-category" rel="tag">ruby on rails</a>
+      <a href="/categories/#startup" class="page__taxonomy-item p-category" rel="tag">startup</a>
     
     </span>
   </p>
@@ -418,7 +354,7 @@ var myChart = new Chart(ctx, {
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-04-14T00:00:00+08:00">April 14, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-12-10T00:00:00+08:00">December 10, 2021</time></p>
 
       </footer>
 
@@ -427,22 +363,22 @@ var myChart = new Chart(ctx, {
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%E5%A6%82%E4%BD%95%E5%9C%A8Rails+%E9%A1%B9%E7%9B%AE%E9%87%8C%E9%9D%A2%E5%8A%A0%E5%85%A5%E5%9B%BE%E8%A1%A8%20%2Fruby%2520on%2520rails%2Fhow-to-add-chart-to-rails%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%E6%8A%8A%E8%B4%BA%E5%8D%A1%E7%94%9F%E6%84%8F%E5%81%9A%E4%B8%8A%E4%BA%92%E8%81%94%E7%BD%91%20%2Fstartup%2Fholiday-card%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fruby%2520on%2520rails%2Fhow-to-add-chart-to-rails%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fstartup%2Fholiday-card%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fruby%2520on%2520rails%2Fhow-to-add-chart-to-rails%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fstartup%2Fholiday-card%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/sideproject/startup/17k/" class="pagination--pager" title="一个月入1.7万的退休项目
+      <a href="/startup/nursing-to-internet/" class="pagination--pager" title="由护工跨行业投身到互联网行业
 ">Previous</a>
     
     
-      <a href="/postgresql/postgresql-connection/" class="pagination--pager" title="Postgresql非本地连接设置
+      <a href="/startup/high-school/" class="pagination--pager" title="翘起1000万美元的高校业务
 ">Next</a>
     
   </nav>
@@ -547,7 +483,7 @@ var myChart = new Chart(ctx, {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/startup/holiday-card/" rel="permalink">把贺卡生意做上互联网
+        <a href="/startup/nursing-to-internet/" rel="permalink">由护工跨行业投身到互联网行业
 </a>
       
     </h2>
@@ -587,7 +523,7 @@ var myChart = new Chart(ctx, {
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/startup/nursing-to-internet/" rel="permalink">由护工跨行业投身到互联网行业
+        <a href="/ruby%20on%20rails/macos/rails-enviroment/" rel="permalink">安装Rails开发环境 MacOS 篇
 </a>
       
     </h2>
@@ -605,14 +541,14 @@ var myChart = new Chart(ctx, {
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">
+    <p class="archive__item-excerpt" itemprop="description">需时大概30分钟
 </p>
   </article>
 </div>

@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 <script data-ad-client="ca-pub-4606636162302812" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- begin _includes/seo.html --><title>如何在Rails 项目里面加入图表 - Espresso Withoutmilk</title>
-<meta name="description" content="">
+<!-- begin _includes/seo.html --><title>安装Rails开发环境 MacOS 篇 - Espresso Withoutmilk</title>
+<meta name="description" content="需时大概30分钟">
 
 
   <meta name="author" content="Ryan">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Espresso Withoutmilk">
-<meta property="og:title" content="如何在Rails 项目里面加入图表">
-<meta property="og:url" content="/ruby%20on%20rails/how-to-add-chart-to-rails/">
+<meta property="og:title" content="安装Rails开发环境 MacOS 篇">
+<meta property="og:url" content="/ruby%20on%20rails/macos/rails-enviroment/">
 
 
-  <meta property="og:description" content="">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2021-04-14T00:00:00+08:00">
+  <meta property="og:description" content="需时大概30分钟">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2021-10-10T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="/ruby%20on%20rails/how-to-add-chart-to-rails/">
+
+<link rel="canonical" href="/ruby%20on%20rails/macos/rails-enviroment/">
 
 
 
@@ -249,16 +249,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="如何在Rails 项目里面加入图表">
-    <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2021-04-14T00:00:00+08:00">
+    <meta itemprop="headline" content="安装Rails开发环境 MacOS 篇">
+    <meta itemprop="description" content="需时大概30分钟">
+    <meta itemprop="datePublished" content="2021-10-10T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="/ruby%20on%20rails/how-to-add-chart-to-rails/" class="u-url" itemprop="url">如何在Rails 项目里面加入图表
+            <a href="/ruby%20on%20rails/macos/rails-enviroment/" class="u-url" itemprop="url">安装Rails开发环境 MacOS 篇
 </a>
           </h1>
           
@@ -287,111 +287,155 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p><img src="https://img-blog.csdnimg.cn/20210414120844548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+        <p>需时大概30分钟</p>
 
-<p>在这篇文章里面，我们用到<a href="https://www.chartjs.org/">Chart.js</a>，这是一个图表的js库。整个集成过程比较简单，运用到实际的项目需要自己考虑项目的情况，这里只做一个简单展示。</p>
+<p>我们将在MacOS 10.15 Catalina安装 Ruby On Rails 环境。 10.15以前的系统版本也同样适用，可能会有些小问题，但是可以上网搜索解决或者给我留言。</p>
 
-<h3 id="第一步">第一步</h3>
+<h3 id="配置终端">配置终端</h3>
+<p>使用ZSH作为你的终端，我们用</p>
 
-<p>我们直接引用cdn。打开的application.html.erb，加入这段代码</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/.zshrc
+</code></pre></div></div>
+<p>替代</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.css"&gt;
-&lt;script src="https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.js"&gt;&lt;/script&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/.bash_profile
 </code></pre></div></div>
 
-<h3 id="第二步">第二步</h3>
-<p>然后新建一个页面，创建一个canvas</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;canvas id="myChart" width="960" height="200"&gt;&lt;/canvas&gt;
+<p>你也可以手动启动。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chsh -s /bin/zsh
 </code></pre></div></div>
 
-<h3 id="第三步">第三步</h3>
+<h3 id="安装homebrew">安装Homebrew</h3>
+<p>首先我们需要安装 Homebrew. Homebrew是 MacOS的一个安装包管理工具。它使用非常简单。启动的时候如果出现提示安装 XCode CommandLine Tools， 点击’同意’按钮就可以了。</p>
 
-<p>加入图表相关代码，直接在页面上写也是可以的。</p>
+<p>打开终端。运行</p>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
-  type: 'bar',
-  data: {
-    labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-    datasets: [{
-      label: '# of Votes',
-      data: [12, 19, 3, 5, 2, 3],
-      backgroundColor: ['rgba(255, 99, 132, 0.2)', 'rgba(54, 162, 235, 0.2)', 'rgba(255, 206, 86, 0.2)', 'rgba(75, 192, 192, 0.2)', 'rgba(153, 102, 255, 0.2)', 'rgba(255, 159, 64, 0.2)'],
-      borderColor: ['rgba(255, 99, 132, 1)', 'rgba(54, 162, 235, 1)', 'rgba(255, 206, 86, 1)', 'rgba(75, 192, 192, 1)', 'rgba(153, 102, 255, 1)', 'rgba(255, 159, 64, 1)'],
-      borderWidth: 1
-    }]
-  },
-  options: {
-    scales: {
-      yAxes: [{
-        ticks: {
-          beginAtZero: true
-        }
-      }]
-    }
-  }
-});
-&lt;/script&gt;
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
 </code></pre></div></div>
 
-<p>大概是这个效果。
-<img src="https://img-blog.csdnimg.cn/2021041412091577.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<h2 id="安装ruby">安装Ruby</h2>
+<p>推荐 Ruby 版本2.7.0.</p>
 
-<p>同样的，柱形图也可以更换为 线型，参考代码如下</p>
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>&lt;script&gt;
-var ctx = document.getElementById('myChart');
-var myChart = new Chart(ctx, {
- type: 'line',
- data: {
-  labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'],
-  datasets: [{
-   label: '# of Votes',
-   data: [12, 19, 3, 5, 2, 12],
-   fill:false,
-   borderColor:"#308af3",
-   pointBackgroundColor: "#308af3",
-   pointBorderWidth: 2,
-   pointHoverBackgroundColor: "#fff",
-   pointHoverBorderWidth: 2,
-   lineTension:0.05
-  }, {
-   label: '# of Votes',
-   data: [19, 12, 6, 15, 7, 9],
-   fill:false,
-   borderColor:"#48ba16",
-   pointBackgroundColor: "#48ba16",
-   pointBorderWidth: 2,
-   pointHoverBackgroundColor: "#fff",
-   pointHoverBorderWidth: 2,
-   lineTension:0.05
-  }]
- },
- options: {
-  legend: { display: false },
-  scales: {
-   xAxes: [{
-    gridLines: { display:false },
-   }],
-   yAxes: [{
-    gridLines: {
-     color: "rgba(0, 0, 0, .05)",
-    }
-   }]
-  },
- }
-});
-&lt;/script&gt;
+<p>Homebrew安装完成后，我们就可以安装Ruby了。我们采用<a href="https://github.com/sstephenson/rbenv">rbenv</a>管理和安装Ruby在终端运行</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install rbenv ruby-build
 </code></pre></div></div>
 
-<p>长这样
-<img src="https://img-blog.csdnimg.cn/20210414122206589.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>把rbenv加入到终端配置中</p>
 
-<h3 id="写在后面">写在后面</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo 'if which rbenv &gt; /dev/null; then eval "$(rbenv init -)"; fi' &gt;&gt; ~/.zshrc
+source ~/.zshrc
 
-<p>以上是一个比较简单的demo，可以当作参考。如果嫌麻烦，也可以参考这个<a href="https://github.com/coderbydesign/chart-js-rails">chart-js-rails</a>gem。但是使用还是要参考回Chart.js。</p>
+### 开始安装Ruby
+rbenv install 2.7.0
+rbenv global 2.7.0
+ruby -v
+</code></pre></div></div>
+<h3 id="配置git">配置Git</h3>
+<p>我们使用Git作为我们的开发版本管理工具，下面的教程也需要用到。所以我们需要有个Github账户，如果没有可以点击<a href="https://github.com/">注册</a>。</p>
 
-<p><a href="https://download.csdn.net/download/weixin_42577411/16670706">示例源码下载</a></p>
+<p>把下面代码复制到终端运行，把example改成自己的邮箱和用户名。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global color.ui true 
+git config --global user.name "YOUR NAME"
+git config --global user.email "YOUR@EMAIL.com"
+ssh-keygen -t rsa -C "YOUR@EMAIL.com"
+</code></pre></div></div>
+<p>把生成的SSH Key 加入到Github账户当中。复制黏贴到<a href="https://github.com/settings/keys">Github</a></p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat ~/.ssh/id_rsa.pub
+</code></pre></div></div>
+
+<p>完成上面步骤后可以进行如下测试.</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
+</code></pre></div></div>
+<p>得到下面的信息提示表示成功</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hi excid3! You've successfully authenticated, but GitHub does not provide shell access.
+</code></pre></div></div>
+
+<h3 id="安装rails">安装Rails</h3>
+<p>推荐安装6.0.2.1版本， 运行</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install rails -v 6.0.2.1
+</code></pre></div></div>
+
+<p>rails 安装完成后，我们需要更新下配置，在终端运行下面命令</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv rehash
+
+### 查看rails 版本
+rails -v
+# Rails 6.0.2.1
+</code></pre></div></div>
+
+<h2 id="安装数据库">安装数据库</h2>
+
+<p>rails 框架比较轻便的数据库sqlite3,我们首先安装这个,终端运行</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install sqlite3
+</code></pre></div></div>
+
+<h3 id="安装mysql">安装MySQL</h3>
+<p>如果之前有PHP开发经验，可能对MySQL比较熟悉。 终端运行:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install mysql
+</code></pre></div></div>
+<p>命令运行完后，可能会有一些提示，按照提示执行就可以了。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 启动MySQL 服务:
+brew services start mysql
+</code></pre></div></div>
+
+<h3 id="安装postgresql">安装PostgreSQL</h3>
+<p>同样通过Homebrew安装:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install postgresql
+</code></pre></div></div>
+
+<p>命令运行完后，可能会有一些提示，按照提示执行就可以了。
+启动服务</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew services start postgresql
+</code></pre></div></div>
+
+<p>默认Postgresql 用户就是系统的root用户，可以直接登录进去。</p>
+
+<h3 id="最后一步">最后一步</h3>
+
+<p>Mojave系统改变了一些头文件的位置，我们需要执行如下命令。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
+</code></pre></div></div>
+
+<h3 id="测试">测试</h3>
+
+<p>到目前为止，基本配置工作完成了。我们建个项目测试下。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### 建立项目
+rails new myapp
+
+### 使用MySQL数据库
+rails new myapp -d mysql
+
+### 使用Postgres数据库
+rails new myapp -d postgresql
+
+### 安装好后，进入项目文件夹
+cd myapp
+
+###  创建数据库
+rake db:create
+
+### 启动
+rails server
+</code></pre></div></div>
+
+<p>打开浏览器访问 http://localhost:3000, 成功的话应该可以看到
+Yay! You’re on Rails!</p>
+
 
         
       </section>
@@ -410,6 +454,8 @@ var myChart = new Chart(ctx, {
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
+      <a href="/categories/#macos" class="page__taxonomy-item p-category" rel="tag">MacOS</a><span class="sep">, </span>
+    
       <a href="/categories/#ruby-on-rails" class="page__taxonomy-item p-category" rel="tag">ruby on rails</a>
     
     </span>
@@ -418,7 +464,7 @@ var myChart = new Chart(ctx, {
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-04-14T00:00:00+08:00">April 14, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-10-10T00:00:00+08:00">October 10, 2021</time></p>
 
       </footer>
 
@@ -427,22 +473,22 @@ var myChart = new Chart(ctx, {
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%E5%A6%82%E4%BD%95%E5%9C%A8Rails+%E9%A1%B9%E7%9B%AE%E9%87%8C%E9%9D%A2%E5%8A%A0%E5%85%A5%E5%9B%BE%E8%A1%A8%20%2Fruby%2520on%2520rails%2Fhow-to-add-chart-to-rails%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=%E5%AE%89%E8%A3%85Rails%E5%BC%80%E5%8F%91%E7%8E%AF%E5%A2%83+MacOS+%E7%AF%87%20%2Fruby%2520on%2520rails%2Fmacos%2Frails-enviroment%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fruby%2520on%2520rails%2Fhow-to-add-chart-to-rails%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fruby%2520on%2520rails%2Fmacos%2Frails-enviroment%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fruby%2520on%2520rails%2Fhow-to-add-chart-to-rails%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fruby%2520on%2520rails%2Fmacos%2Frails-enviroment%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/sideproject/startup/17k/" class="pagination--pager" title="一个月入1.7万的退休项目
+      <a href="/sideproject/excel-side-project/" class="pagination--pager" title="找不到好的创业点子，试试EXCEL
 ">Previous</a>
     
     
-      <a href="/postgresql/postgresql-connection/" class="pagination--pager" title="Postgresql非本地连接设置
+      <a href="/startup/nursing-to-internet/" class="pagination--pager" title="由护工跨行业投身到互联网行业
 ">Next</a>
     
   </nav>
