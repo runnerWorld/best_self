@@ -1,4 +1,4 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-27T20:30:17+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>An amazing website.</subtitle><author><name>Ryan</name></author><entry><title type="html">快速处理csv</title><link href="/ruby/csv-gem/" rel="alternate" type="text/html" title="快速处理csv" /><published>2022-01-27T00:00:00+08:00</published><updated>2022-01-27T00:00:00+08:00</updated><id>/ruby/csv-gem</id><content type="html" xml:base="/ruby/csv-gem/"><![CDATA[<p>今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，<a href="https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html">链接附上处理csv的代码</a>，但是如果出来的行数足够大，那也是挺恐怖。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-28T11:17:47+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>An amazing website.</subtitle><author><name>Ryan</name></author><entry><title type="html">快速处理csv</title><link href="/ruby/csv-gem/" rel="alternate" type="text/html" title="快速处理csv" /><published>2022-01-27T00:00:00+08:00</published><updated>2022-01-27T00:00:00+08:00</updated><id>/ruby/csv-gem</id><content type="html" xml:base="/ruby/csv-gem/"><![CDATA[<p>今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，<a href="https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html">链接附上处理csv的代码</a>，但是如果出来的行数足够大，那也是挺恐怖。</p>
 
 <p>图1</p>
 
@@ -27,7 +27,28 @@
 
 <h3 id="写在后面">写在后面</h3>
 
-<p>其实若干年前，我就碰到一个以电子表格为基础的应用，一下子想不起来了。国内团队开发的。我们大多数做web开发的，以CRUD为核心，如果可以灵活改造电子表格，是可以解决大部分业务管理系统的需求的。无非就是灵活自定义数据类型，各种查询条件自定义，灵活创建自定义表单。使用户随心所欲的录入数据，然后在随心所欲查询，图形化展示，导出下载等</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">如何在Rails 项目里面加入图表</title><link href="/ruby%20on%20rails/how-to-add-chart-to-rails/" rel="alternate" type="text/html" title="如何在Rails 项目里面加入图表" /><published>2021-04-14T00:00:00+08:00</published><updated>2021-04-14T00:00:00+08:00</updated><id>/ruby%20on%20rails/how-to-add-chart-to-rails</id><content type="html" xml:base="/ruby%20on%20rails/how-to-add-chart-to-rails/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210414120844548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>其实若干年前，我就碰到一个以电子表格为基础的应用，一下子想不起来了。国内团队开发的。我们大多数做web开发的，以CRUD为核心，如果可以灵活改造电子表格，是可以解决大部分业务管理系统的需求的。无非就是灵活自定义数据类型，各种查询条件自定义，灵活创建自定义表单。使用户随心所欲的录入数据，然后在随心所欲查询，图形化展示，导出下载等</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">Postgresql非本地连接设置</title><link href="/postgresql/postgresql-connection/" rel="alternate" type="text/html" title="Postgresql非本地连接设置" /><published>2021-05-25T00:00:00+08:00</published><updated>2021-05-25T00:00:00+08:00</updated><id>/postgresql/postgresql-connection</id><content type="html" xml:base="/postgresql/postgresql-connection/"><![CDATA[<p>机器在Ubuntu；</p>
+
+<h3 id="step1-postgresqlconf">Step1 postgresql.conf</h3>
+
+<p>postgresql.conf存放位置在/etc/postgresql/x/main下，这里的是PostgreSQL的版本号，编辑或添加下面一行，使PostgreSQL可以接受来自任意IP的连接请求。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listen_addresses = '*'
+</code></pre></div></div>
+<h3 id="step2-pg_hbaconf">Step2 pg_hba.conf</h3>
+
+<p>pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地址连接PostgreSQL，但是这在pg中还不够，我们还需在pg_hba.conf中配置服务端允许的认证方式。nano. 打开该文件，编辑或添加下面一行。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>host  all  all 0.0.0.0/0 md5
+</code></pre></div></div>
+
+<p>默认pg只允许本机通过密码认证登录，修改为上面内容后即可以对任意IP访问进行密码验证。对照上面的注释可以很容易搞明白每列的含义，具体的支持项可以查阅文末参考引用。</p>
+
+<p>完成上两项配置后执行</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service postgresql restart
+</code></pre></div></div>
+<p>重启PostgreSQL服务后,允许外网访问的配置就算生效了。</p>
+
+<p>如果是云服务器，检查一下是否屏蔽5432这个port</p>]]></content><author><name>Ryan</name></author><category term="postgresql" /><summary type="html"><![CDATA[机器在Ubuntu；]]></summary></entry><entry><title type="html">如何在Rails 项目里面加入图表</title><link href="/ruby%20on%20rails/how-to-add-chart-to-rails/" rel="alternate" type="text/html" title="如何在Rails 项目里面加入图表" /><published>2021-04-14T00:00:00+08:00</published><updated>2021-04-14T00:00:00+08:00</updated><id>/ruby%20on%20rails/how-to-add-chart-to-rails</id><content type="html" xml:base="/ruby%20on%20rails/how-to-add-chart-to-rails/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210414120844548.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
 <p>在这篇文章里面，我们用到<a href="https://www.chartjs.org/">Chart.js</a>，这是一个图表的js库。整个集成过程比较简单，运用到实际的项目需要自己考虑项目的情况，这里只做一个简单展示。</p>
 
@@ -159,7 +180,35 @@ var myChart = new Chart(ctx, {
 
 <h3 id="写在后面">写在后面</h3>
 
-<p>其中令我印象最深的还是，第一要有积蓄，Michael花的就是自己的积蓄，没有任何众筹或者投资，这样子确保自己能够不受其他方面的影响；第二就是只实现最主要的功能，把最主要功能实现好，第二第三功能都可以放一放。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><category term="startup" /><summary type="html"><![CDATA[简介 今天要分享的主人是Michael, 他从2015年开始做QuotaGurad， 这是是一个静态ip和动态ip代理产品。Michael住在美国内华达州的拉斯维加斯。但是他去过很多地方，包括中国，波兰，香港和1/4个美国。有20年的软件开发和安全经验。曾在2014年尝试退休。但感觉无聊和担心技术落伍就重抄旧业；]]></summary></entry><entry><title type="html">纸牌游戏也可以盈利</title><link href="/sideproject/startup/card-game/" rel="alternate" type="text/html" title="纸牌游戏也可以盈利" /><published>2021-03-28T00:00:00+08:00</published><updated>2021-03-28T00:00:00+08:00</updated><id>/sideproject/startup/card-game</id><content type="html" xml:base="/sideproject/startup/card-game/"><![CDATA[<p>多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。</p>
+<p>其中令我印象最深的还是，第一要有积蓄，Michael花的就是自己的积蓄，没有任何众筹或者投资，这样子确保自己能够不受其他方面的影响；第二就是只实现最主要的功能，把最主要功能实现好，第二第三功能都可以放一放。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><category term="startup" /><summary type="html"><![CDATA[简介 今天要分享的主人是Michael, 他从2015年开始做QuotaGurad， 这是是一个静态ip和动态ip代理产品。Michael住在美国内华达州的拉斯维加斯。但是他去过很多地方，包括中国，波兰，香港和1/4个美国。有20年的软件开发和安全经验。曾在2014年尝试退休。但感觉无聊和担心技术落伍就重抄旧业；]]></summary></entry><entry><title type="html">从内容营销到iOS开发，月入14000美金——在产品还没投放就应该开始营销</title><link href="/sideproject/startup/content-market-ios/" rel="alternate" type="text/html" title="从内容营销到iOS开发，月入14000美金——在产品还没投放就应该开始营销" /><published>2021-04-06T00:00:00+08:00</published><updated>2021-04-06T00:00:00+08:00</updated><id>/sideproject/startup/content-market-ios</id><content type="html" xml:base="/sideproject/startup/content-market-ios/"><![CDATA[<h3 id="引言">引言</h3>
+
+<p>周末清明需要回老家，所以耽搁了，抱歉。今天分享的故事是关于个人数据App的。主人公叫Belle,之前从事市场营销，现从事iOS开发，与小伙伴Josh创业开了个公司，叫做HelloCode。目前在澳大利墨尔本。主打产品是<a href="https://exist.io">Exist</a>, 是一款集成了个人数据的App。凭借这款产品目前月入14000美金。公司还有款产品叫做<a href="https://larder.io">larder</a>。这是款类似书签的产品，也比较有趣。今天主要说下Exsit。如图。</p>
+
+<p>Exis能够展示今日步数，睡眠时间以及一些应用的个人信息，通过这些信息展示将让用户更清晰了解自己每日情况，譬如获取了todo信息，那么就分析哪天事情处理效率，获取了日历信息，就知道哪天工作多等。</p>
+
+<p>目前链接的应用在产品页面都可以找得到，有apple watch, google fit, garmin, strava, github,todolist等。按月收费和按年收费。</p>
+
+<p><img src="https://img-blog.csdnimg.cn/20210406001101848.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<h3 id="历程">历程</h3>
+
+<p>最初。Belle还在还在Buffer公司，就已经研究要开发Exist了，当成一个业余项目来开发。小伙伴 Josh 构建了MVP(最小化可实行产品)，Belle则从事老本行，营销。由于是一个业余的项目，所以进度不是很快。Josh是一个自由职业者，所以也不能够全职来做Exist。Belle和Josh 打算做一个众筹，以一个比较低的价格来让用户进行支付，以便支撑他们能够全职进行产品。虽然众筹没能够达到他们的期望值，但是这个事情让他们有了继续往下开发好这个产品的信心。</p>
+
+<p>最初的最初，Exist是一个响应式的App。并不是手机原生态的App。Belle一直在自学iOS的开发。而Josh也在捣鼓Android的开发。 Josh的本行是web开发。在2014是移动App开始盛行的年代，他们也意识到必须要把产品转到原生态App，从那时候起产品就一直迭代。</p>
+
+<h3 id="关于盈利">关于盈利</h3>
+
+<p>由于是不断获取个人数据，服务器配置需要跟上，所以一开始就是付费服务。这个想法也一直是他们所努力的方向。用户可以免费使用30天，然后要么转付费要么就删用户，虽然一开始注册需要绑定信用卡等信息，但是这样也过滤的免费的用户，更精准的转化用户，也算一种zhezong</p>
+
+<h3 id="关于推广">关于推广</h3>
+
+<p>Belle之前在公司时候就了解某些时候公开透明一些业务是对于用户扩展很有帮助的。所以做Exist时候就公开了收入信息以及一些feature，让用户去投票以便于更好把握用户关注的功能。</p>
+
+<p>在14，15年的时候，人们很关心个人的量化数据，正因为这个契机，App也很快收到用户的追捧。同时Belle也会写Blog，并且在相关内容的网站投稿（Lifehacker和Zapier），并且获得引流，因为也是内容网站，所以也会需要内容（正如我们今天的今日头条，知乎之类的）。刚好还有个契机，默林·曼恩（Merlin Mann）的大牛在播客中多次提到Exist，也涌入不少注册会员。</p>
+
+<h3 id="写在后面">写在后面</h3>
+
+<p>Exist很难实现，其实不是，很多应用会提供Api，把数据抓取然后放在手机App上展示，就是最简单Exist的原型。其实难的是在做产品前要把产品推出去验证想法，有用户买单了才体现价值。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><category term="startup" /><summary type="html"><![CDATA[引言]]></summary></entry><entry><title type="html">纸牌游戏也可以盈利</title><link href="/sideproject/startup/card-game/" rel="alternate" type="text/html" title="纸牌游戏也可以盈利" /><published>2021-03-28T00:00:00+08:00</published><updated>2021-03-28T00:00:00+08:00</updated><id>/sideproject/startup/card-game</id><content type="html" xml:base="/sideproject/startup/card-game/"><![CDATA[<p>多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。</p>
 
 <p>Holger, 一个来自丹麦哥本哈根的设计师。设计师的功底，后转开发，并构建纸牌游戏而且盈利。最初Holger开发了游戏后，获得了每个月大概800美金的收入，最初版本是Mac单机版，通过Mac App Store下载。但去了纽约创业开办公司，很不幸，公司被竞争对手打败。通过这次创业，Holger不得不从新出发。</p>
 
@@ -186,7 +235,29 @@ var myChart = new Chart(ctx, {
 
 <p>我觉得Holger真的很能够认清现实，即使目前依然能够盈利，但是他说他不希望这个成为他依靠的收入来源，现在市场真的有很多竞争者，竞争很激烈。</p>
 
-<p>话说回来，只要有心，依靠数据分析，即使是很老旧的游戏也会有市场，所谓存在即有道理。关于文中Holger提到的受启发文章，找个时间我再写个分享上来。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><category term="startup" /><summary type="html"><![CDATA[多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。]]></summary></entry><entry><title type="html">1年12个项目</title><link href="/sideproject/1year-12-projects/" rel="alternate" type="text/html" title="1年12个项目" /><published>2021-01-24T00:00:00+08:00</published><updated>2021-01-24T00:00:00+08:00</updated><id>/sideproject/1year-12-projects</id><content type="html" xml:base="/sideproject/1year-12-projects/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124163648393.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>话说回来，只要有心，依靠数据分析，即使是很老旧的游戏也会有市场，所谓存在即有道理。关于文中Holger提到的受启发文章，找个时间我再写个分享上来。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><category term="startup" /><summary type="html"><![CDATA[多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。]]></summary></entry><entry><title type="html">解决一个小问题比尝试解决五个大问题要好得多</title><link href="/sideproject/fix-problem-bigger-than-five/" rel="alternate" type="text/html" title="解决一个小问题比尝试解决五个大问题要好得多" /><published>2021-03-21T00:00:00+08:00</published><updated>2021-03-21T00:00:00+08:00</updated><id>/sideproject/fix-problem-bigger-than-five</id><content type="html" xml:base="/sideproject/fix-problem-bigger-than-five/"><![CDATA[<p>今天分享个因为付费，所以自己做个车轮的故事。本文的标题出自今天主人公开发平台一路的心路历程。</p>
+
+<p>Dirk 是个在阿姆斯特丹的软件工程师。他在做自己的一个项目时候，发现有个视频截屏API需要付费，一琢磨，就自己做了个，并且挂到网站，以SaaS的模式开始了盈利。</p>
+
+<h3 id="平台介绍">平台介绍</h3>
+
+<p>一切要从开始做个兴趣网站说起，Dirk 决定做一个关于新闻文章目录的网站，在首页的时候，他想展示一个文章索引的截屏图片，这样子需要一个自动截屏的功能。然后他就决定搜索一下相关功能API。好不容易找到一个挺满意的，但是需要35块钱一个月，因为是兴趣项目，所以也没法接受付费。琢磨了下干脆自己开发一个。</p>
+
+<p>每天1到2个小时，努力了1个多月，终于把MVP(最小化可用产品)做了出来，其中也包含一些小功能。这就是今天介绍的<a href="https://screenshotapi.net">Screenhsotapi.net</a></p>
+
+<p><img src="https://img-blog.csdnimg.cn/20210321220148968.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+
+<p>平台主要用Laravel搭建，前端主要用js和vue框架，其中还用了 Selenium。</p>
+
+<h3 id="关于引流和盈利模式">关于引流和盈利模式</h3>
+
+<p>平台目前采用g家的付费广告，每个月花费大概在100块这个样子。目前盈利平均400块。关于投入付费广告的策略可以参考我以前的文章，主要就是使用工具去查看竞争对手网站或者相关的检索关键字，根据检索关键字做付费广告。相关工具有<a href="https://ahrefs.com">Ahrefs</a> 和 <a href="https://www.similarweb.com">SimilarWeb</a></p>
+
+<p>平台使用SaaS模式，有个入门的免费套餐，提供100个截屏每月，收费从9块开始，相比之前的35块还是便宜的多。</p>
+
+<h3 id="写在后面">写在后面</h3>
+
+<p>由于是个开发人员，对于市场这块还是摸索着来，所以平台还在慢慢成长。Dirk也对未来平台推广吸引用户策略，一是完善SEO，二是通过blog 让更多用户能够了解平台。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[今天分享个因为付费，所以自己做个车轮的故事。本文的标题出自今天主人公开发平台一路的心路历程。]]></summary></entry><entry><title type="html">1年12个项目</title><link href="/sideproject/1year-12-projects/" rel="alternate" type="text/html" title="1年12个项目" /><published>2021-01-24T00:00:00+08:00</published><updated>2021-01-24T00:00:00+08:00</updated><id>/sideproject/1year-12-projects</id><content type="html" xml:base="/sideproject/1year-12-projects/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124163648393.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
 <p>今天来聊下数字游民狂人Pieter Levels， 我更喜欢称他是项目狂人，因为他1年创建了12个项目，没有很强的行动力，恐怕连半数项目都做不来。12个项目当中获取有很好的创业idea，也可能激发你创业的idea，谁知道呢？</p>
 

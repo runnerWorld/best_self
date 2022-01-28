@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 
-<!-- begin _includes/seo.html --><title>纸牌游戏也可以盈利 - Espresso Withoutmilk</title>
-<meta name="description" content="多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。">
+<!-- begin _includes/seo.html --><title>Postgresql非本地连接设置 - Espresso Withoutmilk</title>
+<meta name="description" content="机器在Ubuntu；">
 
 
   <meta name="author" content="Ryan">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Espresso Withoutmilk">
-<meta property="og:title" content="纸牌游戏也可以盈利">
-<meta property="og:url" content="/sideproject/startup/card-game/">
+<meta property="og:title" content="Postgresql非本地连接设置">
+<meta property="og:url" content="/postgresql/postgresql-connection/">
 
 
-  <meta property="og:description" content="多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2021-03-28T00:00:00+08:00">
+  <meta property="og:description" content="机器在Ubuntu；">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2021-05-25T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="/sideproject/startup/card-game/">
+
+<link rel="canonical" href="/postgresql/postgresql-connection/">
 
 
 
@@ -249,16 +249,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="纸牌游戏也可以盈利">
-    <meta itemprop="description" content="多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。">
-    <meta itemprop="datePublished" content="2021-03-28T00:00:00+08:00">
+    <meta itemprop="headline" content="Postgresql非本地连接设置">
+    <meta itemprop="description" content="机器在Ubuntu；">
+    <meta itemprop="datePublished" content="2021-05-25T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="/sideproject/startup/card-game/" class="u-url" itemprop="url">纸牌游戏也可以盈利
+            <a href="/postgresql/postgresql-connection/" class="u-url" itemprop="url">Postgresql非本地连接设置
 </a>
           </h1>
           
@@ -287,34 +287,28 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p>多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。</p>
+        <p>机器在Ubuntu；</p>
 
-<p>Holger, 一个来自丹麦哥本哈根的设计师。设计师的功底，后转开发，并构建纸牌游戏而且盈利。最初Holger开发了游戏后，获得了每个月大概800美金的收入，最初版本是Mac单机版，通过Mac App Store下载。但去了纽约创业开办公司，很不幸，公司被竞争对手打败。通过这次创业，Holger不得不从新出发。</p>
+<h3 id="step1-postgresqlconf">Step1 postgresql.conf</h3>
 
-<p>Holger一直对纸牌游戏情有独钟。重新构建了产品。<a href="https://online-solitaire.com/">Online Solitaire</a>，目前每个月的盈利在1500美金。</p>
+<p>postgresql.conf存放位置在/etc/postgresql/x/main下，这里的是PostgreSQL的版本号，编辑或添加下面一行，使PostgreSQL可以接受来自任意IP的连接请求。</p>
 
-<p><img src="https://img-blog.csdnimg.cn/20210328185034453.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>listen_addresses = '*'
+</code></pre></div></div>
+<h3 id="step2-pg_hbaconf">Step2 pg_hba.conf</h3>
 
-<h3 id="关于更多-盈利运营以及技术">关于更多-盈利，运营以及技术</h3>
+<p>pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地址连接PostgreSQL，但是这在pg中还不够，我们还需在pg_hba.conf中配置服务端允许的认证方式。nano. 打开该文件，编辑或添加下面一行。</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>host  all  all 0.0.0.0/0 md5
+</code></pre></div></div>
 
-<p>开始时候，Holger通过一篇文章受到启发。这篇文章是关于如何把副业做成生意，从而获得被动收入。所以他很聪明的认识到，他不需要重新造轮子，而是做一些市场上成功的产品。最终他打算优化之前的纸牌游戏，但是创业期间，产品没有维护，随着系统平台不算升级，产品有很多bug。所以他打算做成在线的。
-在这之前，他做了一些研究。他写了个脚本抓取<a href="https://www.appannie.com/">AppAnnie</a>应用商店的App评价，得出结论要做个单人版的纸牌游戏。分析情况如下图：</p>
+<p>默认pg只允许本机通过密码认证登录，修改为上面内容后即可以对任意IP访问进行密码验证。对照上面的注释可以很容易搞明白每列的含义，具体的支持项可以查阅文末参考引用。</p>
 
-<p><img src="https://img-blog.csdnimg.cn/20210328185047715.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>完成上两项配置后执行</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo service postgresql restart
+</code></pre></div></div>
+<p>重启PostgreSQL服务后,允许外网访问的配置就算生效了。</p>
 
-<p>Mac版本开发在三到四个礼拜，在线版本的开发时间也花了Holger三到四个礼拜时间，初始版本开发出来后，升级以及优化就一直有在做。</p>
-
-<p>在线版本主要是采用React的技术栈来做的。用<a href="https://firebase.google.com/">Firebase</a>做的数据库。动画方面使用了<a href="https://greensock.com/gsap/">GSAP</a>这个库。单机版本采用<a href="https://www.todesktop.com/">ToDesktop</a> 这个转换工具来进行各个终端转换，Windows, Mac, Linux 都可以，目测网站上介绍。</p>
-
-<p>在线版的纸牌运营主要靠SEO检索。当用户想玩的时候就会上网去搜索，毕竟纸牌人人都知道，所以也不会像其他SaaS 产品一样会有一些介绍文章。通过火狐的<a href="https://moz.com/products/pro/on-page-optimization">页面优化工具</a>来提升检索效果，目前得到g家每天的1000多次点击。</p>
-
-<p>纸牌游戏会有人付费么？答案是否定的。没人会付费玩。所以目前收入主要是广告收入。广告收入主人公也有一些心得。开始用g家的广告，但是每天获利才是10块，后面更换Monumetric，有25块一天，目前使用Freestar，将近50块一天。如果通过广告获益，那么多尝试几个。</p>
-
-<h3 id="写在后面">写在后面</h3>
-
-<p>我觉得Holger真的很能够认清现实，即使目前依然能够盈利，但是他说他不希望这个成为他依靠的收入来源，现在市场真的有很多竞争者，竞争很激烈。</p>
-
-<p>话说回来，只要有心，依靠数据分析，即使是很老旧的游戏也会有市场，所谓存在即有道理。关于文中Holger提到的受启发文章，找个时间我再写个分享上来。</p>
+<p>如果是云服务器，检查一下是否屏蔽5432这个port</p>
 
         
       </section>
@@ -333,9 +327,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#sideproject" class="page__taxonomy-item p-category" rel="tag">sideproject</a><span class="sep">, </span>
-    
-      <a href="/categories/#startup" class="page__taxonomy-item p-category" rel="tag">startup</a>
+      <a href="/categories/#postgresql" class="page__taxonomy-item p-category" rel="tag">postgresql</a>
     
     </span>
   </p>
@@ -343,7 +335,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-03-28T00:00:00+08:00">March 28, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-05-25T00:00:00+08:00">May 25, 2021</time></p>
 
       </footer>
 
@@ -352,22 +344,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%E7%BA%B8%E7%89%8C%E6%B8%B8%E6%88%8F%E4%B9%9F%E5%8F%AF%E4%BB%A5%E7%9B%88%E5%88%A9%20%2Fsideproject%2Fstartup%2Fcard-game%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Postgresql%E9%9D%9E%E6%9C%AC%E5%9C%B0%E8%BF%9E%E6%8E%A5%E8%AE%BE%E7%BD%AE%20%2Fpostgresql%2Fpostgresql-connection%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fsideproject%2Fstartup%2Fcard-game%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fpostgresql%2Fpostgresql-connection%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fsideproject%2Fstartup%2Fcard-game%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fpostgresql%2Fpostgresql-connection%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/sideproject/fix-problem-bigger-than-five/" class="pagination--pager" title="解决一个小问题比尝试解决五个大问题要好得多
+      <a href="/ruby%20on%20rails/how-to-add-chart-to-rails/" class="pagination--pager" title="如何在Rails 项目里面加入图表
 ">Previous</a>
     
     
-      <a href="/sideproject/startup/content-market-ios/" class="pagination--pager" title="从内容营销到iOS开发，月入14000美金——在产品还没投放就应该开始营销
+      <a href="/startup/quit-from-500/" class="pagination--pager" title="从500强企业中辞职出来创业
 ">Next</a>
     
   </nav>
@@ -472,46 +464,6 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/postgresql/postgresql-connection/" rel="permalink">Postgresql非本地连接设置
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">机器在Ubuntu；
-</p>
-  </article>
-</div>
-
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
         <a href="/ruby%20on%20rails/how-to-add-chart-to-rails/" rel="permalink">如何在Rails 项目里面加入图表
 </a>
       
@@ -530,7 +482,7 @@
       <span class="page__meta-readtime">
         <i class="far fa-clock" aria-hidden="true"></i>
         
-          less than 1 minute read
+          1 minute read
         
       </span>
     
@@ -538,6 +490,47 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/sideproject/startup/17k/" rel="permalink">一个月入1.7万的退休项目
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">简介
+今天要分享的主人是Michael, 他从2015年开始做QuotaGurad， 这是是一个静态ip和动态ip代理产品。Michael住在美国内华达州的拉斯维加斯。但是他去过很多地方，包括中国，波兰，香港和1/4个美国。有20年的软件开发和安全经验。曾在2014年尝试退休。但感觉无聊和担心技术落伍就重抄旧业；
 </p>
   </article>
 </div>

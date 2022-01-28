@@ -5,10 +5,22 @@ var store = [{
         "url": "/sideproject/1year-12-projects/",
         "teaser": null
       },{
+        "title": "解决一个小问题比尝试解决五个大问题要好得多",
+        "excerpt":"今天分享个因为付费，所以自己做个车轮的故事。本文的标题出自今天主人公开发平台一路的心路历程。   Dirk 是个在阿姆斯特丹的软件工程师。他在做自己的一个项目时候，发现有个视频截屏API需要付费，一琢磨，就自己做了个，并且挂到网站，以SaaS的模式开始了盈利。   平台介绍   一切要从开始做个兴趣网站说起，Dirk 决定做一个关于新闻文章目录的网站，在首页的时候，他想展示一个文章索引的截屏图片，这样子需要一个自动截屏的功能。然后他就决定搜索一下相关功能API。好不容易找到一个挺满意的，但是需要35块钱一个月，因为是兴趣项目，所以也没法接受付费。琢磨了下干脆自己开发一个。   每天1到2个小时，努力了1个多月，终于把MVP(最小化可用产品)做了出来，其中也包含一些小功能。这就是今天介绍的Screenhsotapi.net      平台主要用Laravel搭建，前端主要用js和vue框架，其中还用了 Selenium。   关于引流和盈利模式   平台目前采用g家的付费广告，每个月花费大概在100块这个样子。目前盈利平均400块。关于投入付费广告的策略可以参考我以前的文章，主要就是使用工具去查看竞争对手网站或者相关的检索关键字，根据检索关键字做付费广告。相关工具有Ahrefs 和 SimilarWeb   平台使用SaaS模式，有个入门的免费套餐，提供100个截屏每月，收费从9块开始，相比之前的35块还是便宜的多。   写在后面   由于是个开发人员，对于市场这块还是摸索着来，所以平台还在慢慢成长。Dirk也对未来平台推广吸引用户策略，一是完善SEO，二是通过blog 让更多用户能够了解平台。  ","categories": ["sideproject"],
+        "tags": [],
+        "url": "/sideproject/fix-problem-bigger-than-five/",
+        "teaser": null
+      },{
         "title": "纸牌游戏也可以盈利",
         "excerpt":"多年前。当学校开始开设Windows课程。老师上课的时候，或者大家操作电脑学习的时候，身边的很多童鞋都在玩扫雷或者纸牌接龙。今天和大家分享的是纸牌游戏，我们的主人公通过纸牌游戏也可以赚取被动收入，并且进一步去做更多其他感兴趣的事情。   Holger, 一个来自丹麦哥本哈根的设计师。设计师的功底，后转开发，并构建纸牌游戏而且盈利。最初Holger开发了游戏后，获得了每个月大概800美金的收入，最初版本是Mac单机版，通过Mac App Store下载。但去了纽约创业开办公司，很不幸，公司被竞争对手打败。通过这次创业，Holger不得不从新出发。   Holger一直对纸牌游戏情有独钟。重新构建了产品。Online Solitaire，目前每个月的盈利在1500美金。      关于更多-盈利，运营以及技术   开始时候，Holger通过一篇文章受到启发。这篇文章是关于如何把副业做成生意，从而获得被动收入。所以他很聪明的认识到，他不需要重新造轮子，而是做一些市场上成功的产品。最终他打算优化之前的纸牌游戏，但是创业期间，产品没有维护，随着系统平台不算升级，产品有很多bug。所以他打算做成在线的。 在这之前，他做了一些研究。他写了个脚本抓取AppAnnie应用商店的App评价，得出结论要做个单人版的纸牌游戏。分析情况如下图：      Mac版本开发在三到四个礼拜，在线版本的开发时间也花了Holger三到四个礼拜时间，初始版本开发出来后，升级以及优化就一直有在做。   在线版本主要是采用React的技术栈来做的。用Firebase做的数据库。动画方面使用了GSAP这个库。单机版本采用ToDesktop 这个转换工具来进行各个终端转换，Windows, Mac, Linux 都可以，目测网站上介绍。   在线版的纸牌运营主要靠SEO检索。当用户想玩的时候就会上网去搜索，毕竟纸牌人人都知道，所以也不会像其他SaaS 产品一样会有一些介绍文章。通过火狐的页面优化工具来提升检索效果，目前得到g家每天的1000多次点击。   纸牌游戏会有人付费么？答案是否定的。没人会付费玩。所以目前收入主要是广告收入。广告收入主人公也有一些心得。开始用g家的广告，但是每天获利才是10块，后面更换Monumetric，有25块一天，目前使用Freestar，将近50块一天。如果通过广告获益，那么多尝试几个。   写在后面   我觉得Holger真的很能够认清现实，即使目前依然能够盈利，但是他说他不希望这个成为他依靠的收入来源，现在市场真的有很多竞争者，竞争很激烈。   话说回来，只要有心，依靠数据分析，即使是很老旧的游戏也会有市场，所谓存在即有道理。关于文中Holger提到的受启发文章，找个时间我再写个分享上来。  ","categories": ["sideproject","startup"],
         "tags": [],
         "url": "/sideproject/startup/card-game/",
+        "teaser": null
+      },{
+        "title": "从内容营销到iOS开发，月入14000美金——在产品还没投放就应该开始营销",
+        "excerpt":"引言   周末清明需要回老家，所以耽搁了，抱歉。今天分享的故事是关于个人数据App的。主人公叫Belle,之前从事市场营销，现从事iOS开发，与小伙伴Josh创业开了个公司，叫做HelloCode。目前在澳大利墨尔本。主打产品是Exist, 是一款集成了个人数据的App。凭借这款产品目前月入14000美金。公司还有款产品叫做larder。这是款类似书签的产品，也比较有趣。今天主要说下Exsit。如图。   Exis能够展示今日步数，睡眠时间以及一些应用的个人信息，通过这些信息展示将让用户更清晰了解自己每日情况，譬如获取了todo信息，那么就分析哪天事情处理效率，获取了日历信息，就知道哪天工作多等。   目前链接的应用在产品页面都可以找得到，有apple watch, google fit, garmin, strava, github,todolist等。按月收费和按年收费。      历程   最初。Belle还在还在Buffer公司，就已经研究要开发Exist了，当成一个业余项目来开发。小伙伴 Josh 构建了MVP(最小化可实行产品)，Belle则从事老本行，营销。由于是一个业余的项目，所以进度不是很快。Josh是一个自由职业者，所以也不能够全职来做Exist。Belle和Josh 打算做一个众筹，以一个比较低的价格来让用户进行支付，以便支撑他们能够全职进行产品。虽然众筹没能够达到他们的期望值，但是这个事情让他们有了继续往下开发好这个产品的信心。   最初的最初，Exist是一个响应式的App。并不是手机原生态的App。Belle一直在自学iOS的开发。而Josh也在捣鼓Android的开发。 Josh的本行是web开发。在2014是移动App开始盛行的年代，他们也意识到必须要把产品转到原生态App，从那时候起产品就一直迭代。   关于盈利   由于是不断获取个人数据，服务器配置需要跟上，所以一开始就是付费服务。这个想法也一直是他们所努力的方向。用户可以免费使用30天，然后要么转付费要么就删用户，虽然一开始注册需要绑定信用卡等信息，但是这样也过滤的免费的用户，更精准的转化用户，也算一种zhezong   关于推广   Belle之前在公司时候就了解某些时候公开透明一些业务是对于用户扩展很有帮助的。所以做Exist时候就公开了收入信息以及一些feature，让用户去投票以便于更好把握用户关注的功能。   在14，15年的时候，人们很关心个人的量化数据，正因为这个契机，App也很快收到用户的追捧。同时Belle也会写Blog，并且在相关内容的网站投稿（Lifehacker和Zapier），并且获得引流，因为也是内容网站，所以也会需要内容（正如我们今天的今日头条，知乎之类的）。刚好还有个契机，默林·曼恩（Merlin Mann）的大牛在播客中多次提到Exist，也涌入不少注册会员。   写在后面   Exist很难实现，其实不是，很多应用会提供Api，把数据抓取然后放在手机App上展示，就是最简单Exist的原型。其实难的是在做产品前要把产品推出去验证想法，有用户买单了才体现价值。  ","categories": ["sideproject","startup"],
+        "tags": [],
+        "url": "/sideproject/startup/content-market-ios/",
         "teaser": null
       },{
         "title": "一个月入1.7万的退休项目",
@@ -21,6 +33,12 @@ var store = [{
         "excerpt":"在这篇文章里面，我们用到Chart.js，这是一个图表的js库。整个集成过程比较简单，运用到实际的项目需要自己考虑项目的情况，这里只做一个简单展示。 第一步 我们直接引用cdn。打开的application.html.erb，加入这段代码 &lt;link rel=\"stylesheet\" href=\"https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.css\"&gt; &lt;script src=\"https://cdn.jsdelivr.net/npm/chart.js@2.9.1/dist/Chart.min.js\"&gt;&lt;/script&gt; 第二步 然后新建一个页面，创建一个canvas &lt;canvas id=\"myChart\" width=\"960\" height=\"200\"&gt;&lt;/canvas&gt; 第三步 加入图表相关代码，直接在页面上写也是可以的。 &lt;script&gt; var ctx = document.getElementById('myChart'); var myChart = new Chart(ctx, { type: 'bar', data: { labels: ['Red', 'Blue', 'Yellow', 'Green', 'Purple', 'Orange'], datasets: [{ label: '# of Votes', data: [12, 19, 3, 5, 2,...","categories": ["ruby on rails"],
         "tags": [],
         "url": "/ruby%20on%20rails/how-to-add-chart-to-rails/",
+        "teaser": null
+      },{
+        "title": "Postgresql非本地连接设置",
+        "excerpt":"机器在Ubuntu；   Step1 postgresql.conf   postgresql.conf存放位置在/etc/postgresql/x/main下，这里的是PostgreSQL的版本号，编辑或添加下面一行，使PostgreSQL可以接受来自任意IP的连接请求。   listen_addresses = '*'  Step2 pg_hba.conf   pg_hba.conf，位置与postgresql.conf相同，虽然上面配置允许任意地址连接PostgreSQL，但是这在pg中还不够，我们还需在pg_hba.conf中配置服务端允许的认证方式。nano. 打开该文件，编辑或添加下面一行。  host  all  all 0.0.0.0/0 md5   默认pg只允许本机通过密码认证登录，修改为上面内容后即可以对任意IP访问进行密码验证。对照上面的注释可以很容易搞明白每列的含义，具体的支持项可以查阅文末参考引用。   完成上两项配置后执行  sudo service postgresql restart  重启PostgreSQL服务后,允许外网访问的配置就算生效了。   如果是云服务器，检查一下是否屏蔽5432这个port  ","categories": ["postgresql"],
+        "tags": [],
+        "url": "/postgresql/postgresql-connection/",
         "teaser": null
       },{
         "title": "从500强企业中辞职出来创业",
