@@ -142,4 +142,10 @@ var store = [{
         "tags": [],
         "url": "/ruby/csv-gem/",
         "teaser": null
+      },{
+        "title": "如何在网站上增加Google analytics，手把手操作",
+        "excerpt":"如何在网站上增加Google的分析，大致说下思路，在Google Analytics上创建你的账号，然后填写相关需要观察网站的信息，顺利验证后会生成一段代码，主要用于Google对网站的访问情况记录，把这段代码放在网站的head标签内即可。下面直接来手把手操作。   需要技能:HTML, CSS, Javascript   步骤一：创建账号  首先去到网站创建账号，创建账号码，需要填写几个tab上的信息    基本信息    你的business信息    网站的话选择web   步骤二：获取代码  成功后填入网站的相关信息，名称以及URL。验证顺利后就会生成一段代码，如图    获取代码   &lt;script async src=\"https://www.googletagmanager.com/gtag/js?id=UA-XXXXXXXXX-X\"&gt;&lt;/script&gt; &lt;script&gt;   window.dataLayer = window.dataLayer || [];   function gtag(){dataLayer.push(arguments);}   gtag('js', new Date());    gtag('config', 'UA-XXXXXXXXX-X'); &lt;/script&gt;   步骤三：加入代码  根据步骤三生成的代码，找到网站的首页head标签加入代码。建议这个头部html写成模版，便于每个页面利用。   把代码复制好后就完成了，完成效果图如图：      最后  非常简单的一个内容，做个记录分享。  ","categories": ["google analytics"],
+        "tags": ["website"],
+        "url": "/google%20analytics/add-google-analist-to-github/",
+        "teaser": null
       }]
