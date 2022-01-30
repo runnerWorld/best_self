@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 <script data-ad-client="ca-pub-4606636162302812" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- begin _includes/seo.html --><title>把贺卡生意做上互联网 - Espresso Withoutmilk</title>
-<meta name="description" content="">
+<!-- begin _includes/seo.html --><title>Sliding Window 解题笔记。找出连续k个数的平均值 - Espresso Withoutmilk</title>
+<meta name="description" content="问题，给出一个数组，找出所有连续的K个子项平均值。">
 
 
   <meta name="author" content="Ryan">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Espresso Withoutmilk">
-<meta property="og:title" content="把贺卡生意做上互联网">
-<meta property="og:url" content="/startup/holiday-card/">
+<meta property="og:title" content="Sliding Window 解题笔记。找出连续k个数的平均值">
+<meta property="og:url" content="/algorithm/slide-window/">
 
 
-  <meta property="og:description" content="">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2021-12-10T00:00:00+08:00">
+  <meta property="og:description" content="问题，给出一个数组，找出所有连续的K个子项平均值。">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2022-01-30T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="/startup/holiday-card/">
+
+<link rel="canonical" href="/algorithm/slide-window/">
 
 
 
@@ -249,16 +249,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="把贺卡生意做上互联网">
-    <meta itemprop="description" content="">
-    <meta itemprop="datePublished" content="2021-12-10T00:00:00+08:00">
+    <meta itemprop="headline" content="Sliding Window 解题笔记。找出连续k个数的平均值">
+    <meta itemprop="description" content="问题，给出一个数组，找出所有连续的K个子项平均值。">
+    <meta itemprop="datePublished" content="2022-01-30T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="/startup/holiday-card/" class="u-url" itemprop="url">把贺卡生意做上互联网
+            <a href="/algorithm/slide-window/" class="u-url" itemprop="url">Sliding Window 解题笔记。找出连续k个数的平均值
 </a>
           </h1>
           
@@ -287,47 +287,63 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p><img src="https://img-blog.csdnimg.cn/20210126234714598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+        <p>问题，给出一个数组，找出所有连续的K个子项平均值。</p>
 
-<h3 id="应用场景">应用场景</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Array: [2, 4, 2, 6, -3, -5, 8], K = 3
+</code></pre></div></div>
 
-<p>小秋要离开公司了，公司同事想给小秋开个告别派对，但是疫情期间，大家都在家里工作。大张在<a href="https://thankbox.co">Thankbox</a> 设定了一些基础信息，例如接收人，贺卡主题等。同事们就在Thankbox 里面给小秋写贺卡，贺卡内容可以包括文字，图片，视频，甚至是红包，大家写好后就直接email给小秋。小秋收到后很感动。这就是Thankbox 的由来。</p>
+<p>如上数组，求解</p>
 
-<h3 id="thankbox-故事线">Thankbox 故事线</h3>
+<p>第一个平均值 （2 + 4 + 2）/3 =&gt; 2.6</p>
 
-<p>创始人Valentin, 大学毕业后从事手机游戏开发。此前没有任何web开发经验，从2020年开始学习web开发。受英国的办公室文化启发，当同事要周年庆祝或者离开公司，同事们凑份子钱，但是大家都不习惯用现金，都纷纷去atm提款。在2020年3月，大家在家办公，他觉得时机到了，可以推出一个在线贺卡之类的产品，简单做了调研就投入了。</p>
+<p>第二个平均值 （4 + 2 + 6）/3 =&gt; 4</p>
 
-<p>最初，他和妻子讨论以怎样的形式进行开始，因为他没有太多的web开发经验，所以决定雇佣开发人员快速把产品雏形做出来，但是也受预算的限制，最终找了个很好的小伙伴，以股份的形式兑现第一版本的开发费用。所以前期的投入就是设计上的支出，大概花了1000美金。很快第一版本出来了，差不多两个月，在2020年5月这样子。我的想法就是当你有一个很好的想法，只是成功一半，要动手做，重要的是，还要快，把你的想法落地。</p>
+<p>第三个平均值 （2 + 6 + （-3））/3 =&gt; 1.6</p>
 
-<p>产品建成起初，他就在他的朋友圈里推广，产品卖的不怎样，大学的一个校友，公司正好有人离职，就用上。反响很好激励了Valentin，产品开发后的第一个月卖了6单。根据客户的反馈陆续完善了bug和一些功能。以及花钱做了使用视频和投入一些社交产品的广告，例如咱们朋友圈的广告。</p>
+<p>…</p>
 
-<p>目前Thankbox一个月收入有3200刀。Thankbox 按每个5.99刀收费。未来可能会推出企业定制的套餐。</p>
+<p>根据以上思路，得出最简单的解法，直接迭代求出</p>
 
-<h3 id="技术栈">技术栈</h3>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class AverageOfSubarrayOfSizeK{
+  public static double[] find(int[]arr, int K){
+    double[] ans = new double[arr.length - k +1];
+    for(int i = 0; i&lt;= arr.length -k; i++){
+      double sum = 0;
+      for(int j = i; j&lt;i+K; j++){
+        sum += arr[j];
+      }
+      ans[i] = sum /K;
+    }
+    return ans;
+  }
+}
+</code></pre></div></div>
 
-<p>服务器采用托管，1cpu，1g ram， 25g硬盘，一个月5刀；</p>
+<p>我们来看下时间复杂度，每次循环一个子项的时候，都要在这个子项的情况下，在持续加K个子项，所以应该是O(N*K),N是数组的子项个数。</p>
 
-<p>图片存储采用图片云存储服务，当然为了保证图片浏览快速，必须的；</p>
+<p>这个时间复杂度我们还能够优化，我们来分析，我们在进行逐项迭代时候，例如第一个（2 + 4 + 2），第二个 （4 + 2 + 6）。这里面存在着重复的项目，4，2是这两个迭代里面出现的。所以我们可以这样处理，在进行第二个项目（4 + 2 + 6）计算时候，可以把第一个项目（2 + 4 + 2）中的第一个2移除，就是总数减去2，然后总数加上6，就能够在保留砍头去尾，达到Sliding Window 效果，直接上代码</p>
 
-<p>产品框架采用 Laravel + Vue， php的框架，我不是很熟悉，有空我开个blog，详细讲下我了解的rails 技术栈哈；</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class AverageOfSubarrayOfSizeK{
+  public static double[] find(int[]arr, int K){
+    double[] ans = new double[arr.length - k +1];
+    double sum = 0;
+    int left = 0;
+    for(int right = 0; right&lt;= arr.length; right++){
 
-<p>部署和服务管理采用  Laravel Forge</p>
+      sum +=  arr[right];
+      if(sum &gt;= K-1){
+        ans[left] = sum/K;
+        sum -= arr[left];
+        left++;
+      }
+      
+    }
+    return ans;
+  }
+}
+</code></pre></div></div>
+<p>现在这个时间复杂度就是O(N)</p>
 
-<p>管理员仪表盘用 Laravel Nova</p>
-
-<p>邮件应用 Mailgun</p>
-
-<p>支付采用 Stripe</p>
-
-<p>网站分析 Fathom</p>
-
-<p>错误报告和服务监控用 Honeybadger</p>
-
-<p>日志采用  Papertrail</p>
-
-<h3 id="最后">最后</h3>
-
-<p>疫情当下，身边很多场景往往都有痛点，解决痛点就是一个商机。正如写在本文，车厘子检出病毒阳性，车厘子市场商家肯定受到冲击，那么如何解决他们的困局，聪明如你，挖掘一个致富的机会。</p>
 
         
       </section>
@@ -335,6 +351,21 @@
       <footer class="page__meta">
         
         
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#sliding-window" class="page__taxonomy-item p-category" rel="tag">Sliding Window</a>
+    
+    </span>
+  </p>
+
+
 
 
   
@@ -346,7 +377,7 @@
     <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
     <span itemprop="keywords">
     
-      <a href="/categories/#startup" class="page__taxonomy-item p-category" rel="tag">startup</a>
+      <a href="/categories/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a>
     
     </span>
   </p>
@@ -354,7 +385,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2021-12-10T00:00:00+08:00">December 10, 2021</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-01-30T00:00:00+08:00">January 30, 2022</time></p>
 
       </footer>
 
@@ -363,23 +394,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=%E6%8A%8A%E8%B4%BA%E5%8D%A1%E7%94%9F%E6%84%8F%E5%81%9A%E4%B8%8A%E4%BA%92%E8%81%94%E7%BD%91%20%2Fstartup%2Fholiday-card%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Sliding+Window+%E8%A7%A3%E9%A2%98%E7%AC%94%E8%AE%B0%E3%80%82%E6%89%BE%E5%87%BA%E8%BF%9E%E7%BB%ADk%E4%B8%AA%E6%95%B0%E7%9A%84%E5%B9%B3%E5%9D%87%E5%80%BC%20%2Falgorithm%2Fslide-window%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Fstartup%2Fholiday-card%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Falgorithm%2Fslide-window%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Fstartup%2Fholiday-card%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Falgorithm%2Fslide-window%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/startup/nursing-to-internet/" class="pagination--pager" title="由护工跨行业投身到互联网行业
+      <a href="/google%20analytics/add-google-analist-to-github/" class="pagination--pager" title="如何在网站上增加Google analytics，手把手操作
 ">Previous</a>
     
     
-      <a href="/startup/high-school/" class="pagination--pager" title="翘起1000万美元的高校业务
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -393,46 +423,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/algorithm/slide-window/" rel="permalink">Sliding Window 解题笔记。找出连续k个数的平均值
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">问题，给出一个数组，找出所有连续的K个子项平均值。
-</p>
-  </article>
-</div>
-
         
           
 
@@ -524,6 +514,46 @@
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
         <a href="/startup/high-school/" rel="permalink">翘起1000万美元的高校业务
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/startup/holiday-card/" rel="permalink">把贺卡生意做上互联网
 </a>
       
     </h2>

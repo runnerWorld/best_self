@@ -1,4 +1,59 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="http://localhost:4000/feed.xml" rel="self" type="application/atom+xml" /><link href="http://localhost:4000/" rel="alternate" type="text/html" /><updated>2022-01-29T08:23:06+08:00</updated><id>http://localhost:4000/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>Share with my blogs</subtitle><author><name>Ryan</name></author><entry><title type="html">如何在网站上增加Google analytics，手把手操作</title><link href="http://localhost:4000/google%20analytics/add-google-analist-to-github/" rel="alternate" type="text/html" title="如何在网站上增加Google analytics，手把手操作" /><published>2022-01-29T00:00:00+08:00</published><updated>2022-01-29T00:00:00+08:00</updated><id>http://localhost:4000/google%20analytics/add-google-analist-to-github</id><content type="html" xml:base="http://localhost:4000/google%20analytics/add-google-analist-to-github/"><![CDATA[<p>如何在网站上增加Google的分析，大致说下思路，在Google Analytics上创建你的账号，然后填写相关需要观察网站的信息，顺利验证后会生成一段代码，主要用于Google对网站的访问情况记录，把这段代码放在网站的head标签内即可。下面直接来手把手操作。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-30T22:56:16+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Sliding Window 解题笔记。找出连续k个数的平均值</title><link href="/algorithm/slide-window/" rel="alternate" type="text/html" title="Sliding Window 解题笔记。找出连续k个数的平均值" /><published>2022-01-30T00:00:00+08:00</published><updated>2022-01-30T00:00:00+08:00</updated><id>/algorithm/slide-window</id><content type="html" xml:base="/algorithm/slide-window/"><![CDATA[<p>问题，给出一个数组，找出所有连续的K个子项平均值。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Array: [2, 4, 2, 6, -3, -5, 8], K = 3
+</code></pre></div></div>
+
+<p>如上数组，求解</p>
+
+<p>第一个平均值 （2 + 4 + 2）/3 =&gt; 2.6</p>
+
+<p>第二个平均值 （4 + 2 + 6）/3 =&gt; 4</p>
+
+<p>第三个平均值 （2 + 6 + （-3））/3 =&gt; 1.6</p>
+
+<p>…</p>
+
+<p>根据以上思路，得出最简单的解法，直接迭代求出</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class AverageOfSubarrayOfSizeK{
+  public static double[] find(int[]arr, int K){
+    double[] ans = new double[arr.length - k +1];
+    for(int i = 0; i&lt;= arr.length -k; i++){
+      double sum = 0;
+      for(int j = i; j&lt;i+K; j++){
+        sum += arr[j];
+      }
+      ans[i] = sum /K;
+    }
+    return ans;
+  }
+}
+</code></pre></div></div>
+
+<p>我们来看下时间复杂度，每次循环一个子项的时候，都要在这个子项的情况下，在持续加K个子项，所以应该是O(N*K),N是数组的子项个数。</p>
+
+<p>这个时间复杂度我们还能够优化，我们来分析，我们在进行逐项迭代时候，例如第一个（2 + 4 + 2），第二个 （4 + 2 + 6）。这里面存在着重复的项目，4，2是这两个迭代里面出现的。所以我们可以这样处理，在进行第二个项目（4 + 2 + 6）计算时候，可以把第一个项目（2 + 4 + 2）中的第一个2移除，就是总数减去2，然后总数加上6，就能够在保留砍头去尾，达到Sliding Window 效果，直接上代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class AverageOfSubarrayOfSizeK{
+  public static double[] find(int[]arr, int K){
+    double[] ans = new double[arr.length - k +1];
+    double sum = 0;
+    int left = 0;
+    for(int right = 0; right&lt;= arr.length; right++){
+
+      sum +=  arr[right];
+      if(sum &gt;= K-1){
+        ans[left] = sum/K;
+        sum -= arr[left];
+        left++;
+      }
+      
+    }
+    return ans;
+  }
+}
+</code></pre></div></div>
+<p>现在这个时间复杂度就是O(N)</p>]]></content><author><name>Ryan</name></author><category term="Algorithm" /><category term="Sliding Window" /><summary type="html"><![CDATA[问题，给出一个数组，找出所有连续的K个子项平均值。]]></summary></entry><entry><title type="html">如何在网站上增加Google analytics，手把手操作</title><link href="/google%20analytics/add-google-analist-to-github/" rel="alternate" type="text/html" title="如何在网站上增加Google analytics，手把手操作" /><published>2022-01-29T00:00:00+08:00</published><updated>2022-01-29T00:00:00+08:00</updated><id>/google%20analytics/add-google-analist-to-github</id><content type="html" xml:base="/google%20analytics/add-google-analist-to-github/"><![CDATA[<p>如何在网站上增加Google的分析，大致说下思路，在Google Analytics上创建你的账号，然后填写相关需要观察网站的信息，顺利验证后会生成一段代码，主要用于Google对网站的访问情况记录，把这段代码放在网站的head标签内即可。下面直接来手把手操作。</p>
 
 <p>需要技能:HTML, CSS, Javascript</p>
 
@@ -37,7 +92,7 @@
 <p><img src="https://s3.bmp.ovh/imgs/2022/01/71386d7df9db8eb9.png" alt="" /></p>
 
 <h3 id="最后">最后</h3>
-<p>非常简单的一个内容，做个记录分享。</p>]]></content><author><name>Ryan</name></author><category term="google analytics" /><category term="website" /><summary type="html"><![CDATA[如何在网站上增加Google的分析，大致说下思路，在Google Analytics上创建你的账号，然后填写相关需要观察网站的信息，顺利验证后会生成一段代码，主要用于Google对网站的访问情况记录，把这段代码放在网站的head标签内即可。下面直接来手把手操作。]]></summary></entry><entry><title type="html">快速处理csv</title><link href="http://localhost:4000/ruby/csv-gem/" rel="alternate" type="text/html" title="快速处理csv" /><published>2022-01-27T00:00:00+08:00</published><updated>2022-01-27T00:00:00+08:00</updated><id>http://localhost:4000/ruby/csv-gem</id><content type="html" xml:base="http://localhost:4000/ruby/csv-gem/"><![CDATA[<p>今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，<a href="https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html">链接附上处理csv的代码</a>，但是如果出来的行数足够大，那也是挺恐怖。</p>
+<p>非常简单的一个内容，做个记录分享。</p>]]></content><author><name>Ryan</name></author><category term="google analytics" /><category term="website" /><summary type="html"><![CDATA[如何在网站上增加Google的分析，大致说下思路，在Google Analytics上创建你的账号，然后填写相关需要观察网站的信息，顺利验证后会生成一段代码，主要用于Google对网站的访问情况记录，把这段代码放在网站的head标签内即可。下面直接来手把手操作。]]></summary></entry><entry><title type="html">快速处理csv</title><link href="/ruby/csv-gem/" rel="alternate" type="text/html" title="快速处理csv" /><published>2022-01-27T00:00:00+08:00</published><updated>2022-01-27T00:00:00+08:00</updated><id>/ruby/csv-gem</id><content type="html" xml:base="/ruby/csv-gem/"><![CDATA[<p>今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，<a href="https://ruby-doc.org/stdlib-2.6.1/libdoc/csv/rdoc/CSV.html">链接附上处理csv的代码</a>，但是如果出来的行数足够大，那也是挺恐怖。</p>
 
 <p>图1</p>
 
@@ -50,7 +105,7 @@
 <p><img src="https://miro.medium.com/max/962/1*1rjo1rJc8IdXywJISSytsg.png" alt="" /></p>
 
 <h3 id="总结">总结</h3>
-<p>关于SmarterCSV还没得细看，看起来不错，做个记录。联想起之前项目也有生成csv过程，但是直接扔进数据库比较多，而且还是可以迭代处理，感觉不需要单个列 写出来。</p>]]></content><author><name>Ryan</name></author><category term="Ruby" /><summary type="html"><![CDATA[今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，链接附上处理csv的代码，但是如果出来的行数足够大，那也是挺恐怖。]]></summary></entry><entry><title type="html">翘起1000万美元的高校业务</title><link href="http://localhost:4000/startup/high-school/" rel="alternate" type="text/html" title="翘起1000万美元的高校业务" /><published>2021-12-26T00:00:00+08:00</published><updated>2021-12-26T00:00:00+08:00</updated><id>http://localhost:4000/startup/high-school</id><content type="html" xml:base="http://localhost:4000/startup/high-school/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210125210951735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>关于SmarterCSV还没得细看，看起来不错，做个记录。联想起之前项目也有生成csv过程，但是直接扔进数据库比较多，而且还是可以迭代处理，感觉不需要单个列 写出来。</p>]]></content><author><name>Ryan</name></author><category term="Ruby" /><summary type="html"><![CDATA[今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，链接附上处理csv的代码，但是如果出来的行数足够大，那也是挺恐怖。]]></summary></entry><entry><title type="html">翘起1000万美元的高校业务</title><link href="/startup/high-school/" rel="alternate" type="text/html" title="翘起1000万美元的高校业务" /><published>2021-12-26T00:00:00+08:00</published><updated>2021-12-26T00:00:00+08:00</updated><id>/startup/high-school</id><content type="html" xml:base="/startup/high-school/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210125210951735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
 <p>今天分享的案例让我想起以前做的一个项目，帮一所高校图书馆做一个论文查重查引系统，当时做的时候对这方面业务不算了解，调研的业务怎么做就简单的规划了。依稀记得当时查重查引业务按条数收费，每条1，2块钱。然后将所需要的论文信息提交给图书馆，馆内的工作人员就根据提交的信息进行查询，得到结果后，根据引用处收钱。用户就进行支付即可。实在没想到美国的这家公司把论文查引业务和论文格式业务做到了极致，一个1000万美元的生意。</p>
 
@@ -61,7 +116,7 @@
 <h3 id="复盘">复盘：</h3>
 <p>1 - 首先有个idea，并能够从最终用户角度考虑功能；</p>
 
-<p>2 - 其次起步要快，快速搭建第一版本；</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">把贺卡生意做上互联网</title><link href="http://localhost:4000/startup/holiday-card/" rel="alternate" type="text/html" title="把贺卡生意做上互联网" /><published>2021-12-10T00:00:00+08:00</published><updated>2021-12-10T00:00:00+08:00</updated><id>http://localhost:4000/startup/holiday-card</id><content type="html" xml:base="http://localhost:4000/startup/holiday-card/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210126234714598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>2 - 其次起步要快，快速搭建第一版本；</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">把贺卡生意做上互联网</title><link href="/startup/holiday-card/" rel="alternate" type="text/html" title="把贺卡生意做上互联网" /><published>2021-12-10T00:00:00+08:00</published><updated>2021-12-10T00:00:00+08:00</updated><id>/startup/holiday-card</id><content type="html" xml:base="/startup/holiday-card/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210126234714598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
 <h3 id="应用场景">应用场景</h3>
 
@@ -101,7 +156,7 @@
 
 <h3 id="最后">最后</h3>
 
-<p>疫情当下，身边很多场景往往都有痛点，解决痛点就是一个商机。正如写在本文，车厘子检出病毒阳性，车厘子市场商家肯定受到冲击，那么如何解决他们的困局，聪明如你，挖掘一个致富的机会。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">由护工跨行业投身到互联网行业</title><link href="http://localhost:4000/startup/nursing-to-internet/" rel="alternate" type="text/html" title="由护工跨行业投身到互联网行业" /><published>2021-11-21T00:00:00+08:00</published><updated>2021-11-21T00:00:00+08:00</updated><id>http://localhost:4000/startup/nursing-to-internet</id><content type="html" xml:base="http://localhost:4000/startup/nursing-to-internet/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210125211241439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+<p>疫情当下，身边很多场景往往都有痛点，解决痛点就是一个商机。正如写在本文，车厘子检出病毒阳性，车厘子市场商家肯定受到冲击，那么如何解决他们的困局，聪明如你，挖掘一个致富的机会。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">由护工跨行业投身到互联网行业</title><link href="/startup/nursing-to-internet/" rel="alternate" type="text/html" title="由护工跨行业投身到互联网行业" /><published>2021-11-21T00:00:00+08:00</published><updated>2021-11-21T00:00:00+08:00</updated><id>/startup/nursing-to-internet</id><content type="html" xml:base="/startup/nursing-to-internet/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210125211241439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
 <p>电商时代，透过商品的描述，我们能够判断商品是否满足我们的需求就是依赖商品评论了。 柯蒂斯Curtis Boyd） 还是护工的时候，依赖帮助一个美容医师移除负面虚假的评论，成功的付清了助学贷款以及日后创立的Objection Co这个帮助商家移除虚假评论的在线平台。</p>
 
@@ -111,7 +166,7 @@
 
 <p>起初平台建起来，和大家想的一样，都想象有很多用户一下子涌进来。当然，这只是想象。柯蒂斯从ClearBanc获得了投资，通过资金，他们把精力放在一个专门收集各行业负面评论的工具上。然后他们使用他们的产品去识别虚假的负面的评论。如果有虚假评论他们就会给商家致电并且发送明信片。每天他们会从各行业40000条评论中进行筛查，并且有个专门的3人小组，一周需要给2500家商户致电。在这个方法下，第一个月收入有2000美金，第二个月到了10000美金。</p>
 
-<p>互联网的今天，有想法有行动力是可以开创一片蓝海的。笔者觉得只要找到一个能够帮助到别人的想法，并变现；然后寻找市场检验你的产品能力；保持信心，由零开始跨入互联网行业是可行的。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">安装Rails开发环境 MacOS 篇</title><link href="http://localhost:4000/ruby%20on%20rails/macos/rails-enviroment/" rel="alternate" type="text/html" title="安装Rails开发环境 MacOS 篇" /><published>2021-10-10T00:00:00+08:00</published><updated>2021-10-10T00:00:00+08:00</updated><id>http://localhost:4000/ruby%20on%20rails/macos/rails-enviroment</id><content type="html" xml:base="http://localhost:4000/ruby%20on%20rails/macos/rails-enviroment/"><![CDATA[<p>需时大概30分钟</p>
+<p>互联网的今天，有想法有行动力是可以开创一片蓝海的。笔者觉得只要找到一个能够帮助到别人的想法，并变现；然后寻找市场检验你的产品能力；保持信心，由零开始跨入互联网行业是可行的。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">安装Rails开发环境 MacOS 篇</title><link href="/ruby%20on%20rails/macos/rails-enviroment/" rel="alternate" type="text/html" title="安装Rails开发环境 MacOS 篇" /><published>2021-10-10T00:00:00+08:00</published><updated>2021-10-10T00:00:00+08:00</updated><id>/ruby%20on%20rails/macos/rails-enviroment</id><content type="html" xml:base="/ruby%20on%20rails/macos/rails-enviroment/"><![CDATA[<p>需时大概30分钟</p>
 
 <p>我们将在MacOS 10.15 Catalina安装 Ruby On Rails 环境。 10.15以前的系统版本也同样适用，可能会有些小问题，但是可以上网搜索解决或者给我留言。</p>
 
@@ -258,7 +313,7 @@ rails server
 </code></pre></div></div>
 
 <p>打开浏览器访问 http://localhost:3000, 成功的话应该可以看到
-Yay! You’re on Rails!</p>]]></content><author><name>Ryan</name></author><category term="ruby on rails" /><category term="MacOS" /><summary type="html"><![CDATA[需时大概30分钟]]></summary></entry><entry><title type="html">找不到好的创业点子，试试EXCEL</title><link href="http://localhost:4000/sideproject/excel-side-project/" rel="alternate" type="text/html" title="找不到好的创业点子，试试EXCEL" /><published>2021-10-05T00:00:00+08:00</published><updated>2021-10-05T00:00:00+08:00</updated><id>http://localhost:4000/sideproject/excel-side-project</id><content type="html" xml:base="http://localhost:4000/sideproject/excel-side-project/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124170557466.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
+Yay! You’re on Rails!</p>]]></content><author><name>Ryan</name></author><category term="ruby on rails" /><category term="MacOS" /><summary type="html"><![CDATA[需时大概30分钟]]></summary></entry><entry><title type="html">找不到好的创业点子，试试EXCEL</title><link href="/sideproject/excel-side-project/" rel="alternate" type="text/html" title="找不到好的创业点子，试试EXCEL" /><published>2021-10-05T00:00:00+08:00</published><updated>2021-10-05T00:00:00+08:00</updated><id>/sideproject/excel-side-project</id><content type="html" xml:base="/sideproject/excel-side-project/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124170557466.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
 <p>很多时候，开发人员空有一身好本事，但是就是想不到一个好的创业点子。如图可以试试EXCEL。上周有个朋友跟我说了一个需求，单位里有个软件会临时分配清单客户，需要及时记录，过了一定的期限这些客户信息就不显示了。而开发客户不是一朝一夕能够谈成的，更多的他们都记录在笔记本里面，但是对日后的查询又会不方便。所以拜托我看看能不能转成电子档的。这个需求在软件开发工程师理解就是1到2个表解决的问题，而我第一时间想到了Excel，用excel把所需要的字段信息整理，然后逐个记录，也可以查询，可以存在网上，随时随地有客户端就可以查阅并且更新。</p>
 
@@ -270,7 +325,7 @@ Yay! You’re on Rails!</p>]]></content><author><name>Ryan</name></author><categ
 
 <p>这个不是瞎说也不是瞎想。从EXCEL表格业务细分出来的初创公司有<a href="https://www.runsandbox.com/">Sandbox</a>(早教方面的saas，方便教育人员安排活动)，<a href="https://www.sweptworks.com">swept</a>(管理家政清洁的SAAS平台),<a href="https://www.littlehotelier.com">Little Hotelier</a>（AirBnb上方便的调度平台）。</p>
 
-<p>留心琢磨，下个成功的SAAS产品说不定你可以从EXCEL上找出来。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">节假日查询，一个简单很暴力的idea</title><link href="http://localhost:4000/sideproject/holidays-query/" rel="alternate" type="text/html" title="节假日查询，一个简单很暴力的idea" /><published>2021-09-24T00:00:00+08:00</published><updated>2021-09-24T00:00:00+08:00</updated><id>http://localhost:4000/sideproject/holidays-query</id><content type="html" xml:base="http://localhost:4000/sideproject/holidays-query/"><![CDATA[<p>自由职业的人，或者不是朝九晚五上班的人，基本上没有放假的概念。经常会通过搜索引擎查询公众假期，除了搜索引擎自带的公众假期安排显示，这段时间搜索结果还有个叫<a href="https://publicholidays.cn">publicholidays</a>的网站。网站做的挺简洁，大家可以感受下.</p>
+<p>留心琢磨，下个成功的SAAS产品说不定你可以从EXCEL上找出来。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">节假日查询，一个简单很暴力的idea</title><link href="/sideproject/holidays-query/" rel="alternate" type="text/html" title="节假日查询，一个简单很暴力的idea" /><published>2021-09-24T00:00:00+08:00</published><updated>2021-09-24T00:00:00+08:00</updated><id>/sideproject/holidays-query</id><content type="html" xml:base="/sideproject/holidays-query/"><![CDATA[<p>自由职业的人，或者不是朝九晚五上班的人，基本上没有放假的概念。经常会通过搜索引擎查询公众假期，除了搜索引擎自带的公众假期安排显示，这段时间搜索结果还有个叫<a href="https://publicholidays.cn">publicholidays</a>的网站。网站做的挺简洁，大家可以感受下.</p>
 
 <p><img src="https://img-blog.csdnimg.cn/2021012417015957.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
 
@@ -284,7 +339,7 @@ Yay! You’re on Rails!</p>]]></content><author><name>Ryan</name></author><categ
 
 <h4 id="发散思考">发散思考</h4>
 
-<p>很多很实用的小工具，往往会带来超乎想象的流量。除了公众假期？我们还会查什么？个人工资？报税？最近社会热点？</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[自由职业的人，或者不是朝九晚五上班的人，基本上没有放假的概念。经常会通过搜索引擎查询公众假期，除了搜索引擎自带的公众假期安排显示，这段时间搜索结果还有个叫publicholidays的网站。网站做的挺简洁，大家可以感受下.]]></summary></entry><entry><title type="html">从Web开发到做支付</title><link href="http://localhost:4000/stratup/web-to-pay/" rel="alternate" type="text/html" title="从Web开发到做支付" /><published>2021-09-10T00:00:00+08:00</published><updated>2021-09-10T00:00:00+08:00</updated><id>http://localhost:4000/stratup/web-to-pay</id><content type="html" xml:base="http://localhost:4000/stratup/web-to-pay/"><![CDATA[<p><img src="https://media.payrequest.nl/images/payrequest-dashboard-v2.webp" alt="在这里插入图片描述" /></p>
+<p>很多很实用的小工具，往往会带来超乎想象的流量。除了公众假期？我们还会查什么？个人工资？报税？最近社会热点？</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[自由职业的人，或者不是朝九晚五上班的人，基本上没有放假的概念。经常会通过搜索引擎查询公众假期，除了搜索引擎自带的公众假期安排显示，这段时间搜索结果还有个叫publicholidays的网站。网站做的挺简洁，大家可以感受下.]]></summary></entry><entry><title type="html">从Web开发到做支付</title><link href="/stratup/web-to-pay/" rel="alternate" type="text/html" title="从Web开发到做支付" /><published>2021-09-10T00:00:00+08:00</published><updated>2021-09-10T00:00:00+08:00</updated><id>/stratup/web-to-pay</id><content type="html" xml:base="/stratup/web-to-pay/"><![CDATA[<p><img src="https://media.payrequest.nl/images/payrequest-dashboard-v2.webp" alt="在这里插入图片描述" /></p>
 
 <h3 id="总览">总览</h3>
 
@@ -301,14 +356,4 @@ Yay! You’re on Rails!</p>]]></content><author><name>Ryan</name></author><categ
 <h3 id="总结收获">总结收获</h3>
 <p>PayRequest的业务非常简单，但正是简单，解决用户的痛点才是关键。这让我想起之前个人开发的收款工具。总所周知，wechat pay和alipay 两大支付巨头，公司办理接口业务比较方便，但是对于个人开发者来说就不是那么友好。市场上已经推出了满足个人开发者收款的工具。其实也很简单。就是在android手机上写个驻留程序，根据个人开发者的微信支付或者支付宝付款推送，获取收款信息，然后解析发给服务器，再由服务器推送给业务系统，个人开发者只需要在开发的产品上放置收款码即可。</p>
 
-<p>今天分享就到这里，如果你有好的idea或者不同意见，欢迎留言讨论。</p>]]></content><author><name>Ryan</name></author><category term="stratup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">17岁妹子轻松赚取90万——帮孩子去英文名</title><link href="http://localhost:4000/stratup/english-name/" rel="alternate" type="text/html" title="17岁妹子轻松赚取90万——帮孩子去英文名" /><published>2021-08-09T00:00:00+08:00</published><updated>2021-08-09T00:00:00+08:00</updated><id>http://localhost:4000/stratup/english-name</id><content type="html" xml:base="http://localhost:4000/stratup/english-name/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124164257854.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<p>17岁的一个英国女孩子Beau Jessup，创建一个帮中国小孩起英文名的网站<a href="http://www.specialname.cn">www.specialname.cn</a>。 在之前的9个月已经给250,000中国小孩取了英文名。之前162,000个小孩免费，然后开始每个名字按10块钱收费。在支付宝上收，然后给出三个参考名字，而且每个名字有什么名人，最后可以分享到微信和家人们讨论。</p>
-
-<h4 id="怎么做到的">怎么做到的</h4>
-<p>Beau先创建一个4,000个名字的数据库，每个名字对应5个性格以及历史的人名。当用户选择五个自己希望小孩的性格后就开始匹配。</p>
-
-<h4 id="复盘">复盘:</h4>
-<p>这个点子很简单，但是很有用。按照她说的，父母都想把最好的给孩子。才花10块钱，可以让英美人士起一个，自己又喜欢又贴切的英文名，何乐而不为。</p>
-
-<p>我们也可以给老外建一个中文名字的网站？小程序？</p>]]></content><author><name>Ryan</name></author><category term="stratup" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>今天分享就到这里，如果你有好的idea或者不同意见，欢迎留言讨论。</p>]]></content><author><name>Ryan</name></author><category term="stratup" /><summary type="html"><![CDATA[]]></summary></entry></feed>

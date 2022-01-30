@@ -148,4 +148,10 @@ var store = [{
         "tags": ["website"],
         "url": "/google%20analytics/add-google-analist-to-github/",
         "teaser": null
+      },{
+        "title": "Sliding Window 解题笔记。找出连续k个数的平均值",
+        "excerpt":"问题，给出一个数组，找出所有连续的K个子项平均值。 Array: [2, 4, 2, 6, -3, -5, 8], K = 3 如上数组，求解 第一个平均值 （2 + 4 + 2）/3 =&gt; 2.6 第二个平均值 （4 + 2 + 6）/3 =&gt; 4 第三个平均值 （2 + 6 + （-3））/3 =&gt; 1.6 … 根据以上思路，得出最简单的解法，直接迭代求出 class AverageOfSubarrayOfSizeK{ public static double[] find(int[]arr, int K){ double[] ans =...","categories": ["Algorithm"],
+        "tags": ["Sliding Window"],
+        "url": "/algorithm/slide-window/",
+        "teaser": null
       }]
