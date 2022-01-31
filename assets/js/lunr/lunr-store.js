@@ -154,4 +154,10 @@ var store = [{
         "tags": ["Sliding Window"],
         "url": "/algorithm/slide-window/",
         "teaser": null
+      },{
+        "title": "Sliding Window 解题笔记2",
+        "excerpt":"紧接昨日思路，再来个递进，看题目，给出一个非负数组和一个非负数的K,找出数组中最大的连续K子项总和。示例如下， Input: [2, 1, 5, 1, 3, 2], k=3 Output: 9 Explanation: Subarray with maximum sum is [5, 1, 3]. 因为数组的缘故，可以先考虑迭代解决。代码如下 class MaxSumSubArrayOfSizeK { public static int findMaxSumSubArray(int[] arr, int k){ int maxSum = 0, windowSum; for(int i = 0; i&lt;= arr.length -k, i++){ windowSum = 0; for(int j =...","categories": ["Algorithm"],
+        "tags": ["Sliding Window"],
+        "url": "/algorithm/sliding-window-1/",
+        "teaser": null
       }]

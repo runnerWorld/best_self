@@ -1,4 +1,47 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-30T22:56:16+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Sliding Window 解题笔记。找出连续k个数的平均值</title><link href="/algorithm/slide-window/" rel="alternate" type="text/html" title="Sliding Window 解题笔记。找出连续k个数的平均值" /><published>2022-01-30T00:00:00+08:00</published><updated>2022-01-30T00:00:00+08:00</updated><id>/algorithm/slide-window</id><content type="html" xml:base="/algorithm/slide-window/"><![CDATA[<p>问题，给出一个数组，找出所有连续的K个子项平均值。</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-31T09:31:55+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Sliding Window 解题笔记2</title><link href="/algorithm/sliding-window-1/" rel="alternate" type="text/html" title="Sliding Window 解题笔记2" /><published>2022-01-31T00:00:00+08:00</published><updated>2022-01-31T00:00:00+08:00</updated><id>/algorithm/sliding-window-1</id><content type="html" xml:base="/algorithm/sliding-window-1/"><![CDATA[<p>紧接昨日思路，再来个递进，看题目，给出一个非负数组和一个非负数的K,找出数组中最大的连续K子项总和。示例如下，</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: [2, 1, 5, 1, 3, 2], k=3 
+Output: 9
+Explanation: Subarray with maximum sum is [5, 1, 3].
+</code></pre></div></div>
+<p>因为数组的缘故，可以先考虑迭代解决。代码如下</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MaxSumSubArrayOfSizeK {
+    public static int findMaxSumSubArray(int[] arr, int k){
+        int maxSum = 0, windowSum;
+        for(int i = 0; i&lt;= arr.length -k, i++){
+            windowSum = 0;
+            for(int j = i; j &lt;i+k; j++){
+                windowSum += arr[j];
+            }
+            maxSum = Math.max(maxSum, windowSum);
+        }
+        return maxSum;
+    }
+}
+</code></pre></div></div>
+
+<p>同昨天缘故一样，时间复杂度还是O(N * K),N是 数组长度。采用Sliding Window把 时间复杂度降下来。
+思路，找出每k个子项的相同项，不同的都是在一头一尾，头尾替换就可以。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MaxSumSubArrayOfSizeK {
+    public static int findMaxSumSubArray(int[] arr, int k){
+        int maxSum = 0, windowSum = 0;
+        int left = 0;
+        for(int right = 0; right&lt;= arr.length, right++){
+            windowSum += arr[right];
+            if(right &gt;= k-1){
+              maxSum = Math.math(maxSum, windowSum);
+              windowSum -= arr[left];
+              left++;
+            }
+            
+        }
+        return maxSum;
+    }
+}
+
+</code></pre></div></div>
+<p>时间复杂度是O(N)， 空间复杂度是O(1)。</p>]]></content><author><name>Ryan</name></author><category term="Algorithm" /><category term="Sliding Window" /><summary type="html"><![CDATA[紧接昨日思路，再来个递进，看题目，给出一个非负数组和一个非负数的K,找出数组中最大的连续K子项总和。示例如下，]]></summary></entry><entry><title type="html">Sliding Window 解题笔记。找出连续k个数的平均值</title><link href="/algorithm/slide-window/" rel="alternate" type="text/html" title="Sliding Window 解题笔记。找出连续k个数的平均值" /><published>2022-01-30T00:00:00+08:00</published><updated>2022-01-30T00:00:00+08:00</updated><id>/algorithm/slide-window</id><content type="html" xml:base="/algorithm/slide-window/"><![CDATA[<p>问题，给出一个数组，找出所有连续的K个子项平均值。</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Array: [2, 4, 2, 6, -3, -5, 8], K = 3
 </code></pre></div></div>
@@ -339,21 +382,4 @@ Yay! You’re on Rails!</p>]]></content><author><name>Ryan</name></author><categ
 
 <h4 id="发散思考">发散思考</h4>
 
-<p>很多很实用的小工具，往往会带来超乎想象的流量。除了公众假期？我们还会查什么？个人工资？报税？最近社会热点？</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[自由职业的人，或者不是朝九晚五上班的人，基本上没有放假的概念。经常会通过搜索引擎查询公众假期，除了搜索引擎自带的公众假期安排显示，这段时间搜索结果还有个叫publicholidays的网站。网站做的挺简洁，大家可以感受下.]]></summary></entry><entry><title type="html">从Web开发到做支付</title><link href="/stratup/web-to-pay/" rel="alternate" type="text/html" title="从Web开发到做支付" /><published>2021-09-10T00:00:00+08:00</published><updated>2021-09-10T00:00:00+08:00</updated><id>/stratup/web-to-pay</id><content type="html" xml:base="/stratup/web-to-pay/"><![CDATA[<p><img src="https://media.payrequest.nl/images/payrequest-dashboard-v2.webp" alt="在这里插入图片描述" /></p>
-
-<h3 id="总览">总览</h3>
-
-<p><a href="https://payrequest.io">PayRequest</a>，是一个全球性的支付服务平台，一个SAAS。可以轻松创建自己品牌支付页面，管理你的支付链接，你的客户根据支付链接就可以向你的产品或者服务进行支付。全程不需要你懂代码。创始人Geert Jan Sloos，是位德国人，12岁开始写网站，到18岁，就已经运营一个web主机公司，大概客户在1000人左右。</p>
-
-<p>在创业过程中，Geert Jan Sloos 觉得最难的部分应该是找到用户并且留存。他说他有在线推广经验，但是PayRequest是一个全球的服务平台，所以他还是很谨慎。他很感恩，从获得第一个用户到逐渐收获一些正面的反馈。</p>
-
-<p>目前的运营模式就是从收款方收取手续费，按每笔交易1%的手续费收取。他觉得很合理，收款方有钱进账， 那么作为服务方同样有钱进账。</p>
-
-<h3 id="技术部分">技术部分</h3>
-
-<p>平台目前依托Github的page，Jekyll。开发框架采用symfony，目前架构(Linux + Apache + Nginx + Mariadb + PHP )。</p>
-
-<h3 id="总结收获">总结收获</h3>
-<p>PayRequest的业务非常简单，但正是简单，解决用户的痛点才是关键。这让我想起之前个人开发的收款工具。总所周知，wechat pay和alipay 两大支付巨头，公司办理接口业务比较方便，但是对于个人开发者来说就不是那么友好。市场上已经推出了满足个人开发者收款的工具。其实也很简单。就是在android手机上写个驻留程序，根据个人开发者的微信支付或者支付宝付款推送，获取收款信息，然后解析发给服务器，再由服务器推送给业务系统，个人开发者只需要在开发的产品上放置收款码即可。</p>
-
-<p>今天分享就到这里，如果你有好的idea或者不同意见，欢迎留言讨论。</p>]]></content><author><name>Ryan</name></author><category term="stratup" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>很多很实用的小工具，往往会带来超乎想象的流量。除了公众假期？我们还会查什么？个人工资？报税？最近社会热点？</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[自由职业的人，或者不是朝九晚五上班的人，基本上没有放假的概念。经常会通过搜索引擎查询公众假期，除了搜索引擎自带的公众假期安排显示，这段时间搜索结果还有个叫publicholidays的网站。网站做的挺简洁，大家可以感受下.]]></summary></entry></feed>
