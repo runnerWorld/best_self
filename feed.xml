@@ -1,4 +1,40 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-01-31T09:31:55+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Sliding Window 解题笔记2</title><link href="/algorithm/sliding-window-1/" rel="alternate" type="text/html" title="Sliding Window 解题笔记2" /><published>2022-01-31T00:00:00+08:00</published><updated>2022-01-31T00:00:00+08:00</updated><id>/algorithm/sliding-window-1</id><content type="html" xml:base="/algorithm/sliding-window-1/"><![CDATA[<p>紧接昨日思路，再来个递进，看题目，给出一个非负数组和一个非负数的K,找出数组中最大的连续K子项总和。示例如下，</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-02-01T19:36:28+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Sliding Window 系列 笔记3</title><link href="/algorithm/sliding-window-2/" rel="alternate" type="text/html" title="Sliding Window 系列 笔记3" /><published>2022-02-01T00:00:00+08:00</published><updated>2022-02-01T00:00:00+08:00</updated><id>/algorithm/sliding-window-2</id><content type="html" xml:base="/algorithm/sliding-window-2/"><![CDATA[<h3 id="题目">题目</h3>
+
+<p>给出一个非负数组和一个非负数s,找出数组中总和大于或者等于s的最小连续子乡长度。示例如下，</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子1
+输入: [2, 1, 5, 2, 3, 2], s=7 
+输出: 2
+解释: 最小的子项大于或者等于7。[5,2]的长度是2。
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子2
+输入: [2, 1, 5, 2, 8], s=7 
+输出: 1
+解释: 最小的子项大于或者等于7。[8]的长度是1。
+</code></pre></div></div>
+<h3 id="思路">思路</h3>
+<p>根据之前的Sliding Window 解法，目前需要考虑的是连续子项的个数变化，需要把子项不断相加，直到总和大于或者等于s，那么记录这些子项的个数，同时把第一个子项去除，继续加入新的子项。见代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MinSizeSubArraySum {
+    public static int findMinSubArray(int[] arr, int s){
+        int windowSum = 0, minLength = Integer.MAX_VALUE;
+        int left = 0;
+        for(int right = 0; right&lt;= arr.length, right++){
+            windowSum += arr[right];
+            if(windowSum &gt;= s){
+              minLength = Math.min(minLength, right - left + 1);
+              windowSum -= arr[left];
+              left++;
+            }
+            
+        }
+        return minLength == Integer.MAX_VALUE ? 0 : minLength;
+    }
+}
+
+</code></pre></div></div>
+<p>时间复杂度是O(N)， 空间复杂度是O(1)。</p>]]></content><author><name>Ryan</name></author><category term="Algorithm" /><category term="Sliding Window" /><summary type="html"><![CDATA[题目]]></summary></entry><entry><title type="html">Sliding Window 系列 笔记2</title><link href="/algorithm/sliding-window-1/" rel="alternate" type="text/html" title="Sliding Window 系列 笔记2" /><published>2022-01-31T00:00:00+08:00</published><updated>2022-01-31T00:00:00+08:00</updated><id>/algorithm/sliding-window-1</id><content type="html" xml:base="/algorithm/sliding-window-1/"><![CDATA[<p>紧接昨日思路，再来个递进，看题目，给出一个非负数组和一个非负数的K,找出数组中最大的连续K子项总和。示例如下，</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: [2, 1, 5, 1, 3, 2], k=3 
 Output: 9
@@ -41,7 +77,7 @@ Explanation: Subarray with maximum sum is [5, 1, 3].
 }
 
 </code></pre></div></div>
-<p>时间复杂度是O(N)， 空间复杂度是O(1)。</p>]]></content><author><name>Ryan</name></author><category term="Algorithm" /><category term="Sliding Window" /><summary type="html"><![CDATA[紧接昨日思路，再来个递进，看题目，给出一个非负数组和一个非负数的K,找出数组中最大的连续K子项总和。示例如下，]]></summary></entry><entry><title type="html">Sliding Window 解题笔记。找出连续k个数的平均值</title><link href="/algorithm/slide-window/" rel="alternate" type="text/html" title="Sliding Window 解题笔记。找出连续k个数的平均值" /><published>2022-01-30T00:00:00+08:00</published><updated>2022-01-30T00:00:00+08:00</updated><id>/algorithm/slide-window</id><content type="html" xml:base="/algorithm/slide-window/"><![CDATA[<p>问题，给出一个数组，找出所有连续的K个子项平均值。</p>
+<p>时间复杂度是O(N)， 空间复杂度是O(1)。</p>]]></content><author><name>Ryan</name></author><category term="Algorithm" /><category term="Sliding Window" /><summary type="html"><![CDATA[紧接昨日思路，再来个递进，看题目，给出一个非负数组和一个非负数的K,找出数组中最大的连续K子项总和。示例如下，]]></summary></entry><entry><title type="html">Sliding Window 系列笔记。找出连续k个数的平均值</title><link href="/algorithm/slide-window/" rel="alternate" type="text/html" title="Sliding Window 系列笔记。找出连续k个数的平均值" /><published>2022-01-30T00:00:00+08:00</published><updated>2022-01-30T00:00:00+08:00</updated><id>/algorithm/slide-window</id><content type="html" xml:base="/algorithm/slide-window/"><![CDATA[<p>问题，给出一个数组，找出所有连续的K个子项平均值。</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Array: [2, 4, 2, 6, -3, -5, 8], K = 3
 </code></pre></div></div>
@@ -368,18 +404,4 @@ Yay! You’re on Rails!</p>]]></content><author><name>Ryan</name></author><categ
 
 <p>这个不是瞎说也不是瞎想。从EXCEL表格业务细分出来的初创公司有<a href="https://www.runsandbox.com/">Sandbox</a>(早教方面的saas，方便教育人员安排活动)，<a href="https://www.sweptworks.com">swept</a>(管理家政清洁的SAAS平台),<a href="https://www.littlehotelier.com">Little Hotelier</a>（AirBnb上方便的调度平台）。</p>
 
-<p>留心琢磨，下个成功的SAAS产品说不定你可以从EXCEL上找出来。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">节假日查询，一个简单很暴力的idea</title><link href="/sideproject/holidays-query/" rel="alternate" type="text/html" title="节假日查询，一个简单很暴力的idea" /><published>2021-09-24T00:00:00+08:00</published><updated>2021-09-24T00:00:00+08:00</updated><id>/sideproject/holidays-query</id><content type="html" xml:base="/sideproject/holidays-query/"><![CDATA[<p>自由职业的人，或者不是朝九晚五上班的人，基本上没有放假的概念。经常会通过搜索引擎查询公众假期，除了搜索引擎自带的公众假期安排显示，这段时间搜索结果还有个叫<a href="https://publicholidays.cn">publicholidays</a>的网站。网站做的挺简洁，大家可以感受下.</p>
-
-<p><img src="https://img-blog.csdnimg.cn/2021012417015957.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<p>我就纳闷，这样子的公众假期展示也会有人做么？他怎么获利？原来网站挂了google的adsense。通过similar web我们可以查看。</p>
-
-<p><img src="https://img-blog.csdnimg.cn/20210124170329770.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<p>每个月平均两百万人访问，这个访问量真大。</p>
-
-<p>这个网站是个人开发的么？带着疑问我研究了一下。我找到了<a href="https://publicholidays.global/about/">关于我们</a>,2011年成立于悉尼，为全球200多个国家地区提供公众假期查询服务，并且还会介绍假期的由来和文化等信息。</p>
-
-<h4 id="发散思考">发散思考</h4>
-
-<p>很多很实用的小工具，往往会带来超乎想象的流量。除了公众假期？我们还会查什么？个人工资？报税？最近社会热点？</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[自由职业的人，或者不是朝九晚五上班的人，基本上没有放假的概念。经常会通过搜索引擎查询公众假期，除了搜索引擎自带的公众假期安排显示，这段时间搜索结果还有个叫publicholidays的网站。网站做的挺简洁，大家可以感受下.]]></summary></entry></feed>
+<p>留心琢磨，下个成功的SAAS产品说不定你可以从EXCEL上找出来。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[]]></summary></entry></feed>

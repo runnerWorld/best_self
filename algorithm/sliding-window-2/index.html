@@ -9,28 +9,32 @@
   <head>
     <meta charset="utf-8">
 <script data-ad-client="ca-pub-4606636162302812" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- begin _includes/seo.html --><title>Espresso Withoutmilk - Page 3</title>
-<meta name="description" content="爱喝咖啡,乳糖不耐受">
+<!-- begin _includes/seo.html --><title>Sliding Window 系列 笔记3 - Espresso Withoutmilk</title>
+<meta name="description" content="题目">
 
 
   <meta name="author" content="Ryan">
   
+  <meta property="article:author" content="Ryan">
+  
 
 
-<meta property="og:type" content="website">
+<meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Espresso Withoutmilk">
-<meta property="og:title" content="Espresso Withoutmilk">
-<meta property="og:url" content="/page3/">
+<meta property="og:title" content="Sliding Window 系列 笔记3">
+<meta property="og:url" content="/algorithm/sliding-window-2/">
 
 
-  <meta property="og:description" content="爱喝咖啡,乳糖不耐受">
-
-
-
+  <meta property="og:description" content="题目">
 
 
 
+
+
+
+
+  <meta property="article:published_time" content="2022-02-01T00:00:00+08:00">
 
 
 
@@ -41,13 +45,9 @@
   
 
 
-<link rel="canonical" href="/page3/">
+<link rel="canonical" href="/algorithm/sliding-window-2/">
 
 
-  <link rel="prev" href="/page2/">
-
-
-  <link rel="next" href="/page4/">
 
 
 <script type="application/ld+json">
@@ -96,7 +96,7 @@
 
   </head>
 
-  <body class="layout--home">
+  <body class="layout--single">
     <nav class="skip-links">
   <ul>
     <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
@@ -248,29 +248,173 @@
 
 
 
-  <div class="archive">
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Sliding Window 系列 笔记3">
+    <meta itemprop="description" content="题目">
+    <meta itemprop="datePublished" content="2022-02-01T00:00:00+08:00">
     
-      <h1 id="page-title" class="page__title"></h1>
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="/algorithm/sliding-window-2/" class="u-url" itemprop="url">Sliding Window 系列 笔记3
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
     
+
     
 
-<h3 class="archive__subtitle">Recent posts</h3>
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
 
 
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+        <h3 id="题目">题目</h3>
+
+<p>给出一个非负数组和一个非负数s,找出数组中总和大于或者等于s的最小连续子乡长度。示例如下，</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子1
+输入: [2, 1, 5, 2, 3, 2], s=7 
+输出: 2
+解释: 最小的子项大于或者等于7。[5,2]的长度是2。
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子2
+输入: [2, 1, 5, 2, 8], s=7 
+输出: 1
+解释: 最小的子项大于或者等于7。[8]的长度是1。
+</code></pre></div></div>
+<h3 id="思路">思路</h3>
+<p>根据之前的Sliding Window 解法，目前需要考虑的是连续子项的个数变化，需要把子项不断相加，直到总和大于或者等于s，那么记录这些子项的个数，同时把第一个子项去除，继续加入新的子项。见代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MinSizeSubArraySum {
+    public static int findMinSubArray(int[] arr, int s){
+        int windowSum = 0, minLength = Integer.MAX_VALUE;
+        int left = 0;
+        for(int right = 0; right&lt;= arr.length, right++){
+            windowSum += arr[right];
+            if(windowSum &gt;= s){
+              minLength = Math.min(minLength, right - left + 1);
+              windowSum -= arr[left];
+              left++;
+            }
+            
+        }
+        return minLength == Integer.MAX_VALUE ? 0 : minLength;
+    }
+}
+
+</code></pre></div></div>
+<p>时间复杂度是O(N)， 空间复杂度是O(1)。</p>
 
 
-<div class="entries-list">
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
   
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
     
+      <a href="/tags/#sliding-window" class="page__taxonomy-item p-category" rel="tag">Sliding Window</a>
+    
+    </span>
+  </p>
 
 
 
-<div class="list__item">
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#algorithm" class="page__taxonomy-item p-category" rel="tag">Algorithm</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-02-01T00:00:00+08:00">February 1, 2022</time></p>
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Sliding+Window+%E7%B3%BB%E5%88%97+%E7%AC%94%E8%AE%B03%20%2Falgorithm%2Fsliding-window-2%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Falgorithm%2Fsliding-window-2%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Falgorithm%2Fsliding-window-2%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/algorithm/sliding-window-1/" class="pagination--pager" title="Sliding Window 系列 笔记2
+">Previous</a>
+    
+    
+      <a href="#" class="pagination--pager disabled">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/sideproject/holidays-query/" rel="permalink">节假日查询，一个简单很暴力的idea
+        <a href="/algorithm/sliding-window-1/" rel="permalink">Sliding Window 系列 笔记2
 </a>
       
     </h2>
@@ -295,22 +439,22 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">自由职业的人，或者不是朝九晚五上班的人，基本上没有放假的概念。经常会通过搜索引擎查询公众假期，除了搜索引擎自带的公众假期安排显示，这段时间搜索结果还有个叫publicholidays的网站。网站做的挺简洁，大家可以感受下.
+    <p class="archive__item-excerpt" itemprop="description">紧接昨日思路，再来个递进，看题目，给出一个非负数组和一个非负数的K,找出数组中最大的连续K子项总和。示例如下，
 </p>
   </article>
 </div>
 
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/stratup/web-to-pay/" rel="permalink">从Web开发到做支付
+        <a href="/algorithm/slide-window/" rel="permalink">Sliding Window 系列笔记。找出连续k个数的平均值
 </a>
       
     </h2>
@@ -335,22 +479,22 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">
+    <p class="archive__item-excerpt" itemprop="description">问题，给出一个数组，找出所有连续的K个子项平均值。
 </p>
   </article>
 </div>
 
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/stratup/english-name/" rel="permalink">17岁妹子轻松赚取90万——帮孩子去英文名
+        <a href="/google%20analytics/add-google-analist-to-github/" rel="permalink">如何在网站上增加Google analytics，手把手操作
 </a>
       
     </h2>
@@ -375,22 +519,22 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">
+    <p class="archive__item-excerpt" itemprop="description">如何在网站上增加Google的分析，大致说下思路，在Google Analytics上创建你的账号，然后填写相关需要观察网站的信息，顺利验证后会生成一段代码，主要用于Google对网站的访问情况记录，把这段代码放在网站的head标签内即可。下面直接来手把手操作。
 </p>
   </article>
 </div>
 
-  
-    
+        
+          
 
 
 
-<div class="list__item">
+<div class="grid__item">
   <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/google/google-products/" rel="permalink">一窥谷歌产品全家福
+        <a href="/ruby/csv-gem/" rel="permalink">快速处理csv
 </a>
       
     </h2>
@@ -415,121 +559,16 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">
+    <p class="archive__item-excerpt" itemprop="description">今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，链接附上处理csv的代码，但是如果出来的行数足够大，那也是挺恐怖。
 </p>
   </article>
 </div>
 
+        
+      </div>
+    </div>
   
-    
-
-
-
-<div class="list__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/sideproject/stratup/testing-cloud/" rel="permalink">把传统测试放上云
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">今天和大家分享的是LambdaTest
-</p>
-  </article>
-</div>
-
   
-</div>
-
-
-<nav class="pagination">
-  
-  <ul>
-    
-    
-      
-        <li><a href="/page2/">Previous</a></li>
-      
-    
-
-    
-    
-      <li><a href="/">1</a></li>
-    
-
-    
-    
-
-    
-    
-    
-
-    
-      
-        
-        
-        
-        <li><a href="/page2/">2</a></li>
-      
-    
-      
-        <li><a href="/page3/" class="disabled current">3</a></li>
-      
-    
-      
-        
-        
-        
-        <li><a href="/page4/">4</a></li>
-      
-    
-      
-        
-        
-        
-        <li><a href="/page5/">5</a></li>
-      
-    
-
-    
-    
-
-    
-      <li><a href="/page6/">6</a></li>
-    
-
-    
-    
-      <li><a href="/page4/">Next</a></li>
-    
-  </ul>
-</nav>
-
-
-
-  </div>
 </div>
     </div>
 

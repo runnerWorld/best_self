@@ -149,15 +149,21 @@ var store = [{
         "url": "/google%20analytics/add-google-analist-to-github/",
         "teaser": null
       },{
-        "title": "Sliding Window 解题笔记。找出连续k个数的平均值",
+        "title": "Sliding Window 系列笔记。找出连续k个数的平均值",
         "excerpt":"问题，给出一个数组，找出所有连续的K个子项平均值。 Array: [2, 4, 2, 6, -3, -5, 8], K = 3 如上数组，求解 第一个平均值 （2 + 4 + 2）/3 =&gt; 2.6 第二个平均值 （4 + 2 + 6）/3 =&gt; 4 第三个平均值 （2 + 6 + （-3））/3 =&gt; 1.6 … 根据以上思路，得出最简单的解法，直接迭代求出 class AverageOfSubarrayOfSizeK{ public static double[] find(int[]arr, int K){ double[] ans =...","categories": ["Algorithm"],
         "tags": ["Sliding Window"],
         "url": "/algorithm/slide-window/",
         "teaser": null
       },{
-        "title": "Sliding Window 解题笔记2",
+        "title": "Sliding Window 系列 笔记2",
         "excerpt":"紧接昨日思路，再来个递进，看题目，给出一个非负数组和一个非负数的K,找出数组中最大的连续K子项总和。示例如下， Input: [2, 1, 5, 1, 3, 2], k=3 Output: 9 Explanation: Subarray with maximum sum is [5, 1, 3]. 因为数组的缘故，可以先考虑迭代解决。代码如下 class MaxSumSubArrayOfSizeK { public static int findMaxSumSubArray(int[] arr, int k){ int maxSum = 0, windowSum; for(int i = 0; i&lt;= arr.length -k, i++){ windowSum = 0; for(int j =...","categories": ["Algorithm"],
         "tags": ["Sliding Window"],
         "url": "/algorithm/sliding-window-1/",
+        "teaser": null
+      },{
+        "title": "Sliding Window 系列 笔记3",
+        "excerpt":"题目 给出一个非负数组和一个非负数s,找出数组中总和大于或者等于s的最小连续子乡长度。示例如下， 例子1 输入: [2, 1, 5, 2, 3, 2], s=7 输出: 2 解释: 最小的子项大于或者等于7。[5,2]的长度是2。 例子2 输入: [2, 1, 5, 2, 8], s=7 输出: 1 解释: 最小的子项大于或者等于7。[8]的长度是1。 思路 根据之前的Sliding Window 解法，目前需要考虑的是连续子项的个数变化，需要把子项不断相加，直到总和大于或者等于s，那么记录这些子项的个数，同时把第一个子项去除，继续加入新的子项。见代码 class MinSizeSubArraySum { public static int findMinSubArray(int[] arr, int s){ int windowSum = 0, minLength = Integer.MAX_VALUE; int left...","categories": ["Algorithm"],
+        "tags": ["Sliding Window"],
+        "url": "/algorithm/sliding-window-2/",
         "teaser": null
       }]
