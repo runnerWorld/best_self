@@ -1,4 +1,57 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-02-01T19:36:28+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Sliding Window 系列 笔记3</title><link href="/algorithm/sliding-window-2/" rel="alternate" type="text/html" title="Sliding Window 系列 笔记3" /><published>2022-02-01T00:00:00+08:00</published><updated>2022-02-01T00:00:00+08:00</updated><id>/algorithm/sliding-window-2</id><content type="html" xml:base="/algorithm/sliding-window-2/"><![CDATA[<h3 id="题目">题目</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-02-02T13:48:08+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Sliding Window 系列笔记4 数组中最长唯一子字符长度</title><link href="/algorithm/sliding-window-longest-substring-with-k-distinct-character/" rel="alternate" type="text/html" title="Sliding Window 系列笔记4 数组中最长唯一子字符长度" /><published>2022-02-02T00:00:00+08:00</published><updated>2022-02-02T00:00:00+08:00</updated><id>/algorithm/sliding-window-longest-substring-with-k-distinct-character</id><content type="html" xml:base="/algorithm/sliding-window-longest-substring-with-k-distinct-character/"><![CDATA[<h3 id="题目">题目</h3>
+
+<p>给出一个字符串,找出字符串中唯一的，最长的并且子字符个数等于K的长度，示例如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子1
+输入: String="araaci", K=2 
+输出: 4
+解释: 最长子字符串长度是4,"araa"
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子2
+输入: String="araaci", K=1
+输出: 2
+解释: 最长子字符串长度是2,"aa"
+</code></pre></div></div>
+<h3 id="思路">思路</h3>
+<p>依然采用Sliding Window解法，由于需要不停的比对判断是否超过k的个数，所以考虑使用HashMap;</p>
+
+<p>1 - 首先我们逐个加入子字符.</p>
+
+<p>2 - 判断加入的子字符是否超过 K 个数.</p>
+
+<p>3 - 如果超过 K 个数，那么就要移除第一个 子字符</p>
+
+<p>4 - 一直比对，保留最长的个数</p>
+
+<p>参看如下代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class LongestSubstringKDistinct {
+  public static int findLength(String str, int k){
+    if (str == null || str.length() == 0 || str.length() &lt; k)
+      throw new IllegalArgumentException();
+  
+    int left = 0, maxLength = 0;
+    Map&lt;Character, Integer&gt; charsMap = new HashMap&lt;&gt;();
+    for(int right =0; right &lt; str.length(); right++){
+      char rightChar = str.charAt(right);
+      charsMap.put(rightChar, charsMap.getOrDefault(rightChar, 0) + 1);
+      while(charsMap.size()&gt;k){
+        char leftChar = str.charAt(left);
+        charsMap.put(leftChar, charsMap.get(leftChar) -1);
+        if(charsMap.get(leftChar) == 0){
+          charsMap.remove(leftChar);
+        }
+        left++;
+      }
+      maxLength = Math.max(maxLength, right-left+1);
+    }
+    return maxLength;
+  }
+}
+
+</code></pre></div></div>
+<p>此时时间复杂度是O(N)， 空间复杂度是O(K)。</p>]]></content><author><name>Ryan</name></author><category term="Algorithm" /><category term="Sliding Window" /><summary type="html"><![CDATA[题目]]></summary></entry><entry><title type="html">Sliding Window 系列 笔记3</title><link href="/algorithm/sliding-window-2/" rel="alternate" type="text/html" title="Sliding Window 系列 笔记3" /><published>2022-02-01T00:00:00+08:00</published><updated>2022-02-01T00:00:00+08:00</updated><id>/algorithm/sliding-window-2</id><content type="html" xml:base="/algorithm/sliding-window-2/"><![CDATA[<h3 id="题目">题目</h3>
 
 <p>给出一个非负数组和一个非负数s,找出数组中总和大于或者等于s的最小连续子乡长度。示例如下，</p>
 
@@ -392,16 +445,4 @@ rails server
 </code></pre></div></div>
 
 <p>打开浏览器访问 http://localhost:3000, 成功的话应该可以看到
-Yay! You’re on Rails!</p>]]></content><author><name>Ryan</name></author><category term="ruby on rails" /><category term="MacOS" /><summary type="html"><![CDATA[需时大概30分钟]]></summary></entry><entry><title type="html">找不到好的创业点子，试试EXCEL</title><link href="/sideproject/excel-side-project/" rel="alternate" type="text/html" title="找不到好的创业点子，试试EXCEL" /><published>2021-10-05T00:00:00+08:00</published><updated>2021-10-05T00:00:00+08:00</updated><id>/sideproject/excel-side-project</id><content type="html" xml:base="/sideproject/excel-side-project/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210124170557466.jpg?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<p>很多时候，开发人员空有一身好本事，但是就是想不到一个好的创业点子。如图可以试试EXCEL。上周有个朋友跟我说了一个需求，单位里有个软件会临时分配清单客户，需要及时记录，过了一定的期限这些客户信息就不显示了。而开发客户不是一朝一夕能够谈成的，更多的他们都记录在笔记本里面，但是对日后的查询又会不方便。所以拜托我看看能不能转成电子档的。这个需求在软件开发工程师理解就是1到2个表解决的问题，而我第一时间想到了Excel，用excel把所需要的字段信息整理，然后逐个记录，也可以查询，可以存在网上，随时随地有客户端就可以查阅并且更新。</p>
-
-<p>很多SAAS初创企业面临的最大竞争者其实是EXCEL，但是存在竞争都是有好处的.百度或者谷歌搜索一波 excel template，会看到各种各样的EXCEL样式，针对每个样式的EXCEL大都可以挖掘出需求，注意了。这里的样式不是颜色的意思，是各行业。</p>
-
-<p><img src="https://img-blog.csdnimg.cn/20210124170615971.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<p>举例说明，通常收入支出表是会计金融行业才关注的，而且也有相关的格式，但是自由职业者是不是也会需要？婚礼统筹是不是也会需要？房屋出租是不是也会需要？每个行业一细分就会是一个业务，再把周边业务打通，就可以做一个产品了。</p>
-
-<p>这个不是瞎说也不是瞎想。从EXCEL表格业务细分出来的初创公司有<a href="https://www.runsandbox.com/">Sandbox</a>(早教方面的saas，方便教育人员安排活动)，<a href="https://www.sweptworks.com">swept</a>(管理家政清洁的SAAS平台),<a href="https://www.littlehotelier.com">Little Hotelier</a>（AirBnb上方便的调度平台）。</p>
-
-<p>留心琢磨，下个成功的SAAS产品说不定你可以从EXCEL上找出来。</p>]]></content><author><name>Ryan</name></author><category term="sideproject" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+Yay! You’re on Rails!</p>]]></content><author><name>Ryan</name></author><category term="ruby on rails" /><category term="MacOS" /><summary type="html"><![CDATA[需时大概30分钟]]></summary></entry></feed>

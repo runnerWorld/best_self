@@ -166,4 +166,10 @@ var store = [{
         "tags": ["Sliding Window"],
         "url": "/algorithm/sliding-window-2/",
         "teaser": null
+      },{
+        "title": "Sliding Window 系列笔记4 数组中最长唯一子字符长度",
+        "excerpt":"题目 给出一个字符串,找出字符串中唯一的，最长的并且子字符个数等于K的长度，示例如下： 例子1 输入: String=\"araaci\", K=2 输出: 4 解释: 最长子字符串长度是4,\"araa\" 例子2 输入: String=\"araaci\", K=1 输出: 2 解释: 最长子字符串长度是2,\"aa\" 思路 依然采用Sliding Window解法，由于需要不停的比对判断是否超过k的个数，所以考虑使用HashMap; 1 - 首先我们逐个加入子字符. 2 - 判断加入的子字符是否超过 K 个数. 3 - 如果超过 K 个数，那么就要移除第一个 子字符 4 - 一直比对，保留最长的个数 参看如下代码 class LongestSubstringKDistinct { public static int findLength(String str, int k){ if...","categories": ["Algorithm"],
+        "tags": ["Sliding Window"],
+        "url": "/algorithm/sliding-window-longest-substring-with-k-distinct-character/",
+        "teaser": null
       }]
