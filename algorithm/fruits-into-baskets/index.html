@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 <script data-ad-client="ca-pub-4606636162302812" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- begin _includes/seo.html --><title>Sliding Window 系列笔记4 数组中最长唯一子字符长度 - Espresso Withoutmilk</title>
-<meta name="description" content="题目">
+<!-- begin _includes/seo.html --><title>Sliding Window 系列笔记5 找出最长的2种组合 - Espresso Withoutmilk</title>
+<meta name="description" content="题目， 给出一个字符数组,里面每个字符代表一个类别，只能够从中挑出两种类别，挑选过程中并且不能够中断，求挑选出最长的字符长度。示例如下：">
 
 
   <meta name="author" content="Ryan">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Espresso Withoutmilk">
-<meta property="og:title" content="Sliding Window 系列笔记4 数组中最长唯一子字符长度">
-<meta property="og:url" content="/algorithm/sliding-window-longest-substring-with-k-distinct-character/">
+<meta property="og:title" content="Sliding Window 系列笔记5 找出最长的2种组合">
+<meta property="og:url" content="/algorithm/fruits-into-baskets/">
 
 
-  <meta property="og:description" content="题目">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-02-02T00:00:00+08:00">
+  <meta property="og:description" content="题目， 给出一个字符数组,里面每个字符代表一个类别，只能够从中挑出两种类别，挑选过程中并且不能够中断，求挑选出最长的字符长度。示例如下：">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2022-02-03T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="/algorithm/sliding-window-longest-substring-with-k-distinct-character/">
+
+<link rel="canonical" href="/algorithm/fruits-into-baskets/">
 
 
 
@@ -249,16 +249,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Sliding Window 系列笔记4 数组中最长唯一子字符长度">
-    <meta itemprop="description" content="题目">
-    <meta itemprop="datePublished" content="2022-02-02T00:00:00+08:00">
+    <meta itemprop="headline" content="Sliding Window 系列笔记5 找出最长的2种组合">
+    <meta itemprop="description" content="题目， 给出一个字符数组,里面每个字符代表一个类别，只能够从中挑出两种类别，挑选过程中并且不能够中断，求挑选出最长的字符长度。示例如下：">
+    <meta itemprop="datePublished" content="2022-02-03T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="/algorithm/sliding-window-longest-substring-with-k-distinct-character/" class="u-url" itemprop="url">Sliding Window 系列笔记4 数组中最长唯一子字符长度
+            <a href="/algorithm/fruits-into-baskets/" class="u-url" itemprop="url">Sliding Window 系列笔记5 找出最长的2种组合
 </a>
           </h1>
           
@@ -287,60 +287,45 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <h3 id="题目">题目</h3>
-
-<p>给出一个字符串,找出字符串中唯一的，最长的并且子字符个数等于K的长度，示例如下：</p>
+        <p>题目， 给出一个字符数组,里面每个字符代表一个类别，只能够从中挑出两种类别，挑选过程中并且不能够中断，求挑选出最长的字符长度。示例如下：</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子1
-输入: String="araaci", K=2 
-输出: 4
-解释: 最长子字符串长度是4,"araa"
+输入: String=['A', 'B', 'C', 'A', 'C']
+输出: 3
+解释: 可以从 'C' 开始挑选，那么就是 'C' 'A' 'C'，长度是3
 </code></pre></div></div>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子2
-输入: String="araaci", K=1
-输出: 2
-解释: 最长子字符串长度是2,"aa"
+输入: String=['A', 'B', 'C', 'B', 'B', 'C']
+输出: 5
+解释: 可以从 'C' 开始挑选，那么就是 'C' 'B' 'B' 'B' 'C'，长度是5
 </code></pre></div></div>
 <h3 id="思路">思路</h3>
-<p>依然采用Sliding Window解法，由于需要不停的比对判断是否超过k的个数，所以考虑使用HashMap;</p>
 
-<p>1 - 首先我们逐个加入子字符.</p>
+<p>依然采用Sliding Window解法，有点类似之前的找出K个不同字符的代码，这次的K换为2，参看如下代码</p>
 
-<p>2 - 判断加入的子字符是否超过 K 个数.</p>
-
-<p>3 - 如果超过 K 个数，那么就要移除第一个 子字符</p>
-
-<p>4 - 一直比对，保留最长的个数</p>
-
-<p>参看如下代码</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class LongestSubstringKDistinct {
-  public static int findLength(String str, int k){
-    if (str == null || str.length() == 0 || str.length() &lt; k)
-      throw new IllegalArgumentException();
-  
-    int left = 0, maxLength = 0;
-    Map&lt;Character, Integer&gt; charsMap = new HashMap&lt;&gt;();
-    for(int right =0; right &lt; str.length(); right++){
-      char rightChar = str.charAt(right);
-      charsMap.put(rightChar, charsMap.getOrDefault(rightChar, 0) + 1);
-      while(charsMap.size()&gt;k){
-        char leftChar = str.charAt(left);
-        charsMap.put(leftChar, charsMap.get(leftChar) -1);
-        if(charsMap.get(leftChar) == 0){
-          charsMap.remove(leftChar);
-        }
-        left++;
-      }
-      maxLength = Math.max(maxLength, right-left+1);
-    }
-    return maxLength;
-  }
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MyClass {
+  	public static int findFruitLength(char[] arr){
+		int left = 0, maxLength = 0;
+		Map&lt;Character, Integer&gt; fruits = new HashMap&lt;&gt;();
+	
+		for(int right = 0; right &lt; arr.length; right++){
+			fruits.put(arr[right], fruits.getOrDefault(arr[right], 0) + 1);
+			while(fruits.size() &gt; 2){
+				fruits.put(arr[left],fruits.get(arr[left])-1);
+				if(fruits.get(arr[left]) == 0){
+					fruits.remove(arr[left]);
+				}
+				left++;
+			}
+			maxLength = Math.max(maxLength, right - left + 1);
+		}
+		return maxLength;
+	}
 }
 
 </code></pre></div></div>
-<p>此时时间复杂度是O(N)， 空间复杂度是O(K)。</p>
+<p>此时时间复杂度是O(N)，N是子字符长度， 空间复杂度是O(1)。</p>
 
 
         
@@ -383,7 +368,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-02-02T00:00:00+08:00">February 2, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-02-03T00:00:00+08:00">February 3, 2022</time></p>
 
       </footer>
 
@@ -392,23 +377,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Sliding+Window+%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B04+%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E9%95%BF%E5%94%AF%E4%B8%80%E5%AD%90%E5%AD%97%E7%AC%A6%E9%95%BF%E5%BA%A6%20%2Falgorithm%2Fsliding-window-longest-substring-with-k-distinct-character%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Sliding+Window+%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B05+%E6%89%BE%E5%87%BA%E6%9C%80%E9%95%BF%E7%9A%842%E7%A7%8D%E7%BB%84%E5%90%88%20%2Falgorithm%2Ffruits-into-baskets%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Falgorithm%2Fsliding-window-longest-substring-with-k-distinct-character%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Falgorithm%2Ffruits-into-baskets%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Falgorithm%2Fsliding-window-longest-substring-with-k-distinct-character%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Falgorithm%2Ffruits-into-baskets%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/algorithm/sliding-window-2/" class="pagination--pager" title="Sliding Window 系列 笔记3
+      <a href="/algorithm/sliding-window-longest-substring-with-k-distinct-character/" class="pagination--pager" title="Sliding Window 系列笔记4 数组中最长唯一子字符长度
 ">Previous</a>
     
     
-      <a href="/algorithm/fruits-into-baskets/" class="pagination--pager" title="Sliding Window 系列笔记5 找出最长的2种组合
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -432,7 +416,7 @@
     
     <h2 class="archive__item-title no_toc" itemprop="headline">
       
-        <a href="/algorithm/fruits-into-baskets/" rel="permalink">Sliding Window 系列笔记5 找出最长的2种组合
+        <a href="/algorithm/sliding-window-longest-substring-with-k-distinct-character/" rel="permalink">Sliding Window 系列笔记4 数组中最长唯一子字符长度
 </a>
       
     </h2>
@@ -457,7 +441,7 @@
   </p>
 
 
-    <p class="archive__item-excerpt" itemprop="description">题目， 给出一个字符数组,里面每个字符代表一个类别，只能够从中挑出两种类别，挑选过程中并且不能够中断，求挑选出最长的字符长度。示例如下：
+    <p class="archive__item-excerpt" itemprop="description">题目
 </p>
   </article>
 </div>

@@ -155,7 +155,7 @@ var store = [{
         "url": "/algorithm/slide-window/",
         "teaser": null
       },{
-        "title": "Sliding Window 系列 笔记2",
+        "title": "Sliding Window 系列笔记2",
         "excerpt":"紧接昨日思路，再来个递进，看题目，给出一个非负数组和一个非负数的K,找出数组中最大的连续K子项总和。示例如下， Input: [2, 1, 5, 1, 3, 2], k=3 Output: 9 Explanation: Subarray with maximum sum is [5, 1, 3]. 因为数组的缘故，可以先考虑迭代解决。代码如下 class MaxSumSubArrayOfSizeK { public static int findMaxSumSubArray(int[] arr, int k){ int maxSum = 0, windowSum; for(int i = 0; i&lt;= arr.length -k, i++){ windowSum = 0; for(int j =...","categories": ["Algorithm"],
         "tags": ["Sliding Window"],
         "url": "/algorithm/sliding-window-1/",
@@ -171,5 +171,11 @@ var store = [{
         "excerpt":"题目 给出一个字符串,找出字符串中唯一的，最长的并且子字符个数等于K的长度，示例如下： 例子1 输入: String=\"araaci\", K=2 输出: 4 解释: 最长子字符串长度是4,\"araa\" 例子2 输入: String=\"araaci\", K=1 输出: 2 解释: 最长子字符串长度是2,\"aa\" 思路 依然采用Sliding Window解法，由于需要不停的比对判断是否超过k的个数，所以考虑使用HashMap; 1 - 首先我们逐个加入子字符. 2 - 判断加入的子字符是否超过 K 个数. 3 - 如果超过 K 个数，那么就要移除第一个 子字符 4 - 一直比对，保留最长的个数 参看如下代码 class LongestSubstringKDistinct { public static int findLength(String str, int k){ if...","categories": ["Algorithm"],
         "tags": ["Sliding Window"],
         "url": "/algorithm/sliding-window-longest-substring-with-k-distinct-character/",
+        "teaser": null
+      },{
+        "title": "Sliding Window 系列笔记5 找出最长的2种组合",
+        "excerpt":"题目， 给出一个字符数组,里面每个字符代表一个类别，只能够从中挑出两种类别，挑选过程中并且不能够中断，求挑选出最长的字符长度。示例如下： 例子1 输入: String=['A', 'B', 'C', 'A', 'C'] 输出: 3 解释: 可以从 'C' 开始挑选，那么就是 'C' 'A' 'C'，长度是3 例子2 输入: String=['A', 'B', 'C', 'B', 'B', 'C'] 输出: 5 解释: 可以从 'C' 开始挑选，那么就是 'C' 'B' 'B' 'B' 'C'，长度是5 思路 依然采用Sliding Window解法，有点类似之前的找出K个不同字符的代码，这次的K换为2，参看如下代码 class MyClass { public static int findFruitLength(char[] arr){ int left...","categories": ["Algorithm"],
+        "tags": ["Sliding Window"],
+        "url": "/algorithm/fruits-into-baskets/",
         "teaser": null
       }]

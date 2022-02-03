@@ -1,4 +1,42 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-02-02T13:48:08+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Sliding Window 系列笔记4 数组中最长唯一子字符长度</title><link href="/algorithm/sliding-window-longest-substring-with-k-distinct-character/" rel="alternate" type="text/html" title="Sliding Window 系列笔记4 数组中最长唯一子字符长度" /><published>2022-02-02T00:00:00+08:00</published><updated>2022-02-02T00:00:00+08:00</updated><id>/algorithm/sliding-window-longest-substring-with-k-distinct-character</id><content type="html" xml:base="/algorithm/sliding-window-longest-substring-with-k-distinct-character/"><![CDATA[<h3 id="题目">题目</h3>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-02-03T18:14:02+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Sliding Window 系列笔记5 找出最长的2种组合</title><link href="/algorithm/fruits-into-baskets/" rel="alternate" type="text/html" title="Sliding Window 系列笔记5 找出最长的2种组合" /><published>2022-02-03T00:00:00+08:00</published><updated>2022-02-03T00:00:00+08:00</updated><id>/algorithm/fruits-into-baskets</id><content type="html" xml:base="/algorithm/fruits-into-baskets/"><![CDATA[<p>题目， 给出一个字符数组,里面每个字符代表一个类别，只能够从中挑出两种类别，挑选过程中并且不能够中断，求挑选出最长的字符长度。示例如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子1
+输入: String=['A', 'B', 'C', 'A', 'C']
+输出: 3
+解释: 可以从 'C' 开始挑选，那么就是 'C' 'A' 'C'，长度是3
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子2
+输入: String=['A', 'B', 'C', 'B', 'B', 'C']
+输出: 5
+解释: 可以从 'C' 开始挑选，那么就是 'C' 'B' 'B' 'B' 'C'，长度是5
+</code></pre></div></div>
+<h3 id="思路">思路</h3>
+
+<p>依然采用Sliding Window解法，有点类似之前的找出K个不同字符的代码，这次的K换为2，参看如下代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MyClass {
+  	public static int findFruitLength(char[] arr){
+		int left = 0, maxLength = 0;
+		Map&lt;Character, Integer&gt; fruits = new HashMap&lt;&gt;();
+	
+		for(int right = 0; right &lt; arr.length; right++){
+			fruits.put(arr[right], fruits.getOrDefault(arr[right], 0) + 1);
+			while(fruits.size() &gt; 2){
+				fruits.put(arr[left],fruits.get(arr[left])-1);
+				if(fruits.get(arr[left]) == 0){
+					fruits.remove(arr[left]);
+				}
+				left++;
+			}
+			maxLength = Math.max(maxLength, right - left + 1);
+		}
+		return maxLength;
+	}
+}
+
+</code></pre></div></div>
+<p>此时时间复杂度是O(N)，N是子字符长度， 空间复杂度是O(1)。</p>]]></content><author><name>Ryan</name></author><category term="Algorithm" /><category term="Sliding Window" /><summary type="html"><![CDATA[题目， 给出一个字符数组,里面每个字符代表一个类别，只能够从中挑出两种类别，挑选过程中并且不能够中断，求挑选出最长的字符长度。示例如下：]]></summary></entry><entry><title type="html">Sliding Window 系列笔记4 数组中最长唯一子字符长度</title><link href="/algorithm/sliding-window-longest-substring-with-k-distinct-character/" rel="alternate" type="text/html" title="Sliding Window 系列笔记4 数组中最长唯一子字符长度" /><published>2022-02-02T00:00:00+08:00</published><updated>2022-02-02T00:00:00+08:00</updated><id>/algorithm/sliding-window-longest-substring-with-k-distinct-character</id><content type="html" xml:base="/algorithm/sliding-window-longest-substring-with-k-distinct-character/"><![CDATA[<h3 id="题目">题目</h3>
 
 <p>给出一个字符串,找出字符串中唯一的，最长的并且子字符个数等于K的长度，示例如下：</p>
 
@@ -87,7 +125,7 @@
 }
 
 </code></pre></div></div>
-<p>时间复杂度是O(N)， 空间复杂度是O(1)。</p>]]></content><author><name>Ryan</name></author><category term="Algorithm" /><category term="Sliding Window" /><summary type="html"><![CDATA[题目]]></summary></entry><entry><title type="html">Sliding Window 系列 笔记2</title><link href="/algorithm/sliding-window-1/" rel="alternate" type="text/html" title="Sliding Window 系列 笔记2" /><published>2022-01-31T00:00:00+08:00</published><updated>2022-01-31T00:00:00+08:00</updated><id>/algorithm/sliding-window-1</id><content type="html" xml:base="/algorithm/sliding-window-1/"><![CDATA[<p>紧接昨日思路，再来个递进，看题目，给出一个非负数组和一个非负数的K,找出数组中最大的连续K子项总和。示例如下，</p>
+<p>时间复杂度是O(N)， 空间复杂度是O(1)。</p>]]></content><author><name>Ryan</name></author><category term="Algorithm" /><category term="Sliding Window" /><summary type="html"><![CDATA[题目]]></summary></entry><entry><title type="html">Sliding Window 系列笔记2</title><link href="/algorithm/sliding-window-1/" rel="alternate" type="text/html" title="Sliding Window 系列笔记2" /><published>2022-01-31T00:00:00+08:00</published><updated>2022-01-31T00:00:00+08:00</updated><id>/algorithm/sliding-window-1</id><content type="html" xml:base="/algorithm/sliding-window-1/"><![CDATA[<p>紧接昨日思路，再来个递进，看题目，给出一个非负数组和一个非负数的K,找出数组中最大的连续K子项总和。示例如下，</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Input: [2, 1, 5, 1, 3, 2], k=3 
 Output: 9
@@ -298,151 +336,4 @@ Explanation: Subarray with maximum sum is [5, 1, 3].
 
 <p>起初平台建起来，和大家想的一样，都想象有很多用户一下子涌进来。当然，这只是想象。柯蒂斯从ClearBanc获得了投资，通过资金，他们把精力放在一个专门收集各行业负面评论的工具上。然后他们使用他们的产品去识别虚假的负面的评论。如果有虚假评论他们就会给商家致电并且发送明信片。每天他们会从各行业40000条评论中进行筛查，并且有个专门的3人小组，一周需要给2500家商户致电。在这个方法下，第一个月收入有2000美金，第二个月到了10000美金。</p>
 
-<p>互联网的今天，有想法有行动力是可以开创一片蓝海的。笔者觉得只要找到一个能够帮助到别人的想法，并变现；然后寻找市场检验你的产品能力；保持信心，由零开始跨入互联网行业是可行的。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">安装Rails开发环境 MacOS 篇</title><link href="/ruby%20on%20rails/macos/rails-enviroment/" rel="alternate" type="text/html" title="安装Rails开发环境 MacOS 篇" /><published>2021-10-10T00:00:00+08:00</published><updated>2021-10-10T00:00:00+08:00</updated><id>/ruby%20on%20rails/macos/rails-enviroment</id><content type="html" xml:base="/ruby%20on%20rails/macos/rails-enviroment/"><![CDATA[<p>需时大概30分钟</p>
-
-<p>我们将在MacOS 10.15 Catalina安装 Ruby On Rails 环境。 10.15以前的系统版本也同样适用，可能会有些小问题，但是可以上网搜索解决或者给我留言。</p>
-
-<h3 id="配置终端">配置终端</h3>
-<p>使用ZSH作为你的终端，我们用</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/.zshrc
-</code></pre></div></div>
-<p>替代</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>~/.bash_profile
-</code></pre></div></div>
-
-<p>你也可以手动启动。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>chsh -s /bin/zsh
-</code></pre></div></div>
-
-<h3 id="安装homebrew">安装Homebrew</h3>
-<p>首先我们需要安装 Homebrew. Homebrew是 MacOS的一个安装包管理工具。它使用非常简单。启动的时候如果出现提示安装 XCode CommandLine Tools， 点击’同意’按钮就可以了。</p>
-
-<p>打开终端。运行</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ruby -e "$(curl -fsSL https://raw.githubusercontent.com/Homebrew/install/master/install)"
-</code></pre></div></div>
-
-<h2 id="安装ruby">安装Ruby</h2>
-<p>推荐 Ruby 版本2.7.0.</p>
-
-<p>Homebrew安装完成后，我们就可以安装Ruby了。我们采用<a href="https://github.com/sstephenson/rbenv">rbenv</a>管理和安装Ruby在终端运行</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install rbenv ruby-build
-</code></pre></div></div>
-
-<p>把rbenv加入到终端配置中</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>echo 'if which rbenv &gt; /dev/null; then eval "$(rbenv init -)"; fi' &gt;&gt; ~/.zshrc
-source ~/.zshrc
-
-### 开始安装Ruby
-rbenv install 2.7.0
-rbenv global 2.7.0
-ruby -v
-</code></pre></div></div>
-<h3 id="配置git">配置Git</h3>
-<p>我们使用Git作为我们的开发版本管理工具，下面的教程也需要用到。所以我们需要有个Github账户，如果没有可以点击<a href="https://github.com/">注册</a>。</p>
-
-<p>把下面代码复制到终端运行，把example改成自己的邮箱和用户名。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>git config --global color.ui true 
-git config --global user.name "YOUR NAME"
-git config --global user.email "YOUR@EMAIL.com"
-ssh-keygen -t rsa -C "YOUR@EMAIL.com"
-</code></pre></div></div>
-<p>把生成的SSH Key 加入到Github账户当中。复制黏贴到<a href="https://github.com/settings/keys">Github</a></p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>cat ~/.ssh/id_rsa.pub
-</code></pre></div></div>
-
-<p>完成上面步骤后可以进行如下测试.</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>ssh -T git@github.com
-</code></pre></div></div>
-<p>得到下面的信息提示表示成功</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>Hi excid3! You've successfully authenticated, but GitHub does not provide shell access.
-</code></pre></div></div>
-
-<h3 id="安装rails">安装Rails</h3>
-<p>推荐安装6.0.2.1版本， 运行</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>gem install rails -v 6.0.2.1
-</code></pre></div></div>
-
-<p>rails 安装完成后，我们需要更新下配置，在终端运行下面命令</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>rbenv rehash
-
-### 查看rails 版本
-rails -v
-# Rails 6.0.2.1
-</code></pre></div></div>
-
-<h2 id="安装数据库">安装数据库</h2>
-
-<p>rails 框架比较轻便的数据库sqlite3,我们首先安装这个,终端运行</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install sqlite3
-</code></pre></div></div>
-
-<h3 id="安装mysql">安装MySQL</h3>
-<p>如果之前有PHP开发经验，可能对MySQL比较熟悉。 终端运行:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install mysql
-</code></pre></div></div>
-<p>命令运行完后，可能会有一些提示，按照提示执行就可以了。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code># 启动MySQL 服务:
-brew services start mysql
-</code></pre></div></div>
-
-<h3 id="安装postgresql">安装PostgreSQL</h3>
-<p>同样通过Homebrew安装:</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew install postgresql
-</code></pre></div></div>
-
-<p>命令运行完后，可能会有一些提示，按照提示执行就可以了。
-启动服务</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>brew services start postgresql
-</code></pre></div></div>
-
-<p>默认Postgresql 用户就是系统的root用户，可以直接登录进去。</p>
-
-<h3 id="最后一步">最后一步</h3>
-
-<p>Mojave系统改变了一些头文件的位置，我们需要执行如下命令。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>sudo installer -pkg /Library/Developer/CommandLineTools/Packages/macOS_SDK_headers_for_macOS_10.14.pkg -target /
-</code></pre></div></div>
-
-<h3 id="测试">测试</h3>
-
-<p>到目前为止，基本配置工作完成了。我们建个项目测试下。</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### 建立项目
-rails new myapp
-
-### 使用MySQL数据库
-rails new myapp -d mysql
-
-### 使用Postgres数据库
-rails new myapp -d postgresql
-
-### 安装好后，进入项目文件夹
-cd myapp
-
-###  创建数据库
-rake db:create
-
-### 启动
-rails server
-</code></pre></div></div>
-
-<p>打开浏览器访问 http://localhost:3000, 成功的话应该可以看到
-Yay! You’re on Rails!</p>]]></content><author><name>Ryan</name></author><category term="ruby on rails" /><category term="MacOS" /><summary type="html"><![CDATA[需时大概30分钟]]></summary></entry></feed>
+<p>互联网的今天，有想法有行动力是可以开创一片蓝海的。笔者觉得只要找到一个能够帮助到别人的想法，并变现；然后寻找市场检验你的产品能力；保持信心，由零开始跨入互联网行业是可行的。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry></feed>
