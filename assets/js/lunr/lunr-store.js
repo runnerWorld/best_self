@@ -178,4 +178,10 @@ var store = [{
         "tags": ["Sliding Window"],
         "url": "/algorithm/fruits-into-baskets/",
         "teaser": null
+      },{
+        "title": "Sliding Window 系列笔记6 找出不重复的字符",
+        "excerpt":"题目， 给出一个字符串,找出里面最长的不重复字符长度。示例如下： 例子1 输入: String=\"aabccbb\" 输出: 3 解释: 最长的，不重复字符是\"abc\",长度是3 例子2 输入: String=\"abbbb\" 输出: 2 解释: 最长的，不重复字符是\"ab\",长度是2 思路 依然采用Sliding Window解法，根据之前找出k个不同子字符思路,对比使用HashMap,然后对N项迭代一一进行比对即可。参看如下代码 class MyClass { public static int findMaxLength(String str){ int left = 0, maxLength = 0; Map&lt;Character, Integer&gt; chars = new HashMap&lt;&gt;(); for(int right = 0; right &lt; str.length(); right++){ char rightChar...","categories": ["Algorithm"],
+        "tags": ["Sliding Window"],
+        "url": "/algorithm/no-repeat-substring/",
+        "teaser": null
       }]

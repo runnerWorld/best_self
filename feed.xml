@@ -1,4 +1,39 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-02-03T18:14:02+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Sliding Window 系列笔记5 找出最长的2种组合</title><link href="/algorithm/fruits-into-baskets/" rel="alternate" type="text/html" title="Sliding Window 系列笔记5 找出最长的2种组合" /><published>2022-02-03T00:00:00+08:00</published><updated>2022-02-03T00:00:00+08:00</updated><id>/algorithm/fruits-into-baskets</id><content type="html" xml:base="/algorithm/fruits-into-baskets/"><![CDATA[<p>题目， 给出一个字符数组,里面每个字符代表一个类别，只能够从中挑出两种类别，挑选过程中并且不能够中断，求挑选出最长的字符长度。示例如下：</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-02-04T14:30:50+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Sliding Window 系列笔记6 找出不重复的字符</title><link href="/algorithm/no-repeat-substring/" rel="alternate" type="text/html" title="Sliding Window 系列笔记6 找出不重复的字符" /><published>2022-02-04T00:00:00+08:00</published><updated>2022-02-04T00:00:00+08:00</updated><id>/algorithm/no-repeat-substring</id><content type="html" xml:base="/algorithm/no-repeat-substring/"><![CDATA[<p>题目， 给出一个字符串,找出里面最长的不重复字符长度。示例如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子1
+输入: String="aabccbb"
+输出: 3
+解释: 最长的，不重复字符是"abc",长度是3
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子2
+输入: String="abbbb"
+输出: 2
+解释: 最长的，不重复字符是"ab",长度是2
+</code></pre></div></div>
+<h3 id="思路">思路</h3>
+
+<p>依然采用Sliding Window解法，根据之前找出k个不同子字符思路,对比使用HashMap,然后对N项迭代一一进行比对即可。参看如下代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class MyClass {
+  	public static int findMaxLength(String str){
+		    int left = 0, maxLength = 0;
+		    Map&lt;Character, Integer&gt; chars = new HashMap&lt;&gt;();
+	
+		    for(int right = 0; right &lt; str.length(); right++){
+			      char rightChar = str.charAt(right);
+			      if(chars.containsKey(rightChar)){
+				        left = Math.max(left, chars.get(rightChar) + 1);
+			      }
+			      chars.put(rightChar, right);
+			      maxLength = Math.max(maxLength, right - left + 1);
+		    }
+		    return maxLength;
+	  }
+}
+
+</code></pre></div></div>
+<p>此时时间复杂度是O(N)，N是子字符长度， 空间复杂度是O(K)，K表示存在的不重复子项个数.</p>]]></content><author><name>Ryan</name></author><category term="Algorithm" /><category term="Sliding Window" /><summary type="html"><![CDATA[题目， 给出一个字符串,找出里面最长的不重复字符长度。示例如下：]]></summary></entry><entry><title type="html">Sliding Window 系列笔记5 找出最长的2种组合</title><link href="/algorithm/fruits-into-baskets/" rel="alternate" type="text/html" title="Sliding Window 系列笔记5 找出最长的2种组合" /><published>2022-02-03T00:00:00+08:00</published><updated>2022-02-03T00:00:00+08:00</updated><id>/algorithm/fruits-into-baskets</id><content type="html" xml:base="/algorithm/fruits-into-baskets/"><![CDATA[<p>题目， 给出一个字符数组,里面每个字符代表一个类别，只能够从中挑出两种类别，挑选过程中并且不能够中断，求挑选出最长的字符长度。示例如下：</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子1
 输入: String=['A', 'B', 'C', 'A', 'C']
@@ -326,14 +361,4 @@ Explanation: Subarray with maximum sum is [5, 1, 3].
 
 <h3 id="最后">最后</h3>
 
-<p>疫情当下，身边很多场景往往都有痛点，解决痛点就是一个商机。正如写在本文，车厘子检出病毒阳性，车厘子市场商家肯定受到冲击，那么如何解决他们的困局，聪明如你，挖掘一个致富的机会。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">由护工跨行业投身到互联网行业</title><link href="/startup/nursing-to-internet/" rel="alternate" type="text/html" title="由护工跨行业投身到互联网行业" /><published>2021-11-21T00:00:00+08:00</published><updated>2021-11-21T00:00:00+08:00</updated><id>/startup/nursing-to-internet</id><content type="html" xml:base="/startup/nursing-to-internet/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210125211241439.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<p>电商时代，透过商品的描述，我们能够判断商品是否满足我们的需求就是依赖商品评论了。 柯蒂斯Curtis Boyd） 还是护工的时候，依赖帮助一个美容医师移除负面虚假的评论，成功的付清了助学贷款以及日后创立的Objection Co这个帮助商家移除虚假评论的在线平台。</p>
-
-<p>时间回到六年前，柯蒂斯实习那一年，当时他还没有付清30,000美元的学习贷款，还在急诊室实习。一天一个美容医生走进急诊室，当时这位美容医师心情差到极点，因为一些负面的评论让他失去了客户咨询的生意。柯蒂斯问清楚了情况，就说可能能够帮助他移除负面的评论。美容医师开玩笑说，好啊，如果你可以做到，那么他就可以帮他还清助学贷款。隔天柯蒂斯再次打电话给美容医师，确认对方不是开玩笑。医师说不是开玩笑，负面评论出现的一周他已经失去了7，8个新的客户了。说干就干，柯蒂斯花了三天研究评论模式并与评论平台的管理员沟通，管理员就是不同意移除评论。在那这个周末柯蒂斯买了机票直接飞去了在线评论平台的总部洛杉矶，看是否能够直接沟通。还好有位高管接待了他并告诉了他评论的细则。有了这些建议柯蒂斯飞回了家并有开始尝试。最终又花了2天成功的把负面评论移除。美容医师也信守承诺付清了助学贷款。这个事情的契机下，使柯蒂斯意识到解决一个问题能够帮助到许多人。美容医师也是当地医疗机构的权威，也给柯蒂斯介绍了500多个客户。</p>
-
-<p>当时的柯蒂斯觉得只要有电脑就能够完成他的工作，所以他由零开始学习编程，并且也尝试着与许多人沟通自己的想法，也开始着手建立自己的平台。他首先在upwork 上找了一个印度的开发团队，但是这个团队经常没有能够按照时间点完成任务，并且费用也越来越多，迫不得已，他结束了和印度团队的合作。第二次他找了个乌克兰团队，这个团队很棒，印度团队做一年的工作量这个团队三个月就完成了。</p>
-
-<p>起初平台建起来，和大家想的一样，都想象有很多用户一下子涌进来。当然，这只是想象。柯蒂斯从ClearBanc获得了投资，通过资金，他们把精力放在一个专门收集各行业负面评论的工具上。然后他们使用他们的产品去识别虚假的负面的评论。如果有虚假评论他们就会给商家致电并且发送明信片。每天他们会从各行业40000条评论中进行筛查，并且有个专门的3人小组，一周需要给2500家商户致电。在这个方法下，第一个月收入有2000美金，第二个月到了10000美金。</p>
-
-<p>互联网的今天，有想法有行动力是可以开创一片蓝海的。笔者觉得只要找到一个能够帮助到别人的想法，并变现；然后寻找市场检验你的产品能力；保持信心，由零开始跨入互联网行业是可行的。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>疫情当下，身边很多场景往往都有痛点，解决痛点就是一个商机。正如写在本文，车厘子检出病毒阳性，车厘子市场商家肯定受到冲击，那么如何解决他们的困局，聪明如你，挖掘一个致富的机会。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry></feed>
