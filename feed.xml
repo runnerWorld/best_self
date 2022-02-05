@@ -1,4 +1,41 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-02-04T14:30:50+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Sliding Window 系列笔记6 找出不重复的字符</title><link href="/algorithm/no-repeat-substring/" rel="alternate" type="text/html" title="Sliding Window 系列笔记6 找出不重复的字符" /><published>2022-02-04T00:00:00+08:00</published><updated>2022-02-04T00:00:00+08:00</updated><id>/algorithm/no-repeat-substring</id><content type="html" xml:base="/algorithm/no-repeat-substring/"><![CDATA[<p>题目， 给出一个字符串,找出里面最长的不重复字符长度。示例如下：</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-02-05T19:59:26+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Two Pointers笔记#1 找出相等数</title><link href="/algorithm/pair-with-target-sum/" rel="alternate" type="text/html" title="Two Pointers笔记#1 找出相等数" /><published>2022-02-05T00:00:00+08:00</published><updated>2022-02-05T00:00:00+08:00</updated><id>/algorithm/pair-with-target-sum</id><content type="html" xml:base="/algorithm/pair-with-target-sum/"><![CDATA[<p>题目， 给出一个排序数组和一个目标数,找出数组中两两相加等于目标数。示例如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子1
+输入: arr=[1, 2, 3, 4, 6], target = 6
+输出: [1, 3]
+解释: arr的索引1是2，索引3是4，所以2+4 = 6
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子2
+输入: arr=[2, 5, 9, 11], target = 11
+输出: [0, 2]
+解释: 见例1
+</code></pre></div></div>
+<h3 id="思路">思路</h3>
+
+<p>这道题不算难，简单的迭代也可以求出两数和，时间复杂度是O(N*logN),因为会逐个循环这个数组迭代。我们使用Two Pointers方法，首先数组进行了排序，所以我们会用根据两数求和不断进行左边或者右边加或者减。</p>
+
+<p>如1+6 &gt; 6, 那么我们需要小一点的数，就是右边开始下一个项，即1+4 &lt; 6, 说明总和小于6，那么左边需要下一个项。参考代码如下</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static int[] search(int[] arr, int target){
+   	int left = 0, right = arr.length - 1;
+   	while(left &lt; right){
+   			int current = arr[left] + arr[right];
+   			if(current == target)
+   				return new int[] { left, right};
+			
+   			if(target&gt; current){
+   				left++;
+   			}else{
+   				right--;
+   			}
+			
+   	}
+   	return new int[] { -1,-1};
+}
+
+</code></pre></div></div>
+<p>此时时间复杂度是O(N)，N是数组长度， 空间复杂度是O(1)。</p>]]></content><author><name>Ryan</name></author><category term="Algorithm" /><category term="Two Pointers" /><summary type="html"><![CDATA[题目， 给出一个排序数组和一个目标数,找出数组中两两相加等于目标数。示例如下：]]></summary></entry><entry><title type="html">Sliding Window 系列笔记6 找出不重复的字符</title><link href="/algorithm/no-repeat-substring/" rel="alternate" type="text/html" title="Sliding Window 系列笔记6 找出不重复的字符" /><published>2022-02-04T00:00:00+08:00</published><updated>2022-02-04T00:00:00+08:00</updated><id>/algorithm/no-repeat-substring</id><content type="html" xml:base="/algorithm/no-repeat-substring/"><![CDATA[<p>题目， 给出一个字符串,找出里面最长的不重复字符长度。示例如下：</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子1
 输入: String="aabccbb"
@@ -321,44 +358,4 @@ Explanation: Subarray with maximum sum is [5, 1, 3].
 <h3 id="复盘">复盘：</h3>
 <p>1 - 首先有个idea，并能够从最终用户角度考虑功能；</p>
 
-<p>2 - 其次起步要快，快速搭建第一版本；</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry><entry><title type="html">把贺卡生意做上互联网</title><link href="/startup/holiday-card/" rel="alternate" type="text/html" title="把贺卡生意做上互联网" /><published>2021-12-10T00:00:00+08:00</published><updated>2021-12-10T00:00:00+08:00</updated><id>/startup/holiday-card</id><content type="html" xml:base="/startup/holiday-card/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210126234714598.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<h3 id="应用场景">应用场景</h3>
-
-<p>小秋要离开公司了，公司同事想给小秋开个告别派对，但是疫情期间，大家都在家里工作。大张在<a href="https://thankbox.co">Thankbox</a> 设定了一些基础信息，例如接收人，贺卡主题等。同事们就在Thankbox 里面给小秋写贺卡，贺卡内容可以包括文字，图片，视频，甚至是红包，大家写好后就直接email给小秋。小秋收到后很感动。这就是Thankbox 的由来。</p>
-
-<h3 id="thankbox-故事线">Thankbox 故事线</h3>
-
-<p>创始人Valentin, 大学毕业后从事手机游戏开发。此前没有任何web开发经验，从2020年开始学习web开发。受英国的办公室文化启发，当同事要周年庆祝或者离开公司，同事们凑份子钱，但是大家都不习惯用现金，都纷纷去atm提款。在2020年3月，大家在家办公，他觉得时机到了，可以推出一个在线贺卡之类的产品，简单做了调研就投入了。</p>
-
-<p>最初，他和妻子讨论以怎样的形式进行开始，因为他没有太多的web开发经验，所以决定雇佣开发人员快速把产品雏形做出来，但是也受预算的限制，最终找了个很好的小伙伴，以股份的形式兑现第一版本的开发费用。所以前期的投入就是设计上的支出，大概花了1000美金。很快第一版本出来了，差不多两个月，在2020年5月这样子。我的想法就是当你有一个很好的想法，只是成功一半，要动手做，重要的是，还要快，把你的想法落地。</p>
-
-<p>产品建成起初，他就在他的朋友圈里推广，产品卖的不怎样，大学的一个校友，公司正好有人离职，就用上。反响很好激励了Valentin，产品开发后的第一个月卖了6单。根据客户的反馈陆续完善了bug和一些功能。以及花钱做了使用视频和投入一些社交产品的广告，例如咱们朋友圈的广告。</p>
-
-<p>目前Thankbox一个月收入有3200刀。Thankbox 按每个5.99刀收费。未来可能会推出企业定制的套餐。</p>
-
-<h3 id="技术栈">技术栈</h3>
-
-<p>服务器采用托管，1cpu，1g ram， 25g硬盘，一个月5刀；</p>
-
-<p>图片存储采用图片云存储服务，当然为了保证图片浏览快速，必须的；</p>
-
-<p>产品框架采用 Laravel + Vue， php的框架，我不是很熟悉，有空我开个blog，详细讲下我了解的rails 技术栈哈；</p>
-
-<p>部署和服务管理采用  Laravel Forge</p>
-
-<p>管理员仪表盘用 Laravel Nova</p>
-
-<p>邮件应用 Mailgun</p>
-
-<p>支付采用 Stripe</p>
-
-<p>网站分析 Fathom</p>
-
-<p>错误报告和服务监控用 Honeybadger</p>
-
-<p>日志采用  Papertrail</p>
-
-<h3 id="最后">最后</h3>
-
-<p>疫情当下，身边很多场景往往都有痛点，解决痛点就是一个商机。正如写在本文，车厘子检出病毒阳性，车厘子市场商家肯定受到冲击，那么如何解决他们的困局，聪明如你，挖掘一个致富的机会。</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>2 - 其次起步要快，快速搭建第一版本；</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry></feed>

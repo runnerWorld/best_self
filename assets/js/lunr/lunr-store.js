@@ -184,4 +184,10 @@ var store = [{
         "tags": ["Sliding Window"],
         "url": "/algorithm/no-repeat-substring/",
         "teaser": null
+      },{
+        "title": "Two Pointers笔记#1 找出相等数",
+        "excerpt":"题目， 给出一个排序数组和一个目标数,找出数组中两两相加等于目标数。示例如下： 例子1 输入: arr=[1, 2, 3, 4, 6], target = 6 输出: [1, 3] 解释: arr的索引1是2，索引3是4，所以2+4 = 6 例子2 输入: arr=[2, 5, 9, 11], target = 11 输出: [0, 2] 解释: 见例1 思路 这道题不算难，简单的迭代也可以求出两数和，时间复杂度是O(N*logN),因为会逐个循环这个数组迭代。我们使用Two Pointers方法，首先数组进行了排序，所以我们会用根据两数求和不断进行左边或者右边加或者减。 如1+6 &gt; 6, 那么我们需要小一点的数，就是右边开始下一个项，即1+4 &lt; 6, 说明总和小于6，那么左边需要下一个项。参考代码如下 public static int[] search(int[] arr, int target){...","categories": ["Algorithm"],
+        "tags": ["Two Pointers"],
+        "url": "/algorithm/pair-with-target-sum/",
+        "teaser": null
       }]
