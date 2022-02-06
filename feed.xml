@@ -1,4 +1,33 @@
-<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-02-05T19:59:26+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Two Pointers笔记#1 找出相等数</title><link href="/algorithm/pair-with-target-sum/" rel="alternate" type="text/html" title="Two Pointers笔记#1 找出相等数" /><published>2022-02-05T00:00:00+08:00</published><updated>2022-02-05T00:00:00+08:00</updated><id>/algorithm/pair-with-target-sum</id><content type="html" xml:base="/algorithm/pair-with-target-sum/"><![CDATA[<p>题目， 给出一个排序数组和一个目标数,找出数组中两两相加等于目标数。示例如下：</p>
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.1">Jekyll</generator><link href="/feed.xml" rel="self" type="application/atom+xml" /><link href="/" rel="alternate" type="text/html" /><updated>2022-02-06T15:23:20+08:00</updated><id>/feed.xml</id><title type="html">Espresso Withoutmilk</title><subtitle>爱喝咖啡,乳糖不耐受</subtitle><author><name>Ryan</name></author><entry><title type="html">Two Pointers笔记#2 排除相同数</title><link href="/algorithm/remove-duplicates/" rel="alternate" type="text/html" title="Two Pointers笔记#2 排除相同数" /><published>2022-02-06T00:00:00+08:00</published><updated>2022-02-06T00:00:00+08:00</updated><id>/algorithm/remove-duplicates</id><content type="html" xml:base="/algorithm/remove-duplicates/"><![CDATA[<p>题目， 给出一个排序数组，找出数组中重复的数，其中不能使用额外的存储，返回新的不重复数组长度。示例如下：</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子1
+输入: arr=[2, 3, 3, 3, 6, 9, 9]
+输出: 4
+解释: 其中不重复项是[2,3,6,9]
+</code></pre></div></div>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子2
+输入: arr=[2, 2, 2, 11]
+输出: 2
+解释: 其中不重复项是[2, 11]
+</code></pre></div></div>
+<h3 id="思路">思路</h3>
+
+<p>我们使用Two Pointers的模式解决，其中不能使用额外的存储，意味着只能在数组中进行处理。我们使用一个Pointer去循环整个数组，另一个pointer去做不重复的指向。例如一开始两个Pointer指向2，循环开始，循环数组的pointer下标1，指向3，不重复pointer指向3，继续循环，循环数组的pointer下标2, 指向3，此时不重复pointers指向3，与循环pointer指向数值一样，不重复pointer指向不变，继续循环…看代码</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static int remove(int[] arr){
+		int non = 1;
+		for(int i=0; i&lt; arr.length; i++){
+			if(arr[non-1] != arr[i]){
+				arr[non] = arr[i];
+				non++;
+			}
+		}
+		return non;
+}
+
+</code></pre></div></div>
+<p>此时时间复杂度是O(N)，N是数组长度， 空间复杂度是O(1)。</p>]]></content><author><name>Ryan</name></author><category term="Algorithm" /><category term="Two Pointers" /><summary type="html"><![CDATA[题目， 给出一个排序数组，找出数组中重复的数，其中不能使用额外的存储，返回新的不重复数组长度。示例如下：]]></summary></entry><entry><title type="html">Two Pointers笔记#1 找出相等数</title><link href="/algorithm/pair-with-target-sum/" rel="alternate" type="text/html" title="Two Pointers笔记#1 找出相等数" /><published>2022-02-05T00:00:00+08:00</published><updated>2022-02-05T00:00:00+08:00</updated><id>/algorithm/pair-with-target-sum</id><content type="html" xml:base="/algorithm/pair-with-target-sum/"><![CDATA[<p>题目， 给出一个排序数组和一个目标数,找出数组中两两相加等于目标数。示例如下：</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子1
 输入: arr=[1, 2, 3, 4, 6], target = 6
@@ -347,15 +376,4 @@ Explanation: Subarray with maximum sum is [5, 1, 3].
 <p><img src="https://miro.medium.com/max/962/1*1rjo1rJc8IdXywJISSytsg.png" alt="" /></p>
 
 <h3 id="总结">总结</h3>
-<p>关于SmarterCSV还没得细看，看起来不错，做个记录。联想起之前项目也有生成csv过程，但是直接扔进数据库比较多，而且还是可以迭代处理，感觉不需要单个列 写出来。</p>]]></content><author><name>Ryan</name></author><category term="Ruby" /><summary type="html"><![CDATA[今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，链接附上处理csv的代码，但是如果出来的行数足够大，那也是挺恐怖。]]></summary></entry><entry><title type="html">翘起1000万美元的高校业务</title><link href="/startup/high-school/" rel="alternate" type="text/html" title="翘起1000万美元的高校业务" /><published>2021-12-26T00:00:00+08:00</published><updated>2021-12-26T00:00:00+08:00</updated><id>/startup/high-school</id><content type="html" xml:base="/startup/high-school/"><![CDATA[<p><img src="https://img-blog.csdnimg.cn/20210125210951735.png?x-oss-process=image/watermark,type_ZmFuZ3poZW5naGVpdGk,shadow_10,text_aHR0cHM6Ly9ibG9nLmNzZG4ubmV0L3dlaXhpbl80MjU3NzQxMQ==,size_16,color_FFFFFF,t_70#pic_center" alt="在这里插入图片描述" /></p>
-
-<p>今天分享的案例让我想起以前做的一个项目，帮一所高校图书馆做一个论文查重查引系统，当时做的时候对这方面业务不算了解，调研的业务怎么做就简单的规划了。依稀记得当时查重查引业务按条数收费，每条1，2块钱。然后将所需要的论文信息提交给图书馆，馆内的工作人员就根据提交的信息进行查询，得到结果后，根据引用处收钱。用户就进行支付即可。实在没想到美国的这家公司把论文查引业务和论文格式业务做到了极致，一个1000万美元的生意。</p>
-
-<p>这期介绍的项目是<a href="https://easybib.com/">EasyBib.com</a>,这是一个帮助用户写论文时候查引和论文格式的网站。创始人Neal Taparia 和 Darshan读高中时候就已经开始编写网站了，高中时期他们做了个徽章和HTML教程的网站。当时他们正在为论文头疼，他们需要设置繁琐的格式。正是这个契机，本身他们也是用户，他们很清楚这个产品需要解决的问题。经过两个月的努力，他们的第一版本上线了。他们花了50美金租了主机。真正发生转机的时候在2001年2月，他们在他们知道的地方进行网站宣传，甚至于他们在互联网找到老师的邮箱，他们给老师写邮件介绍他们的网站，后面流量猛增。</p>
-
-<p>有了用户后服务需要跟上，有些用户要求他们提供APA格式，他们把这一功能做成付费形式。当然在那个年代还没有SAAS,对于SAAS的一些差异化付费也没有相关方面的研究。他们发现一次付费终身使用的服务比较适合用户。但是对于最大化收入原则并不是最好。他们总结，网站所有的改动是否有成效是需要经过用户检验的，不是当下的决定是对或错，将来有数据证明。对于300美金一次性支付就是很好的例子。07年的时候，网站已经有百万流量了。他们的一个朋友提议可以推出广告服务。后来他们的广告CPM(每千次展示率)超过同业。2016年的时候，EasyBib核心业务超过100万美元，并且没有融资。Neal Taparia 和 Darshan决定将业务卖出给Chegg公司，当时他们仍在Chegg公司，后来他们离开了Chegg公司，开始了下一轮新的创业。</p>
-
-<h3 id="复盘">复盘：</h3>
-<p>1 - 首先有个idea，并能够从最终用户角度考虑功能；</p>
-
-<p>2 - 其次起步要快，快速搭建第一版本；</p>]]></content><author><name>Ryan</name></author><category term="startup" /><summary type="html"><![CDATA[]]></summary></entry></feed>
+<p>关于SmarterCSV还没得细看，看起来不错，做个记录。联想起之前项目也有生成csv过程，但是直接扔进数据库比较多，而且还是可以迭代处理，感觉不需要单个列 写出来。</p>]]></content><author><name>Ryan</name></author><category term="Ruby" /><summary type="html"><![CDATA[今天看到个文章，是说处理csv的。csv虽说挺方便，可以简单管理关系型数据，不需要买个office365来处理。笔者说处理csv文件是个头痛的问题，链接附上处理csv的代码，但是如果出来的行数足够大，那也是挺恐怖。]]></summary></entry></feed>

@@ -190,4 +190,10 @@ var store = [{
         "tags": ["Two Pointers"],
         "url": "/algorithm/pair-with-target-sum/",
         "teaser": null
+      },{
+        "title": "Two Pointers笔记#2 排除相同数",
+        "excerpt":"题目， 给出一个排序数组，找出数组中重复的数，其中不能使用额外的存储，返回新的不重复数组长度。示例如下： 例子1 输入: arr=[2, 3, 3, 3, 6, 9, 9] 输出: 4 解释: 其中不重复项是[2,3,6,9] 例子2 输入: arr=[2, 2, 2, 11] 输出: 2 解释: 其中不重复项是[2, 11] 思路 我们使用Two Pointers的模式解决，其中不能使用额外的存储，意味着只能在数组中进行处理。我们使用一个Pointer去循环整个数组，另一个pointer去做不重复的指向。例如一开始两个Pointer指向2，循环开始，循环数组的pointer下标1，指向3，不重复pointer指向3，继续循环，循环数组的pointer下标2, 指向3，此时不重复pointers指向3，与循环pointer指向数值一样，不重复pointer指向不变，继续循环…看代码 public static int remove(int[] arr){ int non = 1; for(int i=0; i&lt; arr.length; i++){ if(arr[non-1] != arr[i]){ arr[non] = arr[i];...","categories": ["Algorithm"],
+        "tags": ["Two Pointers"],
+        "url": "/algorithm/remove-duplicates/",
+        "teaser": null
       }]
