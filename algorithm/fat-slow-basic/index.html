@@ -10,7 +10,7 @@
     <meta charset="utf-8">
 <script data-ad-client="ca-pub-4606636162302812" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
 <!-- begin _includes/seo.html --><title>Slow Fast 指针算法笔记1 - Espresso Withoutmilk</title>
-<meta name="description" content="今天是2022年的情人，停更了一周，主要还是拖，谢谢blog还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，还是比较佩服自己。快慢指针主要解决链表的问题，通过快慢两个速度，根据快慢指针是否相遇去解决问题。 题目，给出一个链表，编写方法判断是否存在循环，如果存在返回true，不存在返回false。如下：">
+<meta name="description" content="今天是2022年的情人，停更了一周，主要还是拖，写写blog，总结之前还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，但还是每天写。">
 
 
   <meta name="author" content="Ryan">
@@ -26,7 +26,7 @@
 <meta property="og:url" content="/algorithm/fat-slow-basic/">
 
 
-  <meta property="og:description" content="今天是2022年的情人，停更了一周，主要还是拖，谢谢blog还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，还是比较佩服自己。快慢指针主要解决链表的问题，通过快慢两个速度，根据快慢指针是否相遇去解决问题。 题目，给出一个链表，编写方法判断是否存在循环，如果存在返回true，不存在返回false。如下：">
+  <meta property="og:description" content="今天是2022年的情人，停更了一周，主要还是拖，写写blog，总结之前还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，但还是每天写。">
 
 
 
@@ -250,7 +250,7 @@
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
     <meta itemprop="headline" content="Slow Fast 指针算法笔记1">
-    <meta itemprop="description" content="今天是2022年的情人，停更了一周，主要还是拖，谢谢blog还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，还是比较佩服自己。快慢指针主要解决链表的问题，通过快慢两个速度，根据快慢指针是否相遇去解决问题。题目，给出一个链表，编写方法判断是否存在循环，如果存在返回true，不存在返回false。如下：">
+    <meta itemprop="description" content="今天是2022年的情人，停更了一周，主要还是拖，写写blog，总结之前还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，但还是每天写。">
     <meta itemprop="datePublished" content="2022-02-14T00:00:00+08:00">
     
 
@@ -287,20 +287,22 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <p>今天是2022年的情人，停更了一周，主要还是拖，谢谢blog还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，还是比较佩服自己。快慢指针主要解决链表的问题，通过快慢两个速度，根据快慢指针是否相遇去解决问题。
+        <p>今天是2022年的情人，停更了一周，主要还是拖，写写blog，总结之前还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，但还是每天写。</p>
+
+<p>言归正传，快慢指针主要解决链表的问题，通过快慢两个速度，根据快慢指针是否相遇去解决问题。
 题目，给出一个链表，编写方法判断是否存在循环，如果存在返回true，不存在返回false。如下：</p>
 
 <div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class ListNode {
-	  int value = 0;
-	  ListNode next;
+    int value = 0;
+    ListNode next;
 
-	  ListNode(int value){
-	  	  this.value = value;
-	  }
+    ListNode(int value){
+        this.value = value;
+    }
 }
 
 class LinkedListCycle{
-	  public static void main(String[] args){
+    public static void main(String[] args){
         ListNode head = new ListNode(1);
         head.next = new ListNode(2);
         head.next.next = new ListNode(3);
@@ -309,19 +311,17 @@ class LinkedListCycle{
     }
 
     public static boolean checkCycle(ListNode head){
-    	  // to do
+    // to do
     }
 }
 
 </code></pre></div></div>
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### 思路
+<h3 id="思路">思路</h3>
 
-思路很简单，定义两个指针遍历链表，一个指针一次走一步，一个指针一次走两步，如果这个链表是循环的，那么两个指针就会相遇，即他们指向的数相等；如果走两步的指针指向空，那么表示这个链表已经走完。关于相遇的问题是经过数学推理的,一下找不到链接，后续找到链接再贴出来。直接代码
+<p>思路很简单，定义两个指针遍历链表，一个指针一次走一步，一个指针一次走两步，如果这个链表是循环的，那么两个指针就会相遇，即他们指向的数相等；如果走两步的指针指向空，那么表示这个链表已经走完。关于相遇的问题是经过数学推理的,一下找不到链接，后续找到链接再贴出来。直接代码</p>
 
-
-</code></pre></div></div>
-<p>public static boolean checkCycle(ListNode head){
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>public static boolean checkCycle(ListNode head){
     ListNode slow = head;
     ListNode fast = head;
     while(fast != null &amp;&amp; slow != null){
@@ -329,14 +329,14 @@ class LinkedListCycle{
         slow = slow.next;
         if(slow == fast){
             return true;
-        }</p>
+        }  
+    }
+    return false;    
+}
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>}
-return false;     }
 </code></pre></div></div>
 
-<p>```
-此时时间复杂度是O(N)，N是链表节点， 空间复杂度是O(1)。</p>
+<p>此时时间复杂度是O(N)，N是链表节点， 空间复杂度是O(1)。</p>
 
 
         
