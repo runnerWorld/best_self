@@ -196,4 +196,10 @@ var store = [{
         "tags": ["Two Pointers"],
         "url": "/algorithm/remove-duplicates/",
         "teaser": null
+      },{
+        "title": "Slow Fast 指针算法笔记1",
+        "excerpt":"今天是2022年的情人，停更了一周，主要还是拖，谢谢blog还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，还是比较佩服自己。快慢指针主要解决链表的问题，通过快慢两个速度，根据快慢指针是否相遇去解决问题。 题目，给出一个链表，编写方法判断是否存在循环，如果存在返回true，不存在返回false。如下： class ListNode { int value = 0; ListNode next; ListNode(int value){ this.value = value; } } class LinkedListCycle{ public static void main(String[] args){ ListNode head = new ListNode(1); head.next = new ListNode(2); head.next.next = new ListNode(3); head.next.next.next = new ListNode(4); head.next.next.next.next = new ListNode(5); } public static boolean...","categories": ["Algorithm"],
+        "tags": ["Slow Fast Pointer"],
+        "url": "/algorithm/fat-slow-basic/",
+        "teaser": null
       }]

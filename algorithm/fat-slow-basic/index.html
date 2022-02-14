@@ -9,8 +9,8 @@
   <head>
     <meta charset="utf-8">
 <script data-ad-client="ca-pub-4606636162302812" async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js"></script>
-<!-- begin _includes/seo.html --><title>Sliding Window 系列笔记4 数组中最长唯一子字符长度 - Espresso Withoutmilk</title>
-<meta name="description" content="题目">
+<!-- begin _includes/seo.html --><title>Slow Fast 指针算法笔记1 - Espresso Withoutmilk</title>
+<meta name="description" content="今天是2022年的情人，停更了一周，主要还是拖，谢谢blog还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，还是比较佩服自己。快慢指针主要解决链表的问题，通过快慢两个速度，根据快慢指针是否相遇去解决问题。 题目，给出一个链表，编写方法判断是否存在循环，如果存在返回true，不存在返回false。如下：">
 
 
   <meta name="author" content="Ryan">
@@ -22,30 +22,30 @@
 <meta property="og:type" content="article">
 <meta property="og:locale" content="en_US">
 <meta property="og:site_name" content="Espresso Withoutmilk">
-<meta property="og:title" content="Sliding Window 系列笔记4 数组中最长唯一子字符长度">
-<meta property="og:url" content="/algorithm/sliding-window-longest-substring-with-k-distinct-character/">
+<meta property="og:title" content="Slow Fast 指针算法笔记1">
+<meta property="og:url" content="/algorithm/fat-slow-basic/">
 
 
-  <meta property="og:description" content="题目">
-
-
-
-
-
-
-
-  <meta property="article:published_time" content="2022-02-02T00:00:00+08:00">
+  <meta property="og:description" content="今天是2022年的情人，停更了一周，主要还是拖，谢谢blog还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，还是比较佩服自己。快慢指针主要解决链表的问题，通过快慢两个速度，根据快慢指针是否相遇去解决问题。 题目，给出一个链表，编写方法判断是否存在循环，如果存在返回true，不存在返回false。如下：">
 
 
 
 
 
-  
+
+
+  <meta property="article:published_time" content="2022-02-14T00:00:00+08:00">
+
+
+
+
 
   
 
+  
 
-<link rel="canonical" href="/algorithm/sliding-window-longest-substring-with-k-distinct-character/">
+
+<link rel="canonical" href="/algorithm/fat-slow-basic/">
 
 
 
@@ -249,16 +249,16 @@
 
 
   <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
-    <meta itemprop="headline" content="Sliding Window 系列笔记4 数组中最长唯一子字符长度">
-    <meta itemprop="description" content="题目">
-    <meta itemprop="datePublished" content="2022-02-02T00:00:00+08:00">
+    <meta itemprop="headline" content="Slow Fast 指针算法笔记1">
+    <meta itemprop="description" content="今天是2022年的情人，停更了一周，主要还是拖，谢谢blog还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，还是比较佩服自己。快慢指针主要解决链表的问题，通过快慢两个速度，根据快慢指针是否相遇去解决问题。题目，给出一个链表，编写方法判断是否存在循环，如果存在返回true，不存在返回false。如下：">
+    <meta itemprop="datePublished" content="2022-02-14T00:00:00+08:00">
     
 
     <div class="page__inner-wrap">
       
         <header>
           <h1 id="page-title" class="page__title p-name" itemprop="headline">
-            <a href="/algorithm/sliding-window-longest-substring-with-k-distinct-character/" class="u-url" itemprop="url">Sliding Window 系列笔记4 数组中最长唯一子字符长度
+            <a href="/algorithm/fat-slow-basic/" class="u-url" itemprop="url">Slow Fast 指针算法笔记1
 </a>
           </h1>
           
@@ -287,60 +287,56 @@
 
       <section class="page__content e-content" itemprop="text">
         
-        <h3 id="题目">题目</h3>
+        <p>今天是2022年的情人，停更了一周，主要还是拖，谢谢blog还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，还是比较佩服自己。快慢指针主要解决链表的问题，通过快慢两个速度，根据快慢指针是否相遇去解决问题。
+题目，给出一个链表，编写方法判断是否存在循环，如果存在返回true，不存在返回false。如下：</p>
 
-<p>给出一个字符串,找出字符串中唯一的，最长的并且子字符个数等于K的长度，示例如下：</p>
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class ListNode {
+	  int value = 0;
+	  ListNode next;
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子1
-输入: String="araaci", K=2 
-输出: 4
-解释: 最长子字符串长度是4,"araa"
-</code></pre></div></div>
+	  ListNode(int value){
+	  	  this.value = value;
+	  }
+}
 
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>例子2
-输入: String="araaci", K=1
-输出: 2
-解释: 最长子字符串长度是2,"aa"
-</code></pre></div></div>
-<h3 id="思路">思路</h3>
-<p>依然采用Sliding Window解法，由于需要不停的比对判断是否超过k的个数，所以考虑使用HashMap;</p>
-
-<p>1 - 首先我们逐个加入子字符.</p>
-
-<p>2 - 判断加入的子字符是否超过 K 个数.</p>
-
-<p>3 - 如果超过 K 个数，那么就要移除第一个 子字符</p>
-
-<p>4 - 一直比对，保留最长的个数</p>
-
-<p>参看如下代码</p>
-
-<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>class LongestSubstringKDistinct {
-  public static int findLength(String str, int k){
-    if (str == null || str.length() == 0 || str.length() &lt; k)
-      throw new IllegalArgumentException();
-  
-    int left = 0, maxLength = 0;
-    Map&lt;Character, Integer&gt; charsMap = new HashMap&lt;&gt;();
-    for(int right =0; right &lt; str.length(); right++){
-      char rightChar = str.charAt(right);
-      charsMap.put(rightChar, charsMap.getOrDefault(rightChar, 0) + 1);
-      while(charsMap.size()&gt;k){
-        char leftChar = str.charAt(left);
-        charsMap.put(leftChar, charsMap.get(leftChar) -1);
-        if(charsMap.get(leftChar) == 0){
-          charsMap.remove(leftChar);
-        }
-        left++;
-      }
-      maxLength = Math.max(maxLength, right-left+1);
+class LinkedListCycle{
+	  public static void main(String[] args){
+        ListNode head = new ListNode(1);
+        head.next = new ListNode(2);
+        head.next.next = new ListNode(3);
+        head.next.next.next = new ListNode(4);
+        head.next.next.next.next = new ListNode(5);
     }
-    return maxLength;
-  }
+
+    public static boolean checkCycle(ListNode head){
+    	  // to do
+    }
 }
 
 </code></pre></div></div>
-<p>此时时间复杂度是O(N)， 空间复杂度是O(K)。</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>### 思路
+
+思路很简单，定义两个指针遍历链表，一个指针一次走一步，一个指针一次走两步，如果这个链表是循环的，那么两个指针就会相遇，即他们指向的数相等；如果走两步的指针指向空，那么表示这个链表已经走完。关于相遇的问题是经过数学推理的,一下找不到链接，后续找到链接再贴出来。直接代码
+
+
+</code></pre></div></div>
+<p>public static boolean checkCycle(ListNode head){
+    ListNode slow = head;
+    ListNode fast = head;
+    while(fast != null &amp;&amp; slow != null){
+        fast = fast.next.next;
+        slow = slow.next;
+        if(slow == fast){
+            return true;
+        }</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>}
+return false;     }
+</code></pre></div></div>
+
+<p>```
+此时时间复杂度是O(N)，N是链表节点， 空间复杂度是O(1)。</p>
 
 
         
@@ -358,7 +354,7 @@
     <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
     <span itemprop="keywords">
     
-      <a href="/tags/#sliding-window" class="page__taxonomy-item p-category" rel="tag">Sliding Window</a>
+      <a href="/tags/#slow-fast-pointer" class="page__taxonomy-item p-category" rel="tag">Slow Fast Pointer</a>
     
     </span>
   </p>
@@ -383,7 +379,7 @@
 
         
 
-  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-02-02T00:00:00+08:00">February 2, 2022</time></p>
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time class="dt-published" datetime="2022-02-14T00:00:00+08:00">February 14, 2022</time></p>
 
       </footer>
 
@@ -392,23 +388,22 @@
     <h4 class="page__share-title">Share on</h4>
   
 
-  <a href="https://twitter.com/intent/tweet?text=Sliding+Window+%E7%B3%BB%E5%88%97%E7%AC%94%E8%AE%B04+%E6%95%B0%E7%BB%84%E4%B8%AD%E6%9C%80%E9%95%BF%E5%94%AF%E4%B8%80%E5%AD%90%E5%AD%97%E7%AC%A6%E9%95%BF%E5%BA%A6%20%2Falgorithm%2Fsliding-window-longest-substring-with-k-distinct-character%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+  <a href="https://twitter.com/intent/tweet?text=Slow+Fast+%E6%8C%87%E9%92%88%E7%AE%97%E6%B3%95%E7%AC%94%E8%AE%B01%20%2Falgorithm%2Ffat-slow-basic%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
 
-  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Falgorithm%2Fsliding-window-longest-substring-with-k-distinct-character%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+  <a href="https://www.facebook.com/sharer/sharer.php?u=%2Falgorithm%2Ffat-slow-basic%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
 
-  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Falgorithm%2Fsliding-window-longest-substring-with-k-distinct-character%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=%2Falgorithm%2Ffat-slow-basic%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
 </section>
 
 
       
   <nav class="pagination">
     
-      <a href="/algorithm/sliding-window-2/" class="pagination--pager" title="Sliding Window 系列 笔记3
+      <a href="/algorithm/remove-duplicates/" class="pagination--pager" title="Two Pointers笔记#2 排除相同数
 ">Previous</a>
     
     
-      <a href="/algorithm/fruits-into-baskets/" class="pagination--pager" title="Sliding Window 系列笔记5 找出最长的2种组合
-">Next</a>
+      <a href="#" class="pagination--pager disabled">Next</a>
     
   </nav>
 
@@ -422,46 +417,6 @@
     <div class="page__related">
       <h2 class="page__related-title">You may also enjoy</h2>
       <div class="grid__wrapper">
-        
-          
-
-
-
-<div class="grid__item">
-  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
-    
-    <h2 class="archive__item-title no_toc" itemprop="headline">
-      
-        <a href="/algorithm/fat-slow-basic/" rel="permalink">Slow Fast 指针算法笔记1
-</a>
-      
-    </h2>
-    
-
-  <p class="page__meta">
-    
-
-    
-
-    
-      
-      
-
-      <span class="page__meta-readtime">
-        <i class="far fa-clock" aria-hidden="true"></i>
-        
-          less than 1 minute read
-        
-      </span>
-    
-  </p>
-
-
-    <p class="archive__item-excerpt" itemprop="description">今天是2022年的情人，停更了一周，主要还是拖，谢谢blog还是比较充实。还有一天就是元宵了，也意味着2022年春节即将过完。回想看看之前春节期间每天都写，虽然有点水，还是比较佩服自己。快慢指针主要解决链表的问题，通过快慢两个速度，根据快慢指针是否相遇去解决问题。
-题目，给出一个链表，编写方法判断是否存在循环，如...</p>
-  </article>
-</div>
-
         
           
 
@@ -578,6 +533,46 @@
 
 
     <p class="archive__item-excerpt" itemprop="description">题目， 给出一个字符串,找出里面最长的不重复字符长度。示例如下：
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/algorithm/fruits-into-baskets/" rel="permalink">Sliding Window 系列笔记5 找出最长的2种组合
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+
+    
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">题目， 给出一个字符数组,里面每个字符代表一个类别，只能够从中挑出两种类别，挑选过程中并且不能够中断，求挑选出最长的字符长度。示例如下：
 </p>
   </article>
 </div>
